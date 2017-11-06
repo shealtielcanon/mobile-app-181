@@ -1,1 +1,1 @@
-# Madicine Alarm Mobile Application Repository
+# Medicine Alarm Mobile Application Repository
