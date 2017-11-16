@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	    <title>Loading</title>
+    	<link rel="stylesheet" type="text/css" href="css/index.css">
+
+
+
+	</head>
+
+	<body onload="loading()">
+		<div id="loader"></div>
+		
+		<div class="app">
+		<div style="display:none;" id="myDiv" class="animate-bottom">
+			<h1>Medicine Alarm</h1>
+			<div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+                <br><br>
+            </div>
+            <input type="button" value="Continue" onclick="checkForNewUser()" />
+		</div>
+		</div>
+		<script type="text/javascript">
+			var myVar;
+
+			function loading() {
+			    myVar = setTimeout(showPage, 3000);
+			}
+
+			function showPage() {
+			  document.getElementById("loader").style.display = "none";
+			  document.getElementById("myDiv").style.display = "block";
+			}
+		</script>
+		<script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/SQLitePlugin.js"></script>
+        <script type="text/javascript" src="js/database_access.js"></script>		
+	</body>
+</html>
