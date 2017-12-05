@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <title>Search</title>
+</head>
+<body id="addbody">
+
+<div id="mySidenav" class="sidenav">
+
+<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+<li> <a href="home.html">Home</a></li>
+<li> <a href="search.html">Search</a></li>
+<li ><a href="addevent1.html">Add illness</a></li> 
+<li> <a href="alarm.html">Set Alarm</a></li> 
+<li> <a href="medicalhistory.html">Medical History</a></li>
+
+</div>
+
+<div id="main">
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    
+</div>
+<input id="addeventinput1" type="text" placeholder="Search medicines in our database" class="addevent1" >
+    <img id="searchimage" align="right" src="images/waiting.gif">
+    <button id="searchbutton">Enter</button>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0)";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "";
+}
+function setbg(color)
+{
+document.getElementById("styled").style.background=color
+}
+</script>
+     
+</body>
+</html

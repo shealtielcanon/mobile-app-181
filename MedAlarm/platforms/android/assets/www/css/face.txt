@@ -1,0 +1,9 @@
+Faces:
+1. Interrogating face ng ga ask syag question sa user
+2. Happy face
+3. Sad face
+4. Waiting face murag naghulat m load and screen or mugawas ang result
+5. Murag informative face kanang mura syag ga sulti ug INFORMATION sa user murag 
+
+
+Tapos pwede duha ka Image per face? kung baga example, sa Happy face duha kabook imo buhaton nga nawong niya nga nalipay pero dapat naay variation iyang nawong kai para mahimo nako ug GIF. THANKS!!!

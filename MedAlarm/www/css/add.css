@@ -1,0 +1,217 @@
+
+.register {
+  margin-bottom:  68px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+
+
+.field {
+  width: 500px;
+  height: 70px;
+  position: relative;
+}
+.field input {
+  width: 100%;
+  border-radius: 6px;
+  height:70px;
+  border: 0;
+  padding: 10px;
+  padding: 20px 0 0 16px;
+  font-size: 0;
+  background: #1566BB;
+  -webkit-transition: background .3s ease;
+  transition: background .3s ease;
+  color: #ffffff;
+}
+.field input:focus {
+  background: #065CB7;
+  font-size: 23px;
+}
+.field input:focus::-moz-selection {
+  background: rgba(188, 232, 255, 0.5);
+}
+.field input:focus::selection {
+  background: rgba(188, 232, 255, 0.5);
+}
+.field input.active {
+  background: #065CB7;
+  font-size: 23px;
+}
+.field input,
+.field button {
+  position: absolute;
+  height: 70px;
+}
+.field button {
+  background: rgba(0, 0, 0, 0.3);
+  right: 0;
+  border: 0;
+  width: 115px;
+  border-radius: 6px;
+  font-size: 22px;
+  cursor: pointer;
+  -webkit-transition: width .3s ease, background .3s ease, opacity .3s ease;
+  transition: width .3s ease, background .3s ease, opacity .3s ease;
+  opacity: 0;
+  color: #065CB7;
+  text-transform: uppercae;
+  pointer-events: none;
+}
+.field button.active {
+  color: #ffffff;
+  background: #639EDB;
+  opacity: 1;
+  pointer-events: auto;
+}
+.field button.active:hover {
+  background: #5E99D6;
+}
+.field button.full {
+  width: 100%;
+}
+.field input:focus + label {
+  font-size: 19px;
+  -webkit-transform: translate(16px, 11px);
+          transform: translate(16px, 11px);
+  color: rgba(255, 255, 255, 0.7);
+}
+.field label {
+  position: absolute;
+  color: white;
+  -webkit-transform: translate(16px, 20px);
+          transform: translate(16px, 20px);
+  -webkit-transition: font-size .3s ease, color .3s .1s ease, -webkit-transform .3s ease;
+  transition: font-size .3s ease, color .3s .1s ease, -webkit-transform .3s ease;
+  transition: transform .3s ease, font-size .3s ease, color .3s .1s ease;
+  transition: transform .3s ease, font-size .3s ease, color .3s .1s ease, -webkit-transform .3s ease;
+  font-size: 28px;
+}
+.field label.active {
+  font-size: 19px;
+  -webkit-transform: translate(16px, 11px);
+          transform: translate(16px, 11px);
+  color: rgba(255, 255, 255, 0.7);
+}
+.field input:focus + label + button {
+  opacity: 1;
+}
+
+
+.register1 {
+  margin-bottom:  68px;
+  height: 170px;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#register1{
+
+  height: 200px;
+  -webkit-box-pack: top;
+}
+
+
+.field1 {
+  width: 500px;
+  height: 70px;
+  position: relative;
+}
+.field1 input {
+  width: 100%;
+  border-radius: 6px;
+  height: 70px;
+  border: 0;
+  padding: 10px;
+  padding: 20px 0 0 16px;
+  font-size: 0;
+  background: #1566BB;
+  -webkit-transition: background .3s ease;
+  transition: background .3s ease;
+  color: #ffffff;
+}
+.field1 input:focus {
+  background: #065CB7;
+  font-size: 23px;
+}
+.field1 input:focus::-moz-selection {
+  background: rgba(188, 232, 255, 0.5);
+}
+.field1 input:focus::selection {
+  background: rgba(188, 232, 255, 0.5);
+}
+.field1 input.active {
+  background: #065CB7;
+  font-size: 23px;
+}
+.field1 input,
+.field1 button {
+  position: absolute;
+  height: 70px;
+}
+.field1 button {
+  background: rgba(0, 0, 0, 0.3);
+  right: 0;
+  border: 0;
+  width: 115px;
+  border-radius: 6px;
+  font-size: 22px;
+  cursor: pointer;
+  -webkit-transition: width .3s ease, background .3s ease, opacity .3s ease;
+  transition: width .3s ease, background .3s ease, opacity .3s ease;
+  opacity: 0;
+  color: #065CB7;
+  text-transform: uppercae;
+  pointer-events: none;
+}
+.field1 button.active {
+  color: #ffffff;
+  background: #639EDB;
+  opacity: 1;
+  pointer-events: auto;
+}
+.field1 button.active:hover {
+  background: #5E99D6;
+}
+.field1 button.full {
+  width: 100%;
+}
+.field1 input:focus + label {
+  font-size: 19px;
+  -webkit-transform: translate(16px, 11px);
+          transform: translate(16px, 11px);
+  color: rgba(255, 255, 255, 0.7);
+}
+.field1 label {
+  position: absolute;
+  color: white;
+  -webkit-transform: translate(16px, 20px);
+          transform: translate(16px, 20px);
+  -webkit-transition: font-size .3s ease, color .3s .1s ease, -webkit-transform .3s ease;
+  transition: font-size .3s ease, color .3s .1s ease, -webkit-transform .3s ease;
+  transition: transform .3s ease, font-size .3s ease, color .3s .1s ease;
+  transition: transform .3s ease, font-size .3s ease, color .3s .1s ease, -webkit-transform .3s ease;
+  font-size: 28px;
+}
+.field1 label.active {
+  font-size: 19px;
+  -webkit-transform: translate(16px, 11px);
+          transform: translate(16px, 11px);
+  color: rgba(255, 255, 255, 0.7);
+}
+.field1 input:focus + label + button {
+  opacity: 1;
+}
