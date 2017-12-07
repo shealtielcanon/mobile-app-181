@@ -1,5 +1,6 @@
 
 var switcher = false;
+var temp_alarm_array = [];
 //var accumIntervals = calcAllInterv();
 //alert("Here");
 //alert(accumIntervals);
@@ -14,22 +15,23 @@ setInterval(function() {
     var cuttime = getCurDate(date);
     
     $('#clock-wrapper').html(cuttime);
-    
-    checkAlarmList(date,cuttime);
+    //var x = 
+    checkAlarm(cuttime);
 
 }, 500);
 
 $(".btntosetalrm").click(function(){ //fix this next!
     setMultipleAlarm(new Date());
-    window.location = "home.html";
+    alert("CLICKED!");
+    //window.location = "home.html";
 });
 
 function setMultipleAlarm(date) {
-    var alarmArray = [];
-    alarmArray =  getPrescIdArray();
+    //var alarmArray = [];
+    //alarmArray =  getPrescIdArray();
 
-    alarmArray.forEach(function(item, index, array) {
-        setAlarm(date, item);
+    temp_alarm_array.forEach(function(item, index, array) {
+        setAlarm(date, item, 's');
     });
 }
 
@@ -74,8 +76,9 @@ function addNew(num) {
 
     dur_times_t = setAlarmInterval(days, (dur_h_t + temp_min));
     var date = new Date();
-    //alarmArray.push([getCurDate(date), dur_h_t, dur_m_t, dur_times_t]);
-    addAlarmToDB(getCurDate(date), med, dur_h_t, dur_m_t, dur_times_t);
+
+    temp_alarm_array.push([getCurDate(date), med, dur_h_t, dur_m_t, dur_times_t]);
+    //addAlarmToDB(getCurDate(date), med, dur_h_t, dur_m_t, dur_times_t);
 
     var stringInput = "<p>"+ med +": " + dur_h_t + " hour/s, " + dur_m_t + " min/s, " + dur_times_t + " times. <br></p>";
     var newLine = stringInput +" <div id=\"alarm_list_id"+(num+1)+"\">";
@@ -88,14 +91,22 @@ function addNew(num) {
     document.getElementById('alarm_list_id' + num).innerHTML = newLine;
 }
 
-function setAlarm(date, p_id) {
-    var array_row = getPrescAlarmArray(p_id);
-    dur_h = array_row[1];
-    dur_m = array_row[2];
-    dur_times = array_row[3];
+function setAlarm(date, current_row, setMode) {
+    alert("setAlarm");
+    var array_row = [];
+    array_row = current_row;
+    temp_med = array_row[1];
+    dur_h = array_row[2];
+    dur_m = array_row[3];
+    dur_times = array_row[4];
 
     var alrmhr = date.getHours() + (dur_h*1);
     var alrmmin = date.getMinutes() + (dur_m*1);
+
+    while(alrmmin>=60) {
+        alrmmin = alrmmin - 60;
+        alrmhr = alrmhr + 1;
+    }
 
     var time_format;
 
@@ -112,16 +123,18 @@ function setAlarm(date, p_id) {
     }
     alRmTime = alrmhr + ":" + ("0" + alrmmin).slice(-2) + " " + time_format;
 
-    if(alRmTime){
-        $(".alrm-main").css("display","none");
-        $(".when-alrm-ring").css("display","block");
-    }
+    current_row[0] = alRmTime;
 
-    else{
-        return false;
+    //addAlarmToDB(alRmTime, temp_med, dur_h, dur_m, dur_times);
+    //updateNextAlarm(p_id, alRmTime);
+    if(setMode=='s') {
+        finalizeAlarm(current_row);
     }
+    
+}
 
-    updateNextAlarm(p_id, alRmTime);
+function finalizeAlarm(current_row) {
+    addAlarmToDB(current_row[0], current_row[1], current_row[2], current_row[3], current_row[4]);
 }
 
 function getCurDate(date) {
