@@ -1,18 +1,15 @@
-GENERIC NAME,WEIGHT,TYPE,BRAND NAME,INDICATIONS,SIDE EFFECTS,DOSAGE
-AMBROXOL,50mg,syrup,Mucosolvan,"All forms of tracheobronchitis, emphysema with bronchitis pneumoconiosis, chronic inflammatory pulmonary conditions, bronchiectasis, bronchitis with bronchospasm asthma. During acute exacerbations of bronchitis it should be given with the appropriate antibiotic.","Occasional gastrointestinal side effects may occur but these are normally mild.
+GENERIC NAME,TYPE,BRAND NAME,INDICATIONS,SIDE EFFECTS,DOSAGE
+AMBROXOL,"Syrup, tablet","Mucosolvan, Ambrolex, Zobrixol","All forms of tracheobronchitis, emphysema with bronchitis pneumoconiosis, chronic inflammatory pulmonary conditions, bronchiectasis, bronchitis with bronchospasm asthma. During acute exacerbations of bronchitis it should be given with the appropriate antibiotic.","Occasional gastrointestinal side effects may occur but these are normally mild.
 Stomach upset symptoms can become uncomfortable and may contribute to a decreased appetite in certain patients. To limit the development of these side effects, ambroxol hydrochloride should be taken with food. Patients who experience severe nausea or vomiting while taking this medication should contact a doctor.","Adults: daily dose of 30 mg (one Ambroxol tablet ) to 120 mg (4 Ambroxol tablets) taken in 2 to 3 divided doses
 Children up to 2 years: half a teaspoonful Ambroxol syrup twice daily
 Children 2 - 5 years: half a teaspoonful Ambroxol syrup 3 times daily
 Children over 5 years: One teaspoonful Ambroxol syrup 2-3 times daily."
-,30mg,,Ambrolex,,,
-,30mg,tablet,Zobrixol,,,
-ASCORBIC ACID + SODIUM ASCORBATE,200mg + 366mg,tablet,,For the treatment and prevention of Vitamin C deficiency,"Diarrhea, nausea, vomiting, abdominal cramps/pain, or heartburn may occur. If any of these effects persist or worsen, tell your doctor or pharmacist promptly. If your doctor has directed you to use this vitamin, remember that he or she has judged that the benefit to you is greater than the risk of side effects.",Dosage is based on your medical condition and response to treatment.
-ASCORBIC ACID,100mg per 5ml,syrup,Cecon,"Ascorbic acid is recommended for the prevention and treatment of scurvy. Its parenteral administration is desirable for patients with an acute deficiency or for those whose absorption of orally ingested ascorbic acid is uncertain. Symptoms of mild deficiency may include faulty bone and tooth development, gingivitis, bleeding gums, and loosened teeth. Febrile states, chronic illness, and infection (pneumonia, whooping cough, tuberculosis, diphtheria, sinusitis, rheumatic fever, etc.) increase the need for ascorbic acid. ","Side effects from too much vitamin C are very rare. This is because the body cannot store the vitamin. Studies have shown, however, that vitamin C amounts greater than 2,000 mg/day can lead to nausea and diarrhea.","Males: 90 mg/day
+ASCORBIC ACID + SODIUM ASCORBATE,tablet,,For the treatment and prevention of Vitamin C deficiency,"Diarrhea, nausea, vomiting, abdominal cramps/pain, or heartburn may occur. If any of these effects persist or worsen, tell your doctor or pharmacist promptly. If your doctor has directed you to use this vitamin, remember that he or she has judged that the benefit to you is greater than the risk of side effects.",Dosage is based on your medical condition and response to treatment.
+ASCORBIC ACID,"syrup, Sugar-Coated Tablet","Cecon, Vitamin C","Ascorbic acid is recommended for the prevention and treatment of scurvy. Its parenteral administration is desirable for patients with an acute deficiency or for those whose absorption of orally ingested ascorbic acid is uncertain. Symptoms of mild deficiency may include faulty bone and tooth development, gingivitis, bleeding gums, and loosened teeth. Febrile states, chronic illness, and infection (pneumonia, whooping cough, tuberculosis, diphtheria, sinusitis, rheumatic fever, etc.) increase the need for ascorbic acid. ","Side effects from too much vitamin C are very rare. This is because the body cannot store the vitamin. Studies have shown, however, that vitamin C amounts greater than 2,000 mg/day can lead to nausea and diarrhea.","Males: 90 mg/day
 Females: 75 mg/day
-Pregnant: 85 mg/day; not to exceed 2000 mg/day (80 mg if <18 years; not to exceed 1800 mg/day)
-Nursing: 120 mg/day; not to exceed 2000 mg/day (115 mg if <18 years old; not to exceed 1800 mg/day)"
-,500mg,Sugar-Coated Tablet,Vitamin C,,,
-Ascorbic Acid + Sodium Ascorbate + Zinc Citrate,20mg + 90 mg + 5 mg,Chewable tablet,,For the treatment and prevention of Vitamin C and zinc deficiencies,"Diarrhea 
+Pregnant: 85 mg/day, not to exceed 2000 mg/day (80 mg if <18 years, not to exceed 1800 mg/day)
+Nursing: 120 mg/day, not to exceed 2000 mg/day (115 mg if <18 years old, not to exceed 1800 mg/day)"
+Ascorbic Acid + Sodium Ascorbate + Zinc Citrate,Chewable tablet,,For the treatment and prevention of Vitamin C and zinc deficiencies,"Diarrhea 
 dizziness or faintness (with the injection only) 
 flushing or redness of skin 
 headache 
@@ -20,67 +17,59 @@ increase in urination (mild)
 nausea or vomiting 
 stomach cramps 
 Side or lower back pain",
-Benzoyl Peroxide,"5%, 10%",Topical Gel,Acne Treatment,"It is used to treat pimples (acne).
-","Signs of an allergic reaction, like rash; hives; itching; red, swollen, blistered, or peeling skin with or without fever; wheezing; tightness in the chest or throat; trouble breathing or talking; unusual hoarseness; or swelling of the mouth, face, lips, tongue, or throat.",Applies to the following strength(s): 0.3%-2.5% ; 0.1%-2.5%
-,,,Oxy-10,,,
-,,,BenzePro,,,
-,,,Benzac,,,
-Bisacodyl,5mg,Enteric-Coated Tablet,Bisalax,"It works directly on the colon to produce a bowel movement. It is typically prescribed for relief of constipation and for the management of neurogenic bowel dysfunction as well as part of bowel preparation before medical examinations, such as for a colonoscopy. Bisacodyl is a derivative of triphenylmethane.","Side effects include: Some degree of abdominal discomfort, nausea, cramps, griping, and/or faintness with therapeutic doses. Diarrhea, GI irritation, and fluid and electrolyte depletion. Gastric irritation and the possibility of vomiting if enteric coating of tablets is disrupted.",Applies to the following strength(s): 5 mg ; 10 mg
-,,,Ritemed Bisacodyl,,,
-,,,Dulxative,,,
-Brompheniramine Maleate + Phenylephrine Hydrochloride,2mg + 5mg per 5ml,Syrup,,"Temporarily relieves nasal & sinus congestion including runny nose, sneezing, itching of nose or throat, itchy watery eyes due to cold, flu, hay fever, allergic rhinitis or other upper resp allergies.","Nausea, weariness, drowsiness, dilated pupil of the eye, irritability or excitement, or dryness of the mouth.","Children 12 yr to adult 10 mL every 4-6 hr, 
+Benzoyl Peroxide,Topical Gel,"Acne Treatment, Oxy-10, BenzePro, Benzac","It is used to treat pimples (acne).
+","Signs of an allergic reaction, like rash, hives, itching, red, swollen, blistered, or peeling skin with or without fever, wheezing, tightness in the chest or throat, trouble breathing or talking, unusual hoarseness, or swelling of the mouth, face, lips, tongue, or throat.","Applies to the following strength(s): 0.3%-2.5% , 0.1%-2.5%"
+Bisacodyl,Enteric-Coated Tablet,"Bisalax, Ritemed Bisacodyl, Dulxative","It works directly on the colon to produce a bowel movement. It is typically prescribed for relief of constipation and for the management of neurogenic bowel dysfunction as well as part of bowel preparation before medical examinations, such as for a colonoscopy. Bisacodyl is a derivative of triphenylmethane.","Side effects include: Some degree of abdominal discomfort, nausea, cramps, griping, and/or faintness with therapeutic doses. Diarrhea, GI irritation, and fluid and electrolyte depletion. Gastric irritation and the possibility of vomiting if enteric coating of tablets is disrupted.","Applies to the following strength(s): 5 mg , 10 mg"
+Brompheniramine Maleate + Phenylephrine Hydrochloride,Syrup,,"Temporarily relieves nasal & sinus congestion including runny nose, sneezing, itching of nose or throat, itchy watery eyes due to cold, flu, hay fever, allergic rhinitis or other upper resp allergies.","Nausea, weariness, drowsiness, dilated pupil of the eye, irritability or excitement, or dryness of the mouth.","Children 12 yr to adult 10 mL every 4-6 hr, 
 
 6 to <12 yr 5 mL every 4-6 hr, 
 
 2 to <6 yr 2.5 mL every 4-6 hr. "
-Butamirate Citrate,7.5mg per 5ml,Syrup,Cofmed,"Butamirate Citrate is used for Cough, Acute lower respiratory tract infections and other conditions.","These side-effects are possible, but do not always occur. Some of the side-effects may be rare but serious. 
+Butamirate Citrate,Syrup,Cofmed,"Butamirate Citrate is used for Cough, Acute lower respiratory tract infections and other conditions.","These side-effects are possible, but do not always occur. Some of the side-effects may be rare but serious. 
 Nausea 
 Vomiting 
 Diarrhoea 
 Skin exanthema 
 ",
-Calcium + Vitamin D + Minerals,,Film-Coated Tablet,Calciumade,"For the symptomatic relief of nasal congestion, relief of cough and colds and allergic conditions.","stomach pain, vomiting, loss of appetite;
-increased thirst or urination;
-muscle pain or weakness, joint pain; or.
+Calcium + Vitamin D + Minerals,Film-Coated Tablet,Calciumade,"For the symptomatic relief of nasal congestion, relief of cough and colds and allergic conditions.","stomach pain, vomiting, loss of appetite,
+increased thirst or urination,
+muscle pain or weakness, joint pain, or.
 confusion, and feeling tired or restless.",
-Calcium Ascorbate,500mg,Capsule,Calcium-Cee,For the treatment and prevention of Vitamin C deficiency,"Minor Side Effects. Although not everyone experiences side effects with vitamin C or calcium supplements, these can occur, especially at high doses. Supplemental vitamin C sometimes causes headache, heartburn, nausea, stomach cramps, vomiting, gas or diarrhea.",
-Carbocisteine,100mg per 5ml; 50mg per ml,Syrup; Oral Drops,Loviscol,"For the treatment of acute to chronic disorders of the upper and lower respiratory tract
+Calcium Ascorbate,Capsule,Calcium-Cee,For the treatment and prevention of Vitamin C deficiency,"Minor Side Effects. Although not everyone experiences side effects with vitamin C or calcium supplements, these can occur, especially at high doses. Supplemental vitamin C sometimes causes headache, heartburn, nausea, stomach cramps, vomiting, gas or diarrhea.",
+Carbocisteine,"Syrup, Oral Drops","Loviscol, Flemaliz, Solmux","For the treatment of acute to chronic disorders of the upper and lower respiratory tract
 ","Symptoms of a serious allergic reaction include: rash, itching/swelling (especially of the face/tongue/throat), dizziness, trouble breathing.",
-,,,Flemaliz,,,
-,,,Solmux,,,
-Cetirizine (As Dihydrochloride),1mg per ml,Syrup,Zyriz,"Cetirizine is an antihistamine that reduces the natural chemical histamine in the body. Histamine can produce symptoms of sneezing, itching, watery eyes, and runny nose. It is used to treat cold or allergy symptoms such as sneezing, itching, watery eyes, or runny nose.
-Cetirizine is also used to treat itching and swelling caused by hives.","fast, pounding, or uneven heartbeat;
-weakness, tremors (uncontrolled shaking), or sleep problems (insomnia);
-severe restless feeling, hyperactivity;
-confusion;
-problems with vision; or
+Cetirizine (As Dihydrochloride),Syrup,Zyriz,"Cetirizine is an antihistamine that reduces the natural chemical histamine in the body. Histamine can produce symptoms of sneezing, itching, watery eyes, and runny nose. It is used to treat cold or allergy symptoms such as sneezing, itching, watery eyes, or runny nose.
+Cetirizine is also used to treat itching and swelling caused by hives.","fast, pounding, or uneven heartbeat,
+weakness, tremors (uncontrolled shaking), or sleep problems (insomnia),
+severe restless feeling, hyperactivity,
+confusion,
+problems with vision, or
 urinating less than usual or not at all.
 Less serious side effects may include:
-dizziness, drowsiness;
-tired feeling;
-dry mouth;
-sore throat, cough;
-nausea, constipation; or
+dizziness, drowsiness,
+tired feeling,
+dry mouth,
+sore throat, cough,
+nausea, constipation, or
 Headache.","Take cetirizine exactly as directed on the label, or as prescribed by your doctor. Do not use it in larger amounts or for longer than recommended.
 You may take cetirizine with or without food.
 The chewable tablet must be chewed before you swallow it.
 Measure liquid medicine with a special dose-measuring spoon or cup, not a regular table spoon. If you do not have a dose-measuring device, ask your pharmacist for one."
-Cetirizine Dihydrochloride + Phenylephrine Hydrochloride,5mg + 10mg,Film-Coated Tablet,,"Cetirizine dihydrochloride is an antihistamine that reduces the effects of natural chemical histamine in the body. Histamine can produce symptoms of sneezing, itching, watery eyes, and runny nose. Cetirizine dihydrochloride is used to treat cold or allergy symptoms such as sneezing, itching, watery eyes, or runny nose. Cetirizine dihydrochloride is also used to treat itching and swelling caused by chronic urticaria (hives).","Dizziness, drowsiness
+Cetirizine Dihydrochloride + Phenylephrine Hydrochloride,"Film-Coated Tablet, Syrup",,"Cetirizine dihydrochloride is an antihistamine that reduces the effects of natural chemical histamine in the body. Histamine can produce symptoms of sneezing, itching, watery eyes, and runny nose. Cetirizine dihydrochloride is used to treat cold or allergy symptoms such as sneezing, itching, watery eyes, or runny nose. Cetirizine dihydrochloride is also used to treat itching and swelling caused by chronic urticaria (hives).","Dizziness, drowsiness
 Mild headache, blurred vision
 Dry mouth, nose, or throat
 Constipation",
-,5mg + 5mg per 5ml,Syrup,,,,
-Chamomile Extract + Methyl Salicylate + Pepermint Oil + Sage Oil,370.5mg + 1mg + 18.5mg + 6mg+ per ml,Spray Solution,,For inflammatory infections of the buccal and pharyngeal cavity; parodontosis; acute gingivitis; pain after tooth extraction and during second dentition; mucosal irritation caused by dental plates; tonsillary angina; canker soers and bad breath,"In patients with known allergy to anethole, intolerance reactions may appear.",Apply 2 puffs 3 times daily to the affected region of the buccal and pharyngeal cavity with the spraying head correspond to a fully effective single dose.
-Chlorphenamine Maleate + Phenylpropanolamine Hydrochloride + Paracetamol,2mg + 25mg + 500mg,Tablet,Symdex-D,"For the relief of nasal catarrh (build up of mucus), nasal congestion, watery eyes, sneezing, fever, body pains and headache associated with the common cold, influenza, acute upper respiratory tract infections and upper respiratory inflammation with allergic component, e.g., allergic rhinitis and sinusitis.","Nervousness, restlessness, insomnia, dizziness, lassitude, muscular weakness, headache, nausea and drowsiness may occur with usual doses of phenylpropanolamine or chlorphenamine maleate.
+Chamomile Extract + Methyl Salicylate + Pepermint Oil + Sage Oil,Spray Solution,,"For inflammatory infections of the buccal and pharyngeal cavity, parodontosis, acute gingivitis, pain after tooth extraction and during second dentition, mucosal irritation caused by dental plates, tonsillary angina, canker soers and bad breath","In patients with known allergy to anethole, intolerance reactions may appear.",Apply 2 puffs 3 times daily to the affected region of the buccal and pharyngeal cavity with the spraying head correspond to a fully effective single dose.
+Chlorphenamine Maleate + Phenylpropanolamine Hydrochloride + Paracetamol,Tablet,Symdex-D,"For the relief of nasal catarrh (build up of mucus), nasal congestion, watery eyes, sneezing, fever, body pains and headache associated with the common cold, influenza, acute upper respiratory tract infections and upper respiratory inflammation with allergic component, e.g., allergic rhinitis and sinusitis.","Nervousness, restlessness, insomnia, dizziness, lassitude, muscular weakness, headache, nausea and drowsiness may occur with usual doses of phenylpropanolamine or chlorphenamine maleate.
 Phenylpropanolamine may cause increased blood pressure, tightness of the chest, premature heart contractions and fast heartbeat (tachycardia).
 Antihistamines may cause epigastric distress, diarrhea or constipation, vomiting and hypersensitivity reactions including contact dermatitis.
-Paracetamol is relatively nontoxic in therapeutic doses; however, skin rash, accumulation of fluid in the throat and rarely, serious allergic (anaphylactoid) reactions, blood disorder (agranulocytosis), low white blood cell count (leukopenia) and deficiency of all three cellular components of the blood (red cells, white cells, and platelets), also known as pancytopenia, may occur with large doses.","Adults: 1 tablet
+Paracetamol is relatively nontoxic in therapeutic doses, however, skin rash, accumulation of fluid in the throat and rarely, serious allergic (anaphylactoid) reactions, blood disorder (agranulocytosis), low white blood cell count (leukopenia) and deficiency of all three cellular components of the blood (red cells, white cells, and platelets), also known as pancytopenia, may occur with large doses.","Adults: 1 tablet
 Children 7-12 yrs old: Half tabletAll doses to be taken every 6 hours, or as prescribed by the doctor."
-Clotrimazole,10mg per mL (1%),Topical Solution,Candid-V6 ,"It is used to treat vaginal yeast infections, oral thrush, diaper rash, pityriasis versicolor, and types of ringworm including athlete's foot and jock itch."," The most common side effects of clotrimazole areredness, blistering, peeling, stinging, swelling, itching, hives, or burning at the site of application. Clotrimazole may also cause stomach pain, nausea, vomiting,fever, or foul-smelling discharge (if using the vaginal product).","OralOropharyngeal candidiasis
+Clotrimazole,Topical Solution,Candid-V6 ,"It is used to treat vaginal yeast infections, oral thrush, diaper rash, pityriasis versicolor, and types of ringworm including athlete's foot and jock itch."," The most common side effects of clotrimazole areredness, blistering, peeling, stinging, swelling, itching, hives, or burning at the site of application. Clotrimazole may also cause stomach pain, nausea, vomiting,fever, or foul-smelling discharge (if using the vaginal product).","OralOropharyngeal candidiasis
 Adult: Per lozenge contains 10 mg clotrimazole: Suck 1 lozenge 5 times daily for 14 days. For prevention in patients receiving immunosuppressant therapy: 1 lozenge tid for the immunosuppressant treatment duration.Otic/AuralFungal otitis externa
 Adult: Apply 1% solution to affected area.Topical/CutaneousSkin fungal infections
-Adult: Apply a 1% cream/lotion/solution bid-tid for 2-4 wk, may be used with a 1% powder to prevent reinfection.VaginalVulvovaginal candidiasisAdult: As pessary: 100 mg daily for 6 days, 200 mg daily for 3 days or 500 mg as a single dose; alternatively, apply 1, 2 or 10% cream."
-Colecalciferol,800IU,Soft Gelation Capsule,Forti-D,For the prevention and treatment of vitamin D deficiency,"allergic reactions like skin rash, itching or hives, swelling of the face, lips, or tongue
+Adult: Apply a 1% cream/lotion/solution bid-tid for 2-4 wk, may be used with a 1% powder to prevent reinfection.VaginalVulvovaginal candidiasisAdult: As pessary: 100 mg daily for 6 days, 200 mg daily for 3 days or 500 mg as a single dose, alternatively, apply 1, 2 or 10% cream."
+Colecalciferol,Soft Gelation Capsule,Forti-D,For the prevention and treatment of vitamin D deficiency,"allergic reactions like skin rash, itching or hives, swelling of the face, lips, or tongue
 bone pain
 increased thirst
 increased urination
@@ -93,10 +82,9 @@ dry mouth
 headache
 loss of appetite
 metallic taste
-stomach upset","Applies to the following strength(s): 400 intl units/mL ; 1000 intl units ; 2000 intl units ; 400 intl units ; 5000 intl units ; 50,000 intl units ; 14,000 intl units ; 10,000 intl units/mL ; 4000 intl units ; 5000 intl units/mL ; 400 intl units/0.028 mL ; 2000 intl units/mL ; 1000 intl units/drop ; 10000 intl units ; 25,000 intl units ; 1000 intl units/10 mL"
-D-Alpha Tocopherol,400IU,Capsule,Nature-E,Used for the treatment and prevention of Vitamin E deficiency,"Some research suggests that taking large amounts of a multivitamin plus a separate vitamin E supplement might actually increase the chance of developing prostate cancer in some men. High doses can also cause nausea, diarrhea, stomach cramps, fatigue, weakness, headache, blurred vision, rash, and bruising and bleeding.",
-,300IU,,,,,
-D-Alpha Tocopheryl + Lecithin,400IU + 500mg,Soft Gelatin,Lactezin,"Skin disorders
+stomach upset","Applies to the following strength(s): 400 intl units/mL , 1000 intl units , 2000 intl units , 400 intl units , 5000 intl units , 50,000 intl units , 14,000 intl units , 10,000 intl units/mL , 4000 intl units , 5000 intl units/mL , 400 intl units/0.028 mL , 2000 intl units/mL , 1000 intl units/drop , 10000 intl units , 25,000 intl units , 1000 intl units/10 mL"
+D-Alpha Tocopherol,Capsule,Nature-E,Used for the treatment and prevention of Vitamin E deficiency,"Some research suggests that taking large amounts of a multivitamin plus a separate vitamin E supplement might actually increase the chance of developing prostate cancer in some men. High doses can also cause nausea, diarrhea, stomach cramps, fatigue, weakness, headache, blurred vision, rash, and bruising and bleeding.",
+D-Alpha Tocopheryl + Lecithin,"Soft Gelatin, Capsule",Lactezin,"Skin disorders
 Vitamin e deficiency in premature infants
 Sexual dysfunction
 Non-fatal myocardial infarction 
@@ -122,8 +110,7 @@ Increased salivation
 Skin rashes
 Stomach pain
 Vomiting","Take (2 )two capsules, one in the morning and one at night or as advised by the physicians."
-,200IU + 500mg,Capsule,,,,
-D-Alpha-Tocopheryl Cid Succinate (Vit E) + Korean Ginseng+ Bee Pollen + Pantothenate + Lecithin,150mg + 100mg + 150mg + 30mg + 50mg,Capsule,,"Improve memory
+D-Alpha-Tocopheryl Cid Succinate (Vit E) + Korean Ginseng+ Bee Pollen + Pantothenate + Lecithin,Capsule,,"Improve memory
 Physical stamina
 Stamina
 Gray hair
@@ -170,10 +157,9 @@ Increased salivation
 Skin rashes
 Stomach pain
 Vomiting",
-Dequalinium Chloride,250mg per 5mL,Lozenges,Dequadin (Aspen),"Mouth and throat infections, such as aphthous ulcers, oral thrush and sore throat.","Hypersensitivity to one of the ingredients
+Dequalinium Chloride,Lozenges,"Dequadin (Aspen), Fluomizin (Medinova)","Mouth and throat infections, such as aphthous ulcers, oral thrush and sore throat.","Hypersensitivity to one of the ingredients
 Sore tongue",Do not take more than eight lozenges in 24 hours.
-,,,Fluomizin (Medinova),,,
-Dextramethorphan Hydrobromide + Phenylephrine Hydrochloride + Paracetamol,15mg + 25mg + 325mg,Capsule,Dextrocol,"Temporary relief of coughs and upper respiratory tract symptoms, including nasal congestion, associated with allergy or common cold.","Blurred vision 
+Dextramethorphan Hydrobromide + Phenylephrine Hydrochloride + Paracetamol,Capsule,"Dextrocol, Decolsin ","Temporary relief of coughs and upper respiratory tract symptoms, including nasal congestion, associated with allergy or common cold.","Blurred vision 
 confusion 
 difficulty in urination 
 drowsiness or dizziness 
@@ -213,8 +199,7 @@ Sustained-release: 30 mg orally every 12 hours. Maximum dose: 60 mg/day.
 Capsule, Liquid, Lozenge, Tablet, Syrup: 10 to 30 mg orally every 4 to 8 hours. Sustained-release: 60 mg orally every 12 hours. 
 Oral disintegrating strip: 15 to 30 mg orally every 6 to 8 hours. 
 Maximum dose: 120 mg/day. "
-,,,Decolsin ,,,
-Dextromethorphan Hydrobromide,10mg per 5mL,Syrup,Strepsils,It is a cough suppressant that works by decreasing the feeling of needing to cough.,"drowsiness
+Dextromethorphan Hydrobromide,Syrup,Strepsils,It is a cough suppressant that works by decreasing the feeling of needing to cough.,"drowsiness
 dizziness
 blurred vision
 nausea
@@ -226,8 +211,8 @@ ringing in your ears
 increased sensitivity to sunlight","OralCough suppressant
 
 Adult: As conventional preparation: 10-20 mg 4 hrly, or 30 mg 6-8 hrly. As extended-release preparation: 60 mg 12 hrly. Max: 120 mg daily. As loz: Suck not more than 10 loz daily.
-Child: As conventional preparation: 4-6 yr 2.5-5 mg 4 hrly, or 7.5 mg 6-8 hrly. Max: 30 mg daily; >6-12 yr 5-10 mg 4 hrly, or 15 mg 6-8 hrly. Max: 60 mg daily; >12 yr Same as adult dose. As extended release preparation: 4-6 yr 15 mg 12 hrly. Max: 30 mg daily; >6-12 yr 30 mg 12 hrly. Max: 60 mg daily; >12 yr Same as adult dose. As loz: 6-12 yr Suck not more than 2 loz w/in any 4 hr, Max: 7 loz daily; >12 yr Same as adult dose."
-Dextromethorphan Hydrobromide + Guaifenesin,15mg + 100mg per 5mL,Syrup,,"For the relief of cough associated with common colds, influenza, allergy, and other respiratory infections, particularly for dry, unproductive cough.","Dizziness, drowsiness, nausea, and vomiting may occur. If any of these effects persist or worsen, notify your doctor or pharmacist promptly.","Oral dosage (immediate-release oral tablets, granules, solutions, syrups, suspensions)
+Child: As conventional preparation: 4-6 yr 2.5-5 mg 4 hrly, or 7.5 mg 6-8 hrly. Max: 30 mg daily, >6-12 yr 5-10 mg 4 hrly, or 15 mg 6-8 hrly. Max: 60 mg daily, >12 yr Same as adult dose. As extended release preparation: 4-6 yr 15 mg 12 hrly. Max: 30 mg daily, >6-12 yr 30 mg 12 hrly. Max: 60 mg daily, >12 yr Same as adult dose. As loz: 6-12 yr Suck not more than 2 loz w/in any 4 hr, Max: 7 loz daily, >12 yr Same as adult dose."
+Dextromethorphan Hydrobromide + Guaifenesin,Syrup,,"For the relief of cough associated with common colds, influenza, allergy, and other respiratory infections, particularly for dry, unproductive cough.","Dizziness, drowsiness, nausea, and vomiting may occur. If any of these effects persist or worsen, notify your doctor or pharmacist promptly.","Oral dosage (immediate-release oral tablets, granules, solutions, syrups, suspensions)
 Adults, Adolescents, and Children 12 years and older
 Usual dose range based on dextromethorphan component: 20 mg PO every 4 hours as needed or 30 mg PO every 6 to 8 hours as needed. Maximum: 120 mg/day of dextromethorphan.
 Children 6 to 11 years
@@ -237,13 +222,13 @@ Children 2 to 5 years
 Oral dosage (extended release and biphasic-release tablets)
 Adults, Adolescents, and Children 12 years and older
 Usual dose range: 30 to 60 mg of the dextromethorphan component PO every 12 hours as needed. Do not exceed 2 doses per 24 hours."
-Dichlorobenzyl Alcohol + Amylmetacresol,1.2mg + 600mcg,Lozenges, Muracept,"Dichlorobenzyl Alcohol / Amylmetacresol is used for Sore throat, Throat discomfort, Blocked nose, Mouth infection, Throat infection and other conditions.","Difficulty in breathing
+Dichlorobenzyl Alcohol + Amylmetacresol,Lozenges, Muracept,"Dichlorobenzyl Alcohol / Amylmetacresol is used for Sore throat, Throat discomfort, Blocked nose, Mouth infection, Throat infection and other conditions.","Difficulty in breathing
 Tongue soreness
 Hypersensitivity reactions
 Swelling of the face
 Tongue
 Throat",Avoid more than 8 lozenges in 24 hours
-Diphenhydramin HCl + Phenylpropanolamine HCl,12.5mg + 12.5mg per 5 mL,Syrup,Tuseran Night,"This medicine is used for the relief of cough, clogged nose, runny nose, postnasal drip, sneezing, and itchy and watery eyes associated with the common cold, allergic rhinitis, sinusitis, flu, and other minor respiratory tract infections. It also helps decongest sinus openings and passages.","Flushing
+Diphenhydramin HCl + Phenylpropanolamine HCl,Syrup,"Tuseran Night, Allerin","This medicine is used for the relief of cough, clogged nose, runny nose, postnasal drip, sneezing, and itchy and watery eyes associated with the common cold, allergic rhinitis, sinusitis, flu, and other minor respiratory tract infections. It also helps decongest sinus openings and passages.","Flushing
 Tachycardia
 Blurred vision
 Delirium
@@ -255,24 +240,21 @@ Children 2 to 6 years old – 2.5mL(½ teaspoonful)
 Children 7 to 12 years old – 5mL (1 teaspoonful)
 
 Adults and Children over 12 years – 10mL (2 teaspoonful)"
-,,,Allerin,,,
-Extract Cepae + Heparin Sodium + Allantoin,10g + 5000IU +1g,Gel,Contractubex,"Hypertrophic and keloidal scars, movement-restricting and cosmetically disfiguring scars from operations, amputations, burns & accidents; contractures e.g., Dupuytren's contracture & traumatic tendon contracture, cicatricial strictures.","Rarely, local skin reactions.","Massage into the scar tissue several times daily until complete penetration. In the case of hard, old scars. It may be allowed to take effect overnight under a dressing."
-Famotidine + Calcium Carbonate + Magnesium Hydroxide,10mg + 800mg + 165mg,Chewable Tablet,KREMIL- S ADVANCE,"It is used to treat heartburn and sour stomach.
-For the treatment and prevention of Vitamin C deficiency.","Signs of an allergic reaction, like rash; hives; itching; red, swollen, blistered, or peeling skin with or without fever; wheezing; tightness in the chest or throat; trouble breathing or talking; unusual hoarseness; or swelling of the mouth, face, lips, tongue, or throat.","Heartburn/Indigestion
+Extract Cepae + Heparin Sodium + Allantoin,Gel,Contractubex,"Hypertrophic and keloidal scars, movement-restricting and cosmetically disfiguring scars from operations, amputations, burns & accidents, contractures e.g., Dupuytren's contracture & traumatic tendon contracture, cicatricial strictures.","Rarely, local skin reactions.","Massage into the scar tissue several times daily until complete penetration. In the case of hard, old scars. It may be allowed to take effect overnight under a dressing."
+Famotidine + Calcium Carbonate + Magnesium Hydroxide,Chewable Tablet,KREMIL- S ADVANCE,"It is used to treat heartburn and sour stomach.
+For the treatment and prevention of Vitamin C deficiency.","Signs of an allergic reaction, like rash, hives, itching, red, swollen, blistered, or peeling skin with or without fever, wheezing, tightness in the chest or throat, trouble breathing or talking, unusual hoarseness, or swelling of the mouth, face, lips, tongue, or throat.","Heartburn/Indigestion
 
 <12 years
 Safety & efficacy not established
 >12 years
-Chew 1 tablet completely, then swallow; do not exceed 2 tablets/24 hr"
-Ferrous Gluconate + Vitamins & Minerals,,Capsule,,"For the treatment of a wide range anemias; iron deficiency anemial anemia during pregnancy, growth, convalescence and senility; megaloblastic and macrocytic heyperchromic anemia; alimentary anemia; prohpylaxis against anemia in blood donors.","Constipation, diarrhea, stomach cramps, or upset stomach may occur. These effects are usually temporary and may disappear as your body adjusts to this medication. If any of these effects persist or worsen, contact your doctor or pharmacist promptly.
+Chew 1 tablet completely, then swallow, do not exceed 2 tablets/24 hr"
+Ferrous Gluconate + Vitamins & Minerals,Capsule,,"For the treatment of a wide range anemias, iron deficiency anemial anemia during pregnancy, growth, convalescence and senility, megaloblastic and macrocytic heyperchromic anemia, alimentary anemia, prohpylaxis against anemia in blood donors.","Constipation, diarrhea, stomach cramps, or upset stomach may occur. These effects are usually temporary and may disappear as your body adjusts to this medication. If any of these effects persist or worsen, contact your doctor or pharmacist promptly.
 Iron may cause your stools to turn black, an effect that is not harmful.","Capsule: 1-2 caps daily during or after meals, unless otherwise prescribed by the physician."
-Ferrous Sulfate,325mg,Tablet,Anemifer,"Ferrous sulfate provides the iron needed by the body to produce red blood cells. It is used to treat or prevent iron-deficiency anemia, a condition that occurs when the body has too few red blood cells because of pregnancy, poor diet, excess bleeding, or other medical problems.","Ferrous sulfate may cause side effects. Your stools will turn dark; this effect is harmless. Your teeth may stain from the liquid; mix each dose with water or fruit juice. You may clean your teeth once a week by rubbing them with a small amount of baking soda.
+Ferrous Sulfate,Tablet,"Anemifer, Ferglobin, Ferosal","Ferrous sulfate provides the iron needed by the body to produce red blood cells. It is used to treat or prevent iron-deficiency anemia, a condition that occurs when the body has too few red blood cells because of pregnancy, poor diet, excess bleeding, or other medical problems.","Ferrous sulfate may cause side effects. Your stools will turn dark, this effect is harmless. Your teeth may stain from the liquid, mix each dose with water or fruit juice. You may clean your teeth once a week by rubbing them with a small amount of baking soda.
 Tell your doctor if either of these symptoms is severe or does not go away:
 constipation
-stomach upset",Applies to the following strength(s): 300 mg/5 mL ; 300 mg ; 160 mg ; (as elemental iron) 45 mg ; 525 mg ; 195 mg ; 325 mg ; (as elemental iron) 15 mg/mL ; 75 mg/0.6 mL ; 90 mg/5 mL ; 190 mg ; 250 mg ; 220 mg/5 mL ; 159 mg ; 324 mg ; (as elemental iron) 15 mg/1.5 mL ; 200 mg
-,,,Ferglobin,,,
-,,,Ferosal,,,
-Fusidic Acid,50mg per mL; 2%,SuspensionCream,Fucid,Fusidic acid belongs to a class of medications known as antibiotics. It is used to treat various skin infections caused by certain kinds of bacteria. Such infectionsmay include impetigo and secondary infections (infections that develop after the skin has been injured) to burns or broken skin.,"allergic reaction at the site of application, including redness, swelling, rash, and/or itching
+stomach upset","Applies to the following strength(s): 300 mg/5 mL , 300 mg , 160 mg , (as elemental iron) 45 mg , 525 mg , 195 mg , 325 mg , (as elemental iron) 15 mg/mL , 75 mg/0.6 mL , 90 mg/5 mL , 190 mg , 250 mg , 220 mg/5 mL , 159 mg , 324 mg , (as elemental iron) 15 mg/1.5 mL , 200 mg"
+Fusidic Acid,SuspensionCream,"Fucid, Fucidin, Fusidane, Fuson, Sofinox, Stafoban, Woncare ",Fusidic acid belongs to a class of medications known as antibiotics. It is used to treat various skin infections caused by certain kinds of bacteria. Such infectionsmay include impetigo and secondary infections (infections that develop after the skin has been injured) to burns or broken skin.,"allergic reaction at the site of application, including redness, swelling, rash, and/or itching
 mild irritation at area of application
 pain (only when medication is applied to deep leg ulcers)","For oral dosage form (tablets):
 Osteomyelitis (bone and joint infections) or skin and soft tissue infections:
@@ -280,18 +262,12 @@ Adults—500 mg (2 tablets) three times daily
 For oral dosage form (suspension):
 Osteomyelitis (bone and joint infections) or skin and soft tissue infections:
 Adults—15 milliliters three times daily
-Children—Up to 1 year of age: 1 milliliter (mL) per kilogram DAILY divided into 3 equal doses; 1 to 5 years of age is 5 mL three times daily; 6 to 12 years of age is 10 mL three times daily.
+Children—Up to 1 year of age: 1 milliliter (mL) per kilogram DAILY divided into 3 equal doses, 1 to 5 years of age is 5 mL three times daily, 6 to 12 years of age is 10 mL three times daily.
 For injection dosage form:
 Osteomyelitis (bone and joint infections) or skin and soft tissue infections:
 Adults—500 milligrams three times daily
 Children—Up to 1 year of age to 12 years: 20 milligrams/kilogram DAILY divided into 3 equal doses, infused over at least 2 hours."
-,,,Fucidin,,,
-,,,Fusidane,,,
-,,,Fuson,,,
-,,,Sofinox,,,
-,,,Stafoban,,,
-,,,Woncare ,,,
-Glutamic Acid + Dicalcium Phosphate + Thiamine Hydrocloride + Cyanocobalamin,325mg + 200mg + 5mg + 10mcg,Tablet,Glutaphos,For the prevention and treatment of vitamin B deficiencies.,"Itching
+Glutamic Acid + Dicalcium Phosphate + Thiamine Hydrocloride + Cyanocobalamin,Tablet,Glutaphos,For the prevention and treatment of vitamin B deficiencies.,"Itching
 Stomach upset
 Constipation
 Pulmonary edema
@@ -299,7 +275,7 @@ Congestive heart failure
 Polycythemia vera
 Diarrhea
 Feeling of swelling of entire body",Adult and child over 12 years of age: 1-2 tablets thrice a day
-Guaifenesin,200mg,Soft Gelatin Capsule,Benadryl Expectorant,"Guaifenesin is an expectorant. It helps loosen congestion in your chest and throat, making it easier to cough out through your mouth. Guaifenesin is used to reduce chest congestion caused by the common cold, infections, or allergies. Guaifenesin may also be used for purposes not listed in this medication guide.","Diarrhea
+Guaifenesin,Soft Gelatin Capsule,"Benadryl Expectorant, Mucinex, Guiamed, Robitussin ","Guaifenesin is an expectorant. It helps loosen congestion in your chest and throat, making it easier to cough out through your mouth. Guaifenesin is used to reduce chest congestion caused by the common cold, infections, or allergies. Guaifenesin may also be used for purposes not listed in this medication guide.","Diarrhea
 dizziness
 headache
 hives
@@ -308,27 +284,23 @@ skin rash
 stomach pain","Immediate release formulation: 200 to 400 mg orally every 4 hours as needed, not to exceed 2.4 g/daySustained release formulation: 600 to 1200 mg orally every 12 hours, not to exceed 2.4 g/day
 
 Immediate release formulation:less than 2 years: 12 mg/kg/day orally in 6 divided doses2 to 5 years: 50 to 100 mg orally every 4 hours as needed, not to exceed 600 mg/day6 to 11 years: 100 to 200 mg orally every 4 hours as needed, not to exceed 1.2 g/day12 years or older: 200 to 400 mg orally every 4 hours as needed, not to exceed 2.4 g/daySustained release formulation:2 to 5 years: 300 mg orally every 12 hours, not to exceed 600 mg/day6 to 11 years: 600 mg orally every 12 hours, not to exceed 1.2 g/day12 years or older: 600 to 1200 mg orally every 12 hours, not to exceed 2.4 g/day"
-,,,Mucinex,,,
-,,,Guiamed,,,
-,,,Robitussin ,,,
-Hexetidine,0.10%,Tablet,Bactidol ,"Hexetidine is the medicinal ingredient in Sterisol, which is labelled for the symptomatic treatment of: streptococcal pharyngitis ('strep throat'), tonsillitis, pharyngitis, laryngitis, gingivitis, ulcerative stomatitis, oral thrush and Vincent's angina; postoperative hygiene following tonsillectomy, throat or oral surgery.","Irritation of the mouth or tongue (soreness, burning sensation or itching).
+Hexetidine,Tablet,Bactidol ,"Hexetidine is the medicinal ingredient in Sterisol, which is labelled for the symptomatic treatment of: streptococcal pharyngitis ('strep throat'), tonsillitis, pharyngitis, laryngitis, gingivitis, ulcerative stomatitis, oral thrush and Vincent's angina, postoperative hygiene following tonsillectomy, throat or oral surgery.","Irritation of the mouth or tongue (soreness, burning sensation or itching).
 Alteration in taste.
 Temporary numbness of the mouth.","ADULTS & CHILDREN above 6 yrs. old:Rinse mouth or gargle 15 mL- 20 mL of undiluted solution for 30 seconds. Use morning and evening, or as directed by the doctor."
-Hyoscine-N-Butylbromide,10mg,Tablet ,Pasbutyl,"Hyoscine-N-butylbromide is an antispasmodic drug used to treat conditions associated with spasms of the gastrointestinal tract, such as cramping. It can also be used in combination with other drugs to relieve painful menstruation.","Side-effects are uncommon, but can include a dry mouth and dry skin.","Adults: 10-20 mg 3-4 times daily with a maximum daily dose of 100 mg.
+Hyoscine-N-Butylbromide,Tablet ,"Pasbutyl, Hyospan","Hyoscine-N-butylbromide is an antispasmodic drug used to treat conditions associated with spasms of the gastrointestinal tract, such as cramping. It can also be used in combination with other drugs to relieve painful menstruation.","Side-effects are uncommon, but can include a dry mouth and dry skin.","Adults: 10-20 mg 3-4 times daily with a maximum daily dose of 100 mg.
 Children: 1-3 months: 1.5 mg 3 times a day
 3-12 months: 2.5-5 mg 3 times a day
 1-3 years: 5-10 mg 3 times a day
 3-6 years: 10 mg 3 times a day
 6-12 years: 10-20 mg 3 times a day"
-,,,Hyospan,,,
-Hyoscine-N-Butylbromide + Paracetamol,10mg + 500mg,Film-Coated Tablet,Buscopan Venus,Relief of pain from severe abdominal cramps including menstrual cramps and urinary tract spasm.,"Blood and Lymphatic System Disorders: Pancytopenia, agranulocytosis, thrombocytopenia, leukopenia.
+Hyoscine-N-Butylbromide + Paracetamol,Film-Coated Tablet,Buscopan Venus,Relief of pain from severe abdominal cramps including menstrual cramps and urinary tract spasm.,"Blood and Lymphatic System Disorders: Pancytopenia, agranulocytosis, thrombocytopenia, leukopenia.
 Immune System Disorders, Skin and Subcutaneous Tissue Disorders: Skin reactions, dyshidrosis, pruritus, urticaria, nausea, erythema, decreased blood pressure including shock, anaphylactic shock, anaphylactic reactions, drug eruption, dyspnea, hypersensitivity, angioedema, rash, exanthema.
 Cardiac Disorders: Tachycardia.
 Respiratory, Thoracic and Mediastinal Disorders: Bronchospasm (especially in patients with a history of bronchial asthma or allergy).
 Gastrointestinal Disorders: Dry mouth.
 Hepatobiliary Disorders: Increased transaminases.
 Renal and Urinary Disorders: Urinary retention.",
-Ibuprofen,200mg,Orally Disintegrating Tablet,Advil,"Ibuprofen is suited for the treatment of pain, in particular of pain related to the musculoskeletal system, but also headaches, postoperative pain, dysmenorrhea, etc. It also has antipyretic action. Pain accompanying arthrosis can be reduced and the mobility of the joints can be increased. In the case of chronic rheumatoid arthritis, ibuprofen reduces pain, joint swelling and morning stiffness, and it improves the functionality of the joints. Ibuprofen has been used successfully for other rheumatoid diseases such as spondylitis ankylosans (Bechterew disease), juvenile rheumatoid arthritis, and acute gout seizures. ","Abdominal pain
+Ibuprofen,Orally Disintegrating Tablet,"Advil, Alaxan, Medicol","Ibuprofen is suited for the treatment of pain, in particular of pain related to the musculoskeletal system, but also headaches, postoperative pain, dysmenorrhea, etc. It also has antipyretic action. Pain accompanying arthrosis can be reduced and the mobility of the joints can be increased. In the case of chronic rheumatoid arthritis, ibuprofen reduces pain, joint swelling and morning stiffness, and it improves the functionality of the joints. Ibuprofen has been used successfully for other rheumatoid diseases such as spondylitis ankylosans (Bechterew disease), juvenile rheumatoid arthritis, and acute gout seizures. ","Abdominal pain
 acid or sour stomach
 belching
 bloating
@@ -358,7 +330,7 @@ vomiting
 weight gain
 Abdominal cramps
 stomach soreness or discomfort","Usual Adult Dose for Dysmenorrhea
-200 to 400 mg orally every 4 to 6 hours as neededMaximum dose: 3200 mg/day (prescription strength); 1200 mg/day (over-the-counter)
+200 to 400 mg orally every 4 to 6 hours as neededMaximum dose: 3200 mg/day (prescription strength), 1200 mg/day (over-the-counter)
 
 Usual Adult Dose for Osteoarthritis
 1200 to 3200 mg orally per day in divided dosesMaximum dose: 3200 mg/day
@@ -367,13 +339,11 @@ Usual Adult Dose for Rheumatoid Arthritis
 1200 to 3200 mg orally per day in divided dosesMaximum dose: 3200 mg/day
 
 Usual Adult Dose for Pain
-Oral:200 to 400 mg orally every 4 to 6 hours as neededMaximum dose: 3200 mg/day (prescription strength); 1200 mg/day (over-the-counter)
+Oral:200 to 400 mg orally every 4 to 6 hours as neededMaximum dose: 3200 mg/day (prescription strength), 1200 mg/day (over-the-counter)
 
 Usual Adult Dose for Fever
 Oral:Initial dose: 200 mg orally every 4 to 6 hours-May increase to 400 mg every 4 to 6 hours if additional relief is neededMaximum dose: 1200 mg/day"
-,,,Alaxan,,,
-,,,Medicol,,,
-Ibuprofen + Paracetamol,325mg + 200mg,Tablet,Dolan FP,"For the temporary relief of mild to moderate pain associated with migraine, headache, backache, period pain, dental pain, rheumatic and muscular pain, pain of non-serious arthritis, cold and flu symptoms, sore throat and fever.","Skin rash
+Ibuprofen + Paracetamol,Tablet,"Dolan FP, Cortal Pain, Alaxan/Alaxan FR, Restolax, Medicol Advance, Advil,","For the temporary relief of mild to moderate pain associated with migraine, headache, backache, period pain, dental pain, rheumatic and muscular pain, pain of non-serious arthritis, cold and flu symptoms, sore throat and fever.","Skin rash
 Itching
 Bleeding from the skin or nose
 Abdominal pain
@@ -403,21 +373,10 @@ Liver toxicity
 Less white blood cells
 Acute renal tubular necrosis
 Blood dyscrasias",Adult: PO Per tab contains ibuprofen 400 mg and paracetamol 325/500 mg: 1 tab 3-4 times/day. 
-,,,Cortal Pain,,,
-,,,Alaxan/Alaxan FR,,,
-,,,Restolax,,,
-,,,Medicol Advance,,,
-,,,Advil,,,
-Iron + Vitamin B Complex,,Oral Solution,,For the treatment and prevention of iron deficiency and nutritional anemias and also for Vitamin B complex deficiency.,"Constipation, diarrhea, or upset stomach may occur. These effects are usually temporary and may disappear as your body adjusts to this medication. If any of these effects persist or worsen, contact your doctor or pharmacist promptly.
+Iron + Vitamin B Complex,Oral Solution,,For the treatment and prevention of iron deficiency and nutritional anemias and also for Vitamin B complex deficiency.,"Constipation, diarrhea, or upset stomach may occur. These effects are usually temporary and may disappear as your body adjusts to this medication. If any of these effects persist or worsen, contact your doctor or pharmacist promptly.
 Iron may cause your stools to turn black, an effect that is not harmful.",
-Loperamide Hydrochloride,2mg,Capsule ,Diatabs,Used for the symptomatic relief of acute and chronic diarrhea. Helps control symptoms of diarrhea associated with bowel disorders.,"Dry mouth, abdominal pain, distention or discomfort, nausea, vomiting, flatulence, dyspepsia, and constipation. Rarely, drowsiness or dizziness and urinary retention.","Adutls & children above 12 yrs old:(Acute diarrhea) Take 2 capsules initially, followed by 1 capsule after each loose or watery stool,or as directed by a doctor. Maximum dose of 16 mg (8 capsules) per day. Do not use for more than 5 days. Discontinue if there is no improvement after 2 days.(Chronic diarrhea) Take 2 capsules initially followed by 1 capsule after each loose bowel movement until 1 to 2 solid stools per day is obtained. Maximum dose of 16 mg (8 capsules) per day. If symptoms persist, consult the doctor."
-,,,Lomotil,,,
-,,,Lorban,,,
-,,,Imodium,,,
-,,,Lopran,,,
-,,,Lormide,,,
-,,,RiteMed Loperamide,,,
-Loratadine,10mg,Orally Disintegrating Tablet,Allerta Syrup,"Loratadine is indicated for the symptomatic relief of allergy such as hay fever (allergic rhinitis), urticaria (hives), chronic idiopathic urticaria, and other skin allergies. For allergic rhinitis (hay fever), loratadine is effective for both nasal and eye symptoms: sneezing, runny nose, itchy or burning eyes.","headache,
+Loperamide Hydrochloride,Capsule ,"Diatabs, Lomotil, Lorban, Imodium, Lopran, Lormide, RiteMed Loperamide,",Used for the symptomatic relief of acute and chronic diarrhea. Helps control symptoms of diarrhea associated with bowel disorders.,"Dry mouth, abdominal pain, distention or discomfort, nausea, vomiting, flatulence, dyspepsia, and constipation. Rarely, drowsiness or dizziness and urinary retention.","Adutls & children above 12 yrs old:(Acute diarrhea) Take 2 capsules initially, followed by 1 capsule after each loose or watery stool,or as directed by a doctor. Maximum dose of 16 mg (8 capsules) per day. Do not use for more than 5 days. Discontinue if there is no improvement after 2 days.(Chronic diarrhea) Take 2 capsules initially followed by 1 capsule after each loose bowel movement until 1 to 2 solid stools per day is obtained. Maximum dose of 16 mg (8 capsules) per day. If symptoms persist, consult the doctor."
+Loratadine,Orally Disintegrating Tablet,"Allerta Syrup, Claritin, Loratyne, RiteMed Loratadin,e Allerta Tablet, Lorange, Prevahist, Zylohist ,","Loratadine is indicated for the symptomatic relief of allergy such as hay fever (allergic rhinitis), urticaria (hives), chronic idiopathic urticaria, and other skin allergies. For allergic rhinitis (hay fever), loratadine is effective for both nasal and eye symptoms: sneezing, runny nose, itchy or burning eyes.","headache,
 sleepiness,
 feeling tired,
 drowsiness,
@@ -432,67 +391,32 @@ eye redness,
 blurred vision,
 nosebleed, or
 skin rash.",10 mg orally once a day-Maximum dose: 10 mg/day
-,,,Claritin,,,
-,,,Loratyne,,,
-,,,RiteMed Loratadine,,,
-,,,Allerta Tablet,,,
-,,,Lorange,,,
-,,,Prevahist,,,
-,,,Zylohist ,,,
-Meclizine Hydrochloride,25mg,Chewable Tablet,Dizitab ,"For the prevention and treatment of nausea, vomiting, or vertigo (dizziness) due to motion sickness.","Blurred vision, fatigue, dry mouth, and drowsiness.","Adults & children 12 yrs old & above: 1-2 tablets once a day, one hour before travel.Children 6-12 yrs. old: Half tablet once a day, one hour before travel.Tablets may be chewed then swallowed without water, or swallowed whole with water."
-Mefenamic Acid,250mg,Film-Coated Tablet,Afligec,Mefenamic acid is used for the short-term treatment of mild to moderate pain from various conditions. It is also used to decrease pain and blood loss from menstrual periods.,"Upset stomach, nausea, heartburn, dizziness, drowsiness, diarrhea, and headache may occur. If any of these effects persist or worsen, notify your doctor or pharmacist promptly.",Initial dose: 500 mg orally onceFollowing initial dose: 250 mg orally every 6 hours as neededDuration of therapy: Usually not to exceed 1 week
-,,,Arthran,,,
-,,,Gardan,,,
-,,,Istan,,,
-,,,Metaflam 250/500,,,
-,,,Analcid,,,
-,,,Fenamax,,,
-,,,Gisfen,,,
-,,,Mefenax,,,
-,,,Ponser ,,,
-Mometasone Furoate,1mg per gram (0.1%),Ointment ,Elica,Mometasone Furoate Cream USP is a medium potency corticosteroid indicated for the relief of the inflammatory and pruritic manifestations of corticosteroid-responsive dermatoses.,"blurred vision, or seeing halos around lights;
-mood changes;
-sleep problems (insomnia);
-weight gain, puffiness in your face; or
+Meclizine Hydrochloride,Chewable Tablet,"Dizitab ,","For the prevention and treatment of nausea, vomiting, or vertigo (dizziness) due to motion sickness.","Blurred vision, fatigue, dry mouth, and drowsiness.","Adults & children 12 yrs old & above: 1-2 tablets once a day, one hour before travel.Children 6-12 yrs. old: Half tablet once a day, one hour before travel.Tablets may be chewed then swallowed without water, or swallowed whole with water."
+Mefenamic Acid,Film-Coated Tablet,"Afligec, Arthran, Gardan, Istan, Metaflam 250/500, Analcid, Fenamax, Gisfen, Mefenax, Ponser ,",Mefenamic acid is used for the short-term treatment of mild to moderate pain from various conditions. It is also used to decrease pain and blood loss from menstrual periods.,"Upset stomach, nausea, heartburn, dizziness, drowsiness, diarrhea, and headache may occur. If any of these effects persist or worsen, notify your doctor or pharmacist promptly.",Initial dose: 500 mg orally onceFollowing initial dose: 250 mg orally every 6 hours as neededDuration of therapy: Usually not to exceed 1 week
+Mometasone Furoate,Ointment ,"Elica, Lomeane, Allerta Dermatec, Momecort, Mosaspray,",Mometasone Furoate Cream USP is a medium potency corticosteroid indicated for the relief of the inflammatory and pruritic manifestations of corticosteroid-responsive dermatoses.,"blurred vision, or seeing halos around lights,
+mood changes,
+sleep problems (insomnia),
+weight gain, puffiness in your face, or
 muscle weakness, feeling tired.
-mild skin rash, itching, burning, redness, or dryness;
-thinning or softening of your skin;
-skin rash or irritation around your mouth;
-swollen hair follicles;
-spider veins;
-numbness or tingling;
-changes in color of treated skin;
-blisters, pimples, or crusting of treated skin; or
+mild skin rash, itching, burning, redness, or dryness,
+thinning or softening of your skin,
+skin rash or irritation around your mouth,
+swollen hair follicles,
+spider veins,
+numbness or tingling,
+changes in color of treated skin,
+blisters, pimples, or crusting of treated skin, or
 stretch marks.","Apply a thin film of Mometasone Furoate Cream USP to the affected skin areas once daily. Mometasone Furoate Cream USP may be used in pediatric patients 2 years of age or older. Since safety and efficacy of Mometasone Furoate Cream USP have not been adequately established in pediatric patients below 2 years of age, its use in this age group is not recommended."
-,,,Lomeane,,,
-,,,Allerta Dermatec,,,
-,,,Momecort,,,
-,,,Mosaspray,,,
-Multivitamins,,Film-Coated Tablet,Conzace,For the prevention and treatment of vitamin deficiencies and as nutritional supplement.,"Signs of an allergic reaction, like rash; hives; itching; red, swollen, blistered, or peeling skin with or without fever; wheezing; tightness in the chest or throat; trouble breathing or talking; unusual hoarseness; or swelling of the mouth, face, lips, tongue, or throat.","Use exactly as directed on the label, or as prescribed by your doctor. Do not use in larger or smaller amounts or for longer than recommended."
-,,,Enervon,,,
-,,,Enervon Activ,,,
-,,,Maxvit ,,,
-,,,Nutroplex,,,
-,,,Vigor-Ace,,,
-,,,Revicon Forte,,,
-Naproxen Sodium,550mg,Film-Coated Tablet,Flanax,"For the treatment of mild to moderate pain (headache, toothache, backache) and primary dysmenorrhea; for the symptomatic treatment of rheumatoid arthritis, osteoarthritis, ankylosing, spondylitis, tendonitis, bursitis, acute gout.","Upset stomach, nausea, heartburn, headache, drowsiness, or dizziness may occur. If any of these effects persist or worsen, tell your doctor or pharmacist promptly.",
-,,,Skelan,,,
-Orlistat,120mg,Capsule,Alli,Used together with dietary modification in the management of obesity in patients with a BMI of 30kg/m2 or greater. It may also be used in overweight with a BMI of 27kg/m2 or more if there are associated risk factors.,"Changes in your bowel function
+Multivitamins,Film-Coated Tablet,"Conzace, Enervon, Enervon Activ, Maxvit , Nutroplex, Vigor-Ace, Revicon Forte,",For the prevention and treatment of vitamin deficiencies and as nutritional supplement.,"Signs of an allergic reaction, like rash, hives, itching, red, swollen, blistered, or peeling skin with or without fever, wheezing, tightness in the chest or throat, trouble breathing or talking, unusual hoarseness, or swelling of the mouth, face, lips, tongue, or throat.","Use exactly as directed on the label, or as prescribed by your doctor. Do not use in larger or smaller amounts or for longer than recommended."
+Naproxen Sodium,Film-Coated Tablet,"Flanax, Skelan,","For the treatment of mild to moderate pain (headache, toothache, backache) and primary dysmenorrhea, for the symptomatic treatment of rheumatoid arthritis, osteoarthritis, ankylosing, spondylitis, tendonitis, bursitis, acute gout.","Upset stomach, nausea, heartburn, headache, drowsiness, or dizziness may occur. If any of these effects persist or worsen, tell your doctor or pharmacist promptly.",
+Orlistat,Capsule,"Alli, Xenical,",Used together with dietary modification in the management of obesity in patients with a BMI of 30kg/m2 or greater. It may also be used in overweight with a BMI of 27kg/m2 or more if there are associated risk factors.,"Changes in your bowel function
 Fatty/oily stool, oily spotting, intestinal gas with discharge, a feeling of needing to have a bowel movement right away, increased number of bowel movements, or poor bowel control may occur.
 Symptoms of liver disease (such as persistent nausea/vomiting, severe stomach/abdominal pain, dark urine, yellowing eyes/skin), symptoms of kidney stones (such as back pain, pain when urinating, pink/bloody urine).","120 mg orally three times a day with each main meal containing fat. The dose may be taken during the meal or within 1 hour of completing the meal.
 
 12 years or older:120 mg orally three times a day with each main meal containing fat. The dose may be taken during the meal or within 1 hour of completing the meal."
-,,,Xenical ,,,
-Paracetamol,250mg per 5mL,Suspension,Biogesic,"Paracetamol Indications. Paracetamol has good analgesic and antipyretic properties. It is suitable for the treatment of pains of all kinds (headaches, dentalpain, postoperative pain, pain in connection with colds, post-traumatic muscle pain).","Stop using this medication and call your doctor at once if you have a serious side effect such as: low fever with nausea, stomach pain, and loss of appetite; dark urine, clay-colored stools; or. jaundice (yellowing of the skin or eyes).",The usual dose for adults is one or two 500mg tablets up to 4 times in 24 hours.
-,,,Calpol,,,
-,,,Panadol,,,
-,,,Tempra,,,
-Povidone – Iodine,10.00%,Solution ,Betadine Ophthalmic Solution,"Povidone-iodine (PVP-I), also known as iodopovidone, is an antiseptic used for skin disinfection before and after surgery. It may be used both to disinfect the skin of the patient and the hands of the healthcare providers. It may also be used for minor wounds.","Signs of an allergic reaction, like rash; hives; itching; red, swollen, blistered, or peeling skin with or without fever; wheezing; tightness in the chest or throat; trouble breathing or talking; unusual hoarseness; or swelling of the mouth, face, lips, tongue, or throat.
+Paracetamol,Suspension,"Biogesic, Calpol, Panadol, Tempra,","Paracetamol Indications. Paracetamol has good analgesic and antipyretic properties. It is suitable for the treatment of pains of all kinds (headaches, dentalpain, postoperative pain, pain in connection with colds, post-traumatic muscle pain).","Stop using this medication and call your doctor at once if you have a serious side effect such as: low fever with nausea, stomach pain, and loss of appetite, dark urine, clay-colored stools, or. jaundice (yellowing of the skin or eyes).",The usual dose for adults is one or two 500mg tablets up to 4 times in 24 hours.
+Povidone – Iodine,Solution ,"Betadine Ophthalmic Solution, Betadine , Betadine Aerosol Spray, Clinidine, Povidine,","Povidone-iodine (PVP-I), also known as iodopovidone, is an antiseptic used for skin disinfection before and after surgery. It may be used both to disinfect the skin of the patient and the hands of the healthcare providers. It may also be used for minor wounds.","Signs of an allergic reaction, like rash, hives, itching, red, swollen, blistered, or peeling skin with or without fever, wheezing, tightness in the chest or throat, trouble breathing or talking, unusual hoarseness, or swelling of the mouth, face, lips, tongue, or throat.
 Very bad skin irritation.
 Redness.","7.5%
 10%"
-,,,Betadine ,,,
-,,,Betadine Aerosol Spray,,,
-,,,Clinidine,,,
-,,,Povidine,,,
-Pyrantel embonate,125mg,Tablet,,For the treatment of ascariasis (common round worm infection) and enterobiasis (pinworm infection),"Nausea, vomiting, diarrhea, stomach/abdominal cramps, headache, drowsiness, dizziness, trouble sleeping, or loss of appetite may occur. If any of these effects persist or worsen, tell your doctor or pharmacist promptly.",
+Pyrantel embonate,Tablet,,For the treatment of ascariasis (common round worm infection) and enterobiasis (pinworm infection),"Nausea, vomiting, diarrhea, stomach/abdominal cramps, headache, drowsiness, dizziness, trouble sleeping, or loss of appetite may occur. If any of these effects persist or worsen, tell your doctor or pharmacist promptly.",
