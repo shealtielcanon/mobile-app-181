@@ -101,7 +101,13 @@ function setAlarm(date, current_row, setMode) {
     dur_times = array_row[4];
 
     var alrmhr = date.getHours() + (dur_h*1);
-    var alrmmin = date.getMinutes() + (dur_m*1);
+    if(setMode=='sn') {
+        var alrmmin = date.getMinutes() + 5;
+    }
+    else {
+        var alrmmin = date.getMinutes() + (dur_m*1);
+    }
+    
 
     while(alrmmin>=60) {
         alrmmin = alrmmin - 60;
