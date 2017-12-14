@@ -4,41 +4,35 @@
 
 #body {
 
-	background-color:#57B4FF;
+	background-color:#FFFFFF;
 
 
 	}
 
-#doctor1 {
 
-	display: inline-block;
-	bottom: 0px;
-	right: 500px;
-	max-width: 100%;
-	overflow-x: auto;
-   
-
-	}
 
 #convo1 {
 
+	position: relative;
+	margin: 0 auto;
 	display: block;
-    margin: auto;
 	max-width: 100%;
-	overflow-x: auto;
+	width: 800px;
+	overflow-x: hidden;
+	
    
 
     }
 #button1 {
-	  position: fixed;
- 	  top: 33%;
-      left: 60%;
-      margin-top: -92px;
-      margin-left: -225px;
-	  width: 200px;
-	  height: 50px;
+	  position: relative;
+ 	  top:10px;
+      left: 43%;
+      
+	  width: 30%;
+	  height: 30%;
+	  max-width: 100%;
 	  display: block;
-	  font-size: 25px;
+	  font-size: 20px;
 	  font-weight: bold;
 	  font-style: ubuntu bold;
 	  cursor: pointer;
@@ -64,15 +58,16 @@
 
 #button2 {
 	  position: relative;
-      margin-top: 30px;
-      margin  : 25px auto;
-    display : block;
-      align-content: center;
-      width: 300px;
-
+ 	  top: 100px;
+      margin: 25px auto;
+      display: block;
+      align-content: center; 
+     
+      width: 70%;
+      max-width: 100%;
+	  height: 30px;
 	  
-	  padding: 15px 25px;
-	  font-size: 30px;
+	  font-size: 20px;
 	  font-weight: bold;
 	  font-style: arial bold;
 	  cursor: pointer;
@@ -114,17 +109,23 @@
 
 #divregheader{
 
-	background-color:#525263;
-
-
+	background-color: #2F597A;
 }
+
+
+
+#registerbody {
+
+	background-color: #366F9C;
+ 
+	}
 
 #loginform {
 
 	color: white;
 }
 
-textarea#eventdesc {
+textarea#styled {
 	width: 97%;
 	height: 200px;
 	border: 7px solid #537190;
@@ -156,15 +157,15 @@ label {
 	
 }
 
-#eventname, #addeventinput1{
+#addeventinput1{
 	font-family:"Lato", Calibri, Arial, sans-serif;
 	color: black;
 	font-weight: bold;
+	display: block;
 	height: 29px;
     position: relative;
     top: 130px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     display: inline-block;
    
 
@@ -172,7 +173,7 @@ label {
 
 }
 .addevent1{
-	
+
 	font-family:"Lato", Calibri, Arial, sans-serif;
     border: 1px solid #B5C9D4;
     padding: 8px 10px;
@@ -195,55 +196,6 @@ label {
 }
 
 
-.addbutton{
-	-moz-box-shadow:inset -1px 2px 0px 0px #dcecfb;
-	-webkit-box-shadow:inset -1px 2px 0px 0px #dcecfb;
-	box-shadow:inset -1px 2px 0px 0px #dcecfb;
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bddbfa), color-stop(1, #80b5ea));
-	background:-moz-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
-	background:-webkit-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
-	background:-o-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
-	background:-ms-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
-	background:linear-gradient(to bottom, #bddbfa 5%, #80b5ea 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bddbfa', endColorstr='#80b5ea',GradientType=0);
-	background-color:#bddbfa;
-	-moz-border-radius:30px;
-	-webkit-border-radius:19px;
-	border-radius:30px;
-	border:2px solid #84bbf3;
-	display: inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:20px;
-	font-weight:bold;
-	padding:13px 38px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #528ecc;
-	outline: none;
-	position: relative;
-	top: 142px;
-	left: 33% ;
-	right: 30%;
-	width: 30%;
-	height: 51px;
-}
-.addbutton:hover {
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #80b5ea), color-stop(1, #bddbfa));
-	background:-moz-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
-	background:-webkit-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
-	background:-o-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
-	background:-ms-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
-	background:linear-gradient(to bottom, #80b5ea 5%, #bddbfa 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#80b5ea', endColorstr='#bddbfa',GradientType=0);
-	background-color:#80b5ea;
-	
-}
-.addbutton:active {
-	position:relative;
-	
-
-}
 .addbutton2{
 	-moz-box-shadow:inset -1px 2px 0px 0px #dcecfb;
 	-webkit-box-shadow:inset -1px 2px 0px 0px #dcecfb;
@@ -263,6 +215,8 @@ label {
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
+	
+	text-align: center;
 	font-family:Arial;
 	font-size:15px;
 	font-weight:bold;
@@ -271,7 +225,7 @@ label {
 	text-shadow:0px 1px 0px #528ecc;
 	outline: none;
 	position: relative;
-	top: 100px;
+	top: 80px;
 	left: 33%;
 	right: 30%;
 	width: 30%;
@@ -300,14 +254,6 @@ label {
 
 }
 
-#registerbody {
-
-
-  background: #35557A;
-  background: -webkit-radial-gradient(#61A6FF,#35557A);
-  #35557A
-
-	}
 
 
 .new-search {
@@ -391,11 +337,6 @@ label {
 	padding: 2px 0 0 25px;
 }
 
-#searchimage{
-
-	display: block;
-	margin-top: 50%;
-}
 #searchinput{
 	font-family:"Lato", Calibri, Arial, sans-serif;
 	color: black;
@@ -406,11 +347,12 @@ label {
     padding-left: 0px;
     padding-right: 0px;
     padding-top: 10px;
-    margin-top: 30px;
-    position: relative;
+    margin-top: 30%;
+    position: absolute;
     top: 10%;
-    display: inline-flex;
-
+    left: 0;
+    right: 10%;
+    display:block;
 
 
 }
@@ -438,6 +380,12 @@ label {
 }
 
 #searchbutton{
+	position: relative;
+	top: 280px;
+	width: 100%;
+	width: 40%;
+	right: 0;
+	left: 30%;
 	-moz-box-shadow:inset -1px 2px 0px 0px #dcecfb;
 	-webkit-box-shadow:inset -1px 2px 0px 0px #dcecfb;
 	box-shadow:inset -1px 2px 0px 0px #dcecfb;
@@ -449,26 +397,22 @@ label {
 	background:linear-gradient(to bottom, #bddbfa 5%, #80b5ea 100%);
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bddbfa', endColorstr='#80b5ea',GradientType=0);
 	background-color:#bddbfa;
-	-moz-border-radius:30px;
+	-moz-border-radius:19px;
 	-webkit-border-radius:19px;
-	border-radius:30px;
+	border-radius:19px;
 	border:2px solid #84bbf3;
-	display: inline-block;
+	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
 	font-family:Arial;
-	font-size:20px;
+	font-size:15px;
 	font-weight:bold;
 	padding:13px 38px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #528ecc;
 	outline: none;
-	position: relative;
-	top: 142px;
-	left: 33% ;
-	right: 30%;
-	width: 30%;
-	height: 51px;
+	
+
 }
 #searchbutton:hover {
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #80b5ea), color-stop(1, #bddbfa));
@@ -485,4 +429,8 @@ label {
 	position:relative;
 	
 
+}
+
+#searchbody {
+	background-color: #2F597A;
 }
