@@ -12,7 +12,20 @@
     },
     "cordova-sqlite-storage": {
       "PACKAGE_NAME": "com.project181.medalarm"
+    },
+    "de.appplant.cordova.plugin.local-notification": {
+      "PACKAGE_NAME": "com.project181.medalarm"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "com.project181.medalarm"
     }
   },
-  "dependent_plugins": {}
+  "dependent_plugins": {
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.project181.medalarm"
+    },
+    "cordova-plugin-app-event": {
+      "PACKAGE_NAME": "com.project181.medalarm"
+    }
+  }
 }

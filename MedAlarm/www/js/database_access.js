@@ -355,8 +355,11 @@ function showAlarmList() {
 
 }
 
+//fix this one.
 
 function checkAlarm(cuttime) {
+    var row_id;
+    var willUpdate=false, willSnooze=false;
 	db.transaction(function(transaction) {
         var executeQuery = "SELECT * FROM prescription";
         
@@ -364,8 +367,33 @@ function checkAlarm(cuttime) {
         	var presc_len = result.rows.length;
         	for(i=0; i<presc_len; i++) {
         		 if((result.rows.item(i).next_alarm == cuttime) && (result.rows.item(i).interval_times>0)) {
-        		 	alert("Drink your medicine");
-        		 	updateNextAlarm(result.rows.item(i).presc_id);
+                    var med_alert = result.rows.item(i).med_name;
+                    cordova.plugins.notification.local.schedule({
+                        id: 123,
+                        title: 'Drink your medicine',
+                        text: 'Drink '+ med_alert,
+                        foreground: true
+                    });
+                    
+                    row_id = result.rows.item(i).presc_id;
+                    cordova.plugins.notification.local.on("click", function (notification, state) {
+                        navigator.notification.confirm(
+                            'Drink' + med_alert,
+                             function(buttonIndex) {
+                                if(buttonIndex==1) {
+                                    willUpdate=true;
+                                }
+                                else {
+                                    willSnooze=true;
+                                }
+                             },            
+                            'Drink your medicine',
+                            ['Drink','Snooze']     
+                        );
+                        
+                    }, this);
+        		 	alert("Drink your " + med_alert);
+        		 	
         		 }
         	}
     	  	
@@ -378,13 +406,34 @@ function checkAlarm(cuttime) {
         console.log('Error checkAlarm: ' + error);
     },
     function() {
-        console.log('Success checkAlarm');        
+        console.log('Success checkAlarm');
+        if(willUpdate) {
+            updateNextAlarm(row_id, 'u');
+        }
+
+        else if(willSnooze) {
+             updateNextAlarm(row_id, 'sn');
+        }        
+    });
+
+}
+
+function snooze(alarm_index,new_next_alarm) {
+    db.transaction(function(transaction) {
+        var executeQuery = "UPDATE prescription SET next_alarm=? WHERE presc_id=?";
+        transaction.executeSql(executeQuery, [new_next_alarm, alarm_index],nullHandler,errorHandler);
+    },
+    function (error) {
+        alert('Error' + error);
+    },
+    function() {
+        alert('Success snooze');
     });
 
 }
 
 
-function updateNextAlarm(alarm_index) {
+function updateNextAlarm(alarm_index, setMode) {
 	var temp_array = [];
 	db.transaction(function(transaction) {
         var executeQuery = "SELECT * FROM prescription WHERE presc_id=" + alarm_index;
@@ -406,8 +455,15 @@ function updateNextAlarm(alarm_index) {
     },
     function() {
         alert('Success updateNextAlarm');
-        setAlarm(new Date(), temp_array, 'u');
-        setNextAlarm(alarm_index, temp_array[0]);        
+        if(setMode=='u'){
+            setAlarm(new Date(), temp_array, 'u');
+            setNextAlarm(alarm_index, temp_array[0]);      
+        }
+        else {
+            setAlarm(new Date(), temp_array, 'sn');
+            snooze(alarm_index, temp_array[0]);
+        }
+          
     });
 
 }
