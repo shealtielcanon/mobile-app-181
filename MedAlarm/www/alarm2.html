@@ -5,14 +5,30 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Medical Alarm App</title>
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/main.css">
-<link href='css/alarm.css' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="css/bootstrap.css">
+
+<link rel="stylesheet" type="text/css" href="css/navbottom.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 
+</style>
 </head> 
-<body>
+<body class="searchbody">
+
+
+<h1 class="addillnessheader">Add what you feel</h1>
+   
+  <div  class="col-lg-6">
+          <div class="form-group">
+            <div class="">
+              <input placeholder=" Enter Your Disease if you know it " id="addillnessinput" type="text" class="form-control">
+              <textarea name="styled-textarea" id="addillnessarea" onblur="" >   I feel like,</textarea>
+            <a id="addillnessbutton" class="btn btn-default" type="submit" href="#" >Go!</a>
+            </div><!-- /input-group -->
+          </div><!-- /.form-group -->
+        </div><!-- /.col-lg-6 -->
+
 <nav class="navbar navbar-default navbar-fixed-bottom">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -31,22 +47,9 @@
         </div>
     </div>
 </nav>
-</div>
+</div>   
 
-       <input id="addeventinput1" type="text" placeholder="Enter your illness here if you know it" class="addevent1" >
-   
-    </form>
-    <textarea name="styled-textarea" id="styled" onfocus="this.value=''; setbg('#EBF0F4');" onblur="setbg('#EBF0F4')">Enter your description here</textarea>
 
-           <input id="alarminputs" type="text" placeholder="Enter medicine here" class="alarmclass" >
-            <input id="alarminputs" type="text" placeholder="Hours" class="alarmclass" >
-           <input id="alarminputs" type="text" placeholder="Minutes" class="alarmclass" >
-            <input id="alarminputs" type="text" placeholder="How many days you want to set a reminder for this medicine?" class="alarmclass" >
-         
-          
-            <br><br><br>
-            <button type="submit" class="myButton">Set Alarm</button>
-            
-            <br/>
+
 </body>
 </html>                            
