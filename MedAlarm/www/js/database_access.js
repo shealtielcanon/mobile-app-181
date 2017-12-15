@@ -3,7 +3,7 @@ var db = null;
 function onDeviceReady() {
 	db = window.sqlitePlugin.openDatabase({name: "med_alarm_db.db", location: 'default', createFromLocation: 1});
 	db.transaction(function(tx) {
-		tx.executeSql('CREATE TABLE IF NOT EXISTS event(event_id integer PRIMARY KEY AUTOINCREMENT, event_name varchar(30), event_desc text)',[],nullHandler,errorHandler);
+		tx.executeSql('CREATE TABLE IF NOT EXISTS event(event_id integer PRIMARY KEY AUTOINCREMENT, event_name varchar(30), event_desc text, start_date date, is_running boolean)',[],nullHandler,errorHandler);
 	},
 	function(error) {
 		console.log("Database is not ready, error: " + error);
