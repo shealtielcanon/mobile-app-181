@@ -17,17 +17,46 @@
 <body class="searchbody">
 
 
-<h1 class="addillnessheader">Add what you feel</h1>
-   
+<h1 class="addillnessheader">Set An Alarm</h1>
+   <div class="Timeinput">
+<select id="hrs" data-toggle="select" class=" select select-inverse mrs mbm form-control">
+        <option value="0">Hrs</option>
+        <option value="1">My Friends</option>
+        <option value="2">My Profile</option>
+        <option value="3">My Friends</option>
+      </select>
+
+      <select id="mins" data-toggle="select" class=" form-control select select-primary mrs mbm">
+        <option value="0">Mins</option>
+        <option value="1">My Friends</option>
+        <option value="2">My Profile</option>
+        <option value="3">My Friends</option>
+      </select>
+</div>
+<div id="dayinput1">
+<div  >
+        <select data-toggle="select" class="form-control select select-primary ">
+          <option value="0">Days</option>
+          <option value="1">My Friends</option>
+          <option value="2">My Profile</option>
+          <option value="3">My Friends</option>
+        </select>
+      </div>
+      </div>
+
+
   <div  class="col-lg-6">
           <div class="form-group">
             <div class="">
-              <input placeholder=" Enter Your Disease if you know it " id="addillnessinput" type="text" class="form-control">
-              <textarea name="styled-textarea" id="addillnessarea" onblur="" >   I feel like,</textarea>
-            <a id="addillnessbutton" class="btn btn-default" type="submit" href="#" >Go!</a>
+              <input placeholder=" Enter Your Disease if you know it " id="adddisease" type="text" class="form-control">
+            <div id="alarmbuttoncont">
+            <a id="alarmbutton" class="btn btn-default" type="submit" href="#" >Go!</a>
+            </div> 
             </div><!-- /input-group -->
           </div><!-- /.form-group -->
         </div><!-- /.col-lg-6 -->
+
+
 
 <nav class="navbar navbar-default navbar-fixed-bottom">
     <div class="container-fluid">
@@ -48,6 +77,8 @@
     </div>
 </nav>
 </div>   
+
+
 
 
 

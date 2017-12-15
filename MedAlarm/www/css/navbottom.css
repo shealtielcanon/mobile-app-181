@@ -405,7 +405,7 @@ background-color: #820099;
 
 #addillnessbutton{
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
- 
+ border-radius: 50px;
   width: 80%;
   border: #fbfbfb solid 4px;
   cursor:pointer;
@@ -414,13 +414,132 @@ background-color: #820099;
   font-size:20px;
   padding-top:12px;
   padding-bottom:10px;
-  -webkit-transition: all 0.3s;
+  -webkit-transition: all 1.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
   position: fixed;
    margin-left:5%;
   margin-right: auto;
-  margin-top: 10%;
+  margin-top: 100px;
     font-weight:700;
+
+}
+
+#addillnessbutton:focus{
+  border-width: 5px;
+  font-size: 15px;
+  background-color: #FFFFFF;
+  border-color: #820099;
+  color: #820099;
+
+
+}
+
+#hrs{
+
+ 
+  width: 20%;
+  display: inline-block;
+  border-width: 3px;
+  border-radius: 10px;
+  border-color: #820099;
+  box-shadow:inset 0 0 3px 3px #888;
+}
+
+#mins{
+
+ 
+  width: 20%;
+  display: inline-block;
+   border-width: 3px;
+  border-radius: 10px;
+  border-color: #820099;
+ box-shadow:inset 0 0 3px 3px #888;
+}
+
+.Timeinput{
+
+  
+  text-align: center;
+  position: relative;
+  margin-top: 50px;
+  
+  width: 100%;
+
+}
+
+#alarmbutton{
+
+  
+  max-width: 100%;
+  width: 40%;
+  position: relative;
+  top: 150px;
+  margin: auto;
+  display: inline-block;
+
+  border: #fbfbfb solid 4px;
+  border-radius: 50px;
+  cursor:pointer;
+  background-color: #783F99;
+  color:white;
+  font-size:20px;
+  padding-top:22px;
+  padding-bottom:20px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  position: relative;
+   margin-left:auto;
+  margin-right: auto;
+  margin-top: 100px;
+    font-weight:700;
+    box-shadow:inset 0 0 3px 3px #888
+    height: 50px;
+}
+
+#alarmbuttoncont{
+  text-align: center;
+
+}
+#alarmbutton:focus{
+  
+  font-size: 20px;
+  background-color: #FFFFFF;
+  border-color: #820099;
+  color: #820099;
+
+
+}
+#adddisease{
+  position: relative;
+  max-width: 100%;
+  width: 83%;
+  top: 60px;
+  border-radius: 30px;
+  display: block;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  border-width: 2px;
+  border-color: #820099; 
+  outline: none;
+  height: 45px;
+  font-weight: bold;
+  font-size: 13px;
+  box-shadow:inset 0 0 3px 3px #888;
+  
+}
+
+
+#dayinput1{
+
+position: relative;
+  max-width: 100%;
+  width:100px;
+  display:block;
+  margin: 0 auto ;
+   margin-top: 40px;
+box-shadow:inset 0 0 3px 3px #888;
+
 
 }
