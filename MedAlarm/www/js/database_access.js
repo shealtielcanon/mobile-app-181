@@ -11,6 +11,15 @@ function onDeviceReady() {
 	function() {
 		console.log("Database is ready");
 	});
+    db.transaction(function(tx) {
+        tx.executeSql('CREATE TABLE IF NOT EXISTS Medicine(Med_id integer PRIMARY KEY AUTOINCREMENT, GenericName TEXT, Type TEXT, BrandName TEXT, Indications TEXT, SideEffects TEXT, Dosage TEXT)',[],nullHandler,errorHandler);
+    },
+    function(error) {
+        console.log("Database is not ready, error: " + error);
+    },
+    function() {
+        console.log("Database is ready");
+    });
 
 	db.transaction(function(tx) {
 		tx.executeSql('CREATE TABLE IF NOT EXISTS user(fname varchar(15), mname varchar(15), lname varchar(15), age integer, email_ad varchar(25), gender varchar(6), key_id integer PRIMARY KEY)',[],nullHandler,errorHandler);
@@ -23,7 +32,7 @@ function onDeviceReady() {
 	});
 
 	db.transaction(function(tx) {
-		tx.executeSql('CREATE TABLE IF NOT EXISTS prescription(presc_id integer PRIMARY KEY AUTOINCREMENT, med_name varchar(30), next_alarm varchar(8), hrs_dur integer, mins_dur integer, interval_times integer, e_id integer REFERENCES event(idnum))',[],nullHandler,errorHandler);
+		tx.executeSql('CREATE TABLE IF NOT EXISTS prescription(presc_id integer PRIMARY KEY AUTOINCREMENT, pmed_id integer REFERENCES Medicine(Med_id), next_alarm varchar(8), hrs_dur integer, mins_dur integer, interval_times integer, e_id integer REFERENCES event(event_id))',[],nullHandler,errorHandler);
 	},
 	function(error) {
 		console.log("Database is not ready, error: " + error);
@@ -31,6 +40,16 @@ function onDeviceReady() {
 	function() {
 		console.log("Database is ready");
 	});
+
+    db.transaction(function(tx) {
+        tx.executeSql('CREATE TABLE IF NOT EXISTS logs (log_id INTEGER PRIMARY KEY autoincrement, e_id INTEGER REFERENCES event(event_id), start_date date, finish_date date, generated_text TEXT)',[],nullHandler,errorHandler);
+    },
+    function(error) {
+        console.log("Database is not ready, error: " + error);
+    },
+    function() {
+        console.log("Database is ready");
+    });
 
 	var urlPath = window.location.pathname;
 	if(urlPath=="/android_asset/www/home.html") {
