@@ -62,6 +62,62 @@
   text-rendering: optimizeLegibility;
   background-image: url("../images/all.jpg");
 }
+.rwd1-table {
+  margin: 1em 0;
+  min-width: 300px;
+}
+
+.rwd1-table tr {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.rwd1-table th {
+  display: none;
+}
+
+.rwd1-table td {
+  display: block;
+}
+
+.rwd1-table td:first-child {
+  padding-top: .5em;
+}
+
+.rwd1-table td:last-child {
+  padding-bottom: .5em;
+}
+
+.rwd1-table td:before {
+  content: attr(data-th) ": ";
+  font-weight: bold;
+  width: 6.5em;
+  display: inline-block;
+}
+
+@media (min-width: 480px) {
+  .rwd1-table td:before {
+    display: none;
+  }
+}
+
+.rwd1-table th, .rwd1-table td {
+  text-align: left;
+}
+
+@media (min-width: 480px) {
+  .rwd1-table th, .rwd1-table td {
+    display: table-cell;
+    padding: .25em .5em;
+  }
+  .rwd1-table th:first-child, .rwd1-table td:first-child {
+    padding-left: 0;
+  }
+  .rwd1-table th:last-child, .rwd1-table td:last-child {
+    padding-right: 0;
+  }
+}
+
 .searchbody {
  
   font-family: Montserrat, sans-serif;
@@ -90,6 +146,55 @@
   font-weight: bold;
 }
 
+.rwd1-table {
+  background:#820099;
+  color: #fff;
+  border-radius: 25px;
+    overflow: hidden;
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow:inset 0 0 5px 5px #888;
+    font-size: 10px;
+}
+
+.rwd1-table tr {
+  border-color: #FFFFFF;
+  font-size: 15px;
+  box-shadow:inset 0 0 5px 5px #888;
+  border-width: 3px;
+
+}
+
+.rwd1-table th, .rwd1-table td {
+  margin: .1em .1em;
+  border-color: #FFFFFF;
+  border-width: 3px;
+
+}
+
+@media (min-width: 480px) {
+  .rwd1-table th, .rwd1-table td {
+    padding: 20px !important;
+    overflow:auto;
+    min-width:0;
+    width:100%
+
+    
+    top:100px!important;
+    left:auto!important;
+    right:-150px!important;
+    width:200px!important;
+  }
+}
+
+.rwd1-table th, .rwd1-table td:before {
+  color: #FFFFFF;
+
+}
+
+
 .rwd-table {
   background:#820099;
   color: #fff;
@@ -100,6 +205,7 @@
     margin-left: auto;
     margin-right: auto;
     box-shadow:inset 0 0 5px 5px #888;
+    font-size: 10px;
 }
 
 .rwd-table tr {
@@ -111,7 +217,7 @@
 }
 
 .rwd-table th, .rwd-table td {
-  margin: .5em 1em;
+  margin: .1em .1em;
   border-color: #FFFFFF;
   border-width: 3px;
 
@@ -119,7 +225,7 @@
 
 @media (min-width: 480px) {
   .rwd-table th, .rwd-table td {
-    padding: 75px !important;
+    padding: 70px !important;
   }
 }
 
@@ -180,7 +286,7 @@
 
   position: relative;
   max-width: 100%;
- 
+
   top: 60px;
   border-radius: 30px;
   margin: auto;
