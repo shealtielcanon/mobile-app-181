@@ -1,14 +1,6 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
   {
-    "id": "cordova-sqlite-storage.SQLitePlugin",
-    "file": "plugins/cordova-sqlite-storage/www/SQLitePlugin.js",
-    "pluginId": "cordova-sqlite-storage",
-    "clobbers": [
-      "SQLitePlugin"
-    ]
-  },
-  {
     "id": "cordova-plugin-device.device",
     "file": "plugins/cordova-plugin-device/www/device.js",
     "pluginId": "cordova-plugin-device",
@@ -67,18 +59,26 @@ module.exports = [
       "cordova.plugins.backgroundMode",
       "plugin.backgroundMode"
     ]
+  },
+  {
+    "id": "cordova-sqlite-ext.SQLitePlugin",
+    "file": "plugins/cordova-sqlite-ext/www/SQLitePlugin.js",
+    "pluginId": "cordova-sqlite-ext",
+    "clobbers": [
+      "SQLitePlugin"
+    ]
   }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
   "cordova-plugin-whitelist": "1.3.2",
-  "cordova-sqlite-storage": "2.1.1",
   "cordova-plugin-device": "1.1.7",
   "cordova-plugin-app-event": "1.2.1",
   "de.appplant.cordova.plugin.local-notification": "0.8.4.1",
   "cordova-plugin-dialogs": "1.3.4",
-  "cordova-plugin-background-mode": "0.7.2"
+  "cordova-plugin-background-mode": "0.7.2",
+  "cordova-sqlite-ext": "0.10.6"
 };
 // BOTTOM OF METADATA
 });

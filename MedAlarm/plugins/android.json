@@ -10,9 +10,6 @@
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.project181.medalarm"
     },
-    "cordova-sqlite-storage": {
-      "PACKAGE_NAME": "com.project181.medalarm"
-    },
     "de.appplant.cordova.plugin.local-notification": {
       "PACKAGE_NAME": "com.project181.medalarm"
     },
@@ -20,6 +17,9 @@
       "PACKAGE_NAME": "com.project181.medalarm"
     },
     "cordova-plugin-background-mode": {
+      "PACKAGE_NAME": "com.project181.medalarm"
+    },
+    "cordova-sqlite-ext": {
       "PACKAGE_NAME": "com.project181.medalarm"
     }
   },

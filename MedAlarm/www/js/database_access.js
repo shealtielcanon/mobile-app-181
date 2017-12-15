@@ -1,7 +1,7 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 var db = null;
 function onDeviceReady() {
-	db = window.sqlitePlugin.openDatabase({name: "med_alarm_db.db", location: 2});
+	db = window.sqlitePlugin.openDatabase({name: "med_alarm_db.db", location: 'default', createFromLocation: 1});
 	db.transaction(function(tx) {
 		tx.executeSql('CREATE TABLE IF NOT EXISTS event(event_id integer PRIMARY KEY AUTOINCREMENT, event_name varchar(30), event_desc text)',[],nullHandler,errorHandler);
 	},
@@ -15,10 +15,10 @@ function onDeviceReady() {
         tx.executeSql('CREATE TABLE IF NOT EXISTS Medicine(Med_id integer PRIMARY KEY AUTOINCREMENT, GenericName TEXT, Type TEXT, BrandName TEXT, Indications TEXT, SideEffects TEXT, Dosage TEXT)',[],nullHandler,errorHandler);
     },
     function(error) {
-        console.log("Database is not ready, error: " + error);
+        alert("Database is not ready, error: " + error);
     },
     function() {
-        console.log("Database is ready");
+        alert("Database is ready");
     });
 
 	db.transaction(function(tx) {
@@ -168,6 +168,7 @@ function confirmUser() {
 
 function checkForNewUser() {
     alert("Checking for registered user...");
+    showMeds();
     db.transaction(function(transaction) {
         var executeQuery = "SELECT * FROM user";
         transaction.executeSql(executeQuery, [], function(tx, result) {
@@ -498,6 +499,25 @@ function setNextAlarm(alarm_index, new_next_alarm) {
 	function() {
 		alert('Success update');
 	});
+
+}
+
+function showMeds() {
+    db.transaction(function(transaction) {
+        var executeQuery = "SELECT * FROM Medicine";
+        transaction.executeSql(executeQuery, [], function(tx, result) {
+            alert("SHOWMEDS: " + result.rows.length);
+        },
+        function(error) {
+            alert('Error:' + error);
+        });
+    },
+    function(error) {
+        alert('Error showMeds: ' + error);
+    },
+    function() {
+        alert('Success showMeds');
+    });
 
 }
 

@@ -1,49 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" type="text/css" href="css/main.css">
-  <title>Home</title>
-</head>
-<body id="addbody">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Medical Alarm App</title>
 
-<div id="mySidenav" class="sidenav">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/navbottom.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 
-<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-<li> <a href="home.html">Home</a></li>
-<li> <a href="search.html">Search</a></li>
-<li ><a href="addevent1.html">Add illness</a></li> 
-<li> <a href="alarm.html">Set Alarm</a></li> 
-<li> <a href="medicalhistory.html">Medical History</a></li>
 
-</div>
+</head> 
+<body class="homebody">
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container-fluid">
+        <div>
+            <ul class="nav navbar-nav">
+                <li><a href="home.html">Dashboard</a></li>
+                <li><a href="alarm2.html">Alarm</a>
+                <li><a href="medicalhistory.html">History</a></li>
+                <li><a href="search.html">Search</a></li>
+            </ul>          
+           
+        </div>
+    </div>
+</nav>
 
-<div id="main">
-    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-    <div id="current_alarms"> </div>
-</div>
 
-<script type="text/javascript" src="cordova.js"></script>
-<script type="text/javascript" charset="utf-8" src="js/SQLitePlugin.js"></script>
-<script src="jquery-1.11.0.min.js"  ></script>
-<script type="text/javascript" src="js/database_access.js"></script>
-<script type="text/javascript" src="js/alarm.js"></script>
-<script>
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-    document.body.style.backgroundColor = "rgba(0,0,0)";
-}
 
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft= "0";
-    document.body.style.backgroundColor = "";
-}
-function setbg(color)
-{
-document.getElementById("styled").style.background=color
-}
-</script>
-     
 </body>
-</html
+</html>                            
