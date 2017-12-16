@@ -15,10 +15,10 @@ function onDeviceReady() {
         tx.executeSql('CREATE TABLE IF NOT EXISTS Medicine(Med_id integer PRIMARY KEY AUTOINCREMENT, GenericName TEXT, Type TEXT, BrandName TEXT, Indications TEXT, SideEffects TEXT, Dosage TEXT)',[],nullHandler,errorHandler);
     },
     function(error) {
-        alert("Database is not ready, error: " + error);
+        console.log("Database is not ready, error: " + error);
     },
     function() {
-        alert("Database is ready");
+        console.log("Database is ready");
     });
 
     db.transaction(function(tx) {
@@ -52,10 +52,19 @@ function onDeviceReady() {
     });
 
     var urlPath = window.location.pathname;
+    alert("urlPath: " + urlPath);
     if(urlPath=="/android_asset/www/home.html") {
         loadUser();
         //checkEvent();
         showAlarmList();
+    }
+
+    if(urlPath=="/android_asset/www/searchresult.html") {
+        var urlWithParams = window.location.href;
+        alert("urlWithParams: "+urlWithParams);
+        var sv = getParameterByName('s', urlWithParams);
+        
+        searchResults(sv);
     }
 
 }
@@ -624,23 +633,50 @@ function updateLogText(ev_id, added_text) {
 
 function search() {
     var search_result = document.getElementById('search_id').value;
+    window.location = "searchresult.html?s=" + search_result;
+}
+
+function searchResults(search_result) {
+    var table_results = "<table  id=\"\" class=\" rwd1-table table-responsive \"><tr><th>Generic name</th><th>Type</th><th>Brand name</th><th>Indications</th><th>Side effects</th><th>Dosage</th></tr>";
     db.transaction(function(transaction) {
         var executeQuery = "SELECT * FROM Medicine WHERE LOWER(GenericName) LIKE LOWER('%"+search_result+"%')";
         alert(executeQuery);
         transaction.executeSql(executeQuery, [], function(tx, result) {
             var len = result.rows.length;
-            alert(result.rows.item(0).GenericName);
+            for(i=0; i<len; i++) {
+                table_results = table_results + "<tr>";
+                table_results = table_results + "<td data-th=\"Generic name\">" + result.rows.item(i).GenericName + "</td>";
+                table_results = table_results + "<td data-th=\"Type\">" + result.rows.item(i).Type + "</td>";
+                table_results = table_results + "<td data-th=\"Brand name\">" + result.rows.item(i).BrandName + "</td>";
+                table_results = table_results + "<td data-th=\"Indications\">" + result.rows.item(i).Indications + "</td>";
+                table_results = table_results + "<td data-th=\"Side effects\">" + result.rows.item(i).SideEffects + "</td>";
+                table_results = table_results + "<td data-th=\"Dosage\">" + result.rows.item(i).Dosage + "</td>";
+                table_results = table_results + "</tr>";
+            }
         },
         function(error) {
             alert('Error:' + error);
         });
     },
     function(error) {
-        alert('Error search: ' + error);
+        alert('Error searchResults: ' + error);
     },
     function() {
-        alert('Success search');
-    });
+        table_results = table_results + "</table>";
+        alert('Success searchResults');
+        //alert(table_results);
+        document.getElementById('search_table_result').innerHTML = table_results;
+    });    
+}
+
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
 function errorHandler() {
