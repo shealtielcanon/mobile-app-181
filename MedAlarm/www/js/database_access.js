@@ -58,6 +58,10 @@ function onDeviceReady() {
         showAlarmList();
     }
 
+    if(urlPath=="/android_asset/www/alarm2.html") {
+        showMeds();
+    }
+
 }
 
 
@@ -168,7 +172,6 @@ function confirmUser() {
 
 function checkForNewUser() {
     alert("Checking for registered user...");
-    showMeds();
     db.transaction(function(transaction) {
         var executeQuery = "SELECT * FROM user";
         transaction.executeSql(executeQuery, [], function(tx, result) {
@@ -566,10 +569,15 @@ function setNextAlarm(alarm_index, new_next_alarm) {//update for 24 hours alarms
 }
 
 function showMeds() {
+    var med_option = "";
     db.transaction(function(transaction) {
         var executeQuery = "SELECT * FROM Medicine";
         transaction.executeSql(executeQuery, [], function(tx, result) {
-            alert("SHOWMEDS: " + result.rows.length);
+            var len = result.rows.length;
+
+            for(int i=0; i<len; i++){
+                med_option = med_option + "<option value=" + result.rows.item(i+1).GenericName + ">";
+            }
         },
         function(error) {
             alert('Error:' + error);
@@ -580,6 +588,7 @@ function showMeds() {
     },
     function() {
         alert('Success showMeds');
+        document.getElementById('med_option_id') = med_option
     });
 
 }
