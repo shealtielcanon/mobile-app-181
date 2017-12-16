@@ -153,9 +153,9 @@ input:focus, textarea:focus {
 	cursor:pointer;
 	background-color: #783F99;
 	color:white;
-	font-size:24px;
-	padding-top:22px;
-	padding-bottom:22px;
+	font-size:15px;
+	padding-top:15px;
+	padding-bottom:10px;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	transition: all 0.3s;
@@ -166,6 +166,8 @@ input:focus, textarea:focus {
 #button-blue:hover{
 	background-color: rgba(0,0,0,0);
 	color: #783F99;
+	
+
 }
 	
 .submit:hover {

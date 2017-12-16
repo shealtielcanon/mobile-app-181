@@ -1,6 +1,14 @@
 
 
+#buttonregister{
 
+	position: relative;
+	max-width: 100%
+	width:50%;
+	margin: auto;
+	margin-top: 10%;
+	display: block;
+}
 
 #body {
 
@@ -17,44 +25,13 @@
 	margin: 0 auto;
 	display: block;
 	max-width: 100%;
-	width: 800px;
-	overflow-x: hidden;
+	width: 80%;
+	
+	margin-top: 20%;
 	
    
 
     }
-#button1 {
-	  position: relative;
- 	  top:10px;
-      left: 43%;
-      
-	  width: 30%;
-	  height: 30%;
-	  max-width: 100%;
-	  display: block;
-	  font-size: 20px;
-	  font-weight: bold;
-	  font-style: ubuntu bold;
-	  cursor: pointer;
-	  outline: none;
-	  color: #fff;
-	  background-color: #505463;
-	  border: none;
-	  border-radius: 50px;
-	  box-shadow: 0 9px #999;
-
-	}
-
-#button1:hover {
-  
-  background-color:#838586}
-
-#button1:active {
- 
-  background-color: #2EA4A4;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-	}
 
 #button2 {
 	  position: relative;
