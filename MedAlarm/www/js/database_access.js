@@ -1,16 +1,16 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 var db = null;
 function onDeviceReady() {
-	db = window.sqlitePlugin.openDatabase({name: "med_alarm_db.db", location: 'default', createFromLocation: 1});
-	db.transaction(function(tx) {
-		tx.executeSql('CREATE TABLE IF NOT EXISTS event(event_id integer PRIMARY KEY AUTOINCREMENT, event_name varchar(30), event_desc text, start_date date, is_running boolean)',[],nullHandler,errorHandler);
-	},
-	function(error) {
-		console.log("Database is not ready, error: " + error);
-	},
-	function() {
-		console.log("Database is ready");
-	});
+    db = window.sqlitePlugin.openDatabase({name: "med_alarm_db.db", location: 'default', createFromLocation: 1});
+    db.transaction(function(tx) {
+        tx.executeSql('CREATE TABLE IF NOT EXISTS event(event_id integer PRIMARY KEY AUTOINCREMENT, event_name varchar(30), event_desc text, start_date date, is_running boolean)',[],nullHandler,errorHandler);
+    },
+    function(error) {
+        console.log("Database is not ready, error: " + error);
+    },
+    function() {
+        console.log("Database is ready");
+    });
     db.transaction(function(tx) {
         tx.executeSql('CREATE TABLE IF NOT EXISTS Medicine(Med_id integer PRIMARY KEY AUTOINCREMENT, GenericName TEXT, Type TEXT, BrandName TEXT, Indications TEXT, SideEffects TEXT, Dosage TEXT)',[],nullHandler,errorHandler);
     },
@@ -21,25 +21,25 @@ function onDeviceReady() {
         alert("Database is ready");
     });
 
-	db.transaction(function(tx) {
-		tx.executeSql('CREATE TABLE IF NOT EXISTS user(fname varchar(15), mname varchar(15), lname varchar(15), age integer, email_ad varchar(25), gender varchar(6), key_id integer PRIMARY KEY)',[],nullHandler,errorHandler);
-	},
-	function(error) {
-		console.log("Database is not ready, error: " + error);
-	},
-	function() {
-		console.log("Database is ready");
-	});
+    db.transaction(function(tx) {
+        tx.executeSql('CREATE TABLE IF NOT EXISTS user(fname varchar(15), mname varchar(15), lname varchar(15), age integer, email_ad varchar(25), gender varchar(6), key_id integer PRIMARY KEY)',[],nullHandler,errorHandler);
+    },
+    function(error) {
+        console.log("Database is not ready, error: " + error);
+    },
+    function() {
+        console.log("Database is ready");
+    });
 
-	db.transaction(function(tx) {
-		tx.executeSql('CREATE TABLE IF NOT EXISTS prescription(presc_id integer PRIMARY KEY AUTOINCREMENT, pmed_id integer REFERENCES Medicine(Med_id), next_alarm varchar(8), hrs_dur integer, mins_dur integer, interval_times integer, e_id integer REFERENCES event(event_id))',[],nullHandler,errorHandler);
-	},
-	function(error) {
-		console.log("Database is not ready, error: " + error);
-	},
-	function() {
-		console.log("Database is ready");
-	});
+    db.transaction(function(tx) {
+        tx.executeSql('CREATE TABLE IF NOT EXISTS prescription(presc_id integer PRIMARY KEY AUTOINCREMENT, pmed_id integer REFERENCES Medicine(Med_id), next_alarm varchar(8), hrs_dur integer, mins_dur integer, interval_times integer, e_id integer REFERENCES event(event_id), next_alarm_date date, is_one_day_alarm boolean)',[],nullHandler,errorHandler);
+    },
+    function(error) {
+        console.log("Database is not ready, error: " + error);
+    },
+    function() {
+        console.log("Database is ready");
+    });
 
     db.transaction(function(tx) {
         tx.executeSql('CREATE TABLE IF NOT EXISTS logs (log_id INTEGER PRIMARY KEY autoincrement, e_id INTEGER REFERENCES event(event_id), start_date date, finish_date date, generated_text TEXT)',[],nullHandler,errorHandler);
@@ -51,18 +51,18 @@ function onDeviceReady() {
         console.log("Database is ready");
     });
 
-	var urlPath = window.location.pathname;
-	if(urlPath=="/android_asset/www/home.html") {
-		loadUser();
-		//checkEvent();
-		showAlarmList();
-	}
+    var urlPath = window.location.pathname;
+    if(urlPath=="/android_asset/www/home.html") {
+        loadUser();
+        //checkEvent();
+        showAlarmList();
+    }
 
 }
 
 
 function checkEvent(){
-	 db.transaction(function(transaction) {
+     db.transaction(function(transaction) {
         var executeQuery = "SELECT * FROM event";
         alert("checkEvent");
         transaction.executeSql(executeQuery, [], function(tx, result) {
@@ -80,89 +80,89 @@ function checkEvent(){
     });
 }
 
-function addEvent() { //fiiiiiiiiiiixxeeeed!
-	alert("Addevent is clicked!");
-	db.transaction(function(transaction) {
-		var new_event_name = document.getElementById('eventname');
-		var new_event_desc = document.getElementById('eventdesc');
-		var executeQuery = "INSERT INTO event (event_name, event_desc) VALUES (?,?)";
-		transaction.executeSql(executeQuery, [new_event_name, new_event_desc],nullHandler,errorHandler);
+function addEvent() { //check and debug this!
+    alert("Addevent is clicked!");
+    db.transaction(function(transaction) {
+        var new_event_name = document.getElementById('eventname');
+        var new_event_desc = document.getElementById('eventdesc');
+        var executeQuery = "INSERT INTO event (event_name, event_desc, start_date, is_running) VALUES (?,?, date('now'), 1)";
+        transaction.executeSql(executeQuery, [new_event_name, new_event_desc],nullHandler,errorHandler);
 
-	},
-	function (error) {
-		alert('Error' + error);
-	},
-	function() {
-		alert('Success event: ' );
-		window.location = "alarm.html";
-	});
-	
+    },
+    function (error) {
+        alert('Error' + error);
+    },
+    function() {
+        alert('Success event: ' );
+        window.location = "alarm.html";
+    });
+    
 }
 
 function getLastId() {
-	var temp_id=0;
+    var temp_id=0;
 
-	db.transaction(function(transaction) {
-		var executeQuery = "SELECT * FROM event";
-		transaction.executeSql(executeQuery, [], function(tx, result) {
-			temp_id = result.rows.length;
-		},
-		function(error) {
-			console.log('Error (getLastId):' + error);
-		});
-	},
-	function(error) {
-		console.log('Error transaction (getLastId): ' + error);
-	},
-	function() {
-		console.log('Success getLastId');
-		
-	});
-	return temp_id;
+    db.transaction(function(transaction) {
+        var executeQuery = "SELECT * FROM event";
+        transaction.executeSql(executeQuery, [], function(tx, result) {
+            temp_id = result.rows.length;
+        },
+        function(error) {
+            console.log('Error (getLastId):' + error);
+        });
+    },
+    function(error) {
+        console.log('Error transaction (getLastId): ' + error);
+    },
+    function() {
+        console.log('Success getLastId');
+        
+    });
+    return temp_id;
 }
 
 
 function createUser() { 
 
-	//alert("Wow");
-	db.transaction(function(transaction) {
-		var fname = document.getElementById('fname').value;
-		var mname = document.getElementById('mname').value;
-		var lname = document.getElementById('lname').value;
-		var email_ad = document.getElementById('email').value;
-		var gender = document.getElementById('gender').value;
-		var age = document.getElementById('age').value;
-		var executeQuery = "INSERT INTO user (fname, mname, lname, age, email_ad, gender, key_id) VALUES (?,?,?,?,?,?,?)";
-		transaction.executeSql(executeQuery, [fname, mname, lname, age, email_ad, gender, 10001],nullHandler,errorHandler);
-	},
-	function (error) {
-		console.log('Error' + error);
-	},
-	function() {
-		console.log('Success insert');
-	});
+    //alert("Wow");
+    db.transaction(function(transaction) {
+        var fname = document.getElementById('fname').value;
+        var mname = document.getElementById('mname').value;
+        var lname = document.getElementById('lname').value;
+        var email_ad = document.getElementById('email').value;
+        var gender = document.getElementById('gender').value;
+        var age = document.getElementById('age').value;
+        var executeQuery = "INSERT INTO user (fname, mname, lname, age, email_ad, gender, key_id) VALUES (?,?,?,?,?,?,?)";
+        transaction.executeSql(executeQuery, [fname, mname, lname, age, email_ad, gender, 10001],nullHandler,errorHandler);
+    },
+    function (error) {
+        console.log('Error' + error);
+    },
+    function() {
+        console.log('Success insert');
+    });
 
-	confirmUser();
-}	
+    confirmUser();
+}   
 
 function confirmUser() {
 
-	db.transaction(function(transaction) {
-		var executeQuery = "SELECT * FROM user";
-		transaction.executeSql(executeQuery, [], function(tx, result) {
-			alert("Added new user: " + result.rows.item(0).lname + ", " + result.rows.item(0).fname + " (" + result.rows.item(0).email_ad + ").");
-		},
-		function(error) {
-			console.log('Error:' + error);
-		});
-	},
-	function(error) {
-		console.log('Error transaction: ' + error);
-	},
-	function() {
-		console.log('Success transaction');
-		window.location = "home.html";
-	});
+    db.transaction(function(transaction) {
+        var executeQuery = "SELECT * FROM user";
+        transaction.executeSql(executeQuery, [], function(tx, result) {
+            alert("Added new user: " + result.rows.item(0).lname + ", " + result.rows.item(0).fname + " (" + result.rows.item(0).email_ad + ").");
+        },
+        function(error) {
+            console.log('Error:' + error);
+        });
+    },
+    function(error) {
+        console.log('Error transaction: ' + error);
+    },
+    function() {
+        console.log('Success transaction');
+        window.location = "home.html";
+    });
 
 }
 
@@ -216,35 +216,41 @@ function loadUser() {
 
 
 function addAlarmToDB(nextAlarm, meds, hrs, mins, times) { 
-	alert("Accessed! " + nextAlarm + ", " + meds + ", " + hrs + ", " + mins + ", " + times);
-	var recentNewEventId = getLastId();
-	db.transaction(function(transaction) {
-		alert('Here daw!');
-		var executeQuery = "INSERT INTO prescription (med_name, next_alarm, hrs_dur, mins_dur, interval_times, e_id) VALUES (?,?,?,?,?,?)";
-		transaction.executeSql(executeQuery, [meds, nextAlarm, hrs, mins, times, recentNewEventId],nullHandler,errorHandler);
-	},
-	function (error) {
-		alert('Error' + error);
-	},
-	function() {
-		alert('Success addAlarmToDB');
-	});
+    alert("Accessed! " + nextAlarm + ", " + meds + ", " + hrs + ", " + mins + ", " + times);
+    var recentNewEventId = getLastId();
+    db.transaction(function(transaction) {
+        alert('Here daw!');
+        var executeQuery;
+        if(hrs=24){
+            executeQuery = "INSERT INTO prescription (pmed_id, next_alarm, hrs_dur, mins_dur, interval_times, e_id, next_alarm_date, is_one_day_alarm) VALUES (?,?,?,?,?,?, date('now', '+1 day'), 1)"
+        }
+        else{
+            executeQuery = "INSERT INTO prescription (pmed_id, next_alarm, hrs_dur, mins_dur, interval_times, e_id, is_one_day_alarm) VALUES (?,?,?,?,?,?, 0)"
+        }
+        transaction.executeSql(executeQuery, [meds, nextAlarm, hrs, mins, times, recentNewEventId],nullHandler,errorHandler);
+    },
+    function (error) {
+        alert('Error' + error);
+    },
+    function() {
+        alert('Success addAlarmToDB');
+    });
 
 }
 
 function getPrescIdArray() {
-	var id_array=[];
-	var return_array = [];
-	db.transaction(function(transaction) {
+    var id_array=[];
+    var return_array = [];
+    db.transaction(function(transaction) {
         var executeQuery = "SELECT * FROM prescription";
         transaction.executeSql(executeQuery, [], function(tx, result) {
-        	var presc_len = result.rows.length;
-        	//alert("presc_len: " + presc_len);
-        	for(i=0; i<presc_len; i++) {
-        		alert("presc_id.pushing - " + result.rows.item(i).presc_id);
-        		id_array.push(result.rows.item(i).presc_id);
-        	}
-    	  	
+            var presc_len = result.rows.length;
+            //alert("presc_len: " + presc_len);
+            for(i=0; i<presc_len; i++) {
+                alert("presc_id.pushing - " + result.rows.item(i).presc_id);
+                id_array.push(result.rows.item(i).presc_id);
+            }
+            
         },
         function(error) {
             alert('Error:' + error);
@@ -256,24 +262,24 @@ function getPrescIdArray() {
     function() {
         alert('Success getPrescIdArray');
         id_array.forEach(function(item, index, array) {
-        	return_array.push(item);
+            return_array.push(item);
         });
         
     });
 
-	alert("return_array[1]: " + return_array[1]);
+    alert("return_array[1]: " + return_array[1]);
     return return_array;
 }
 
 function getPrescAlarmArray(alarm_index) {
-	var alarm_array=[];
-	db.transaction(function(transaction) {
+    var alarm_array=[];
+    db.transaction(function(transaction) {
         var executeQuery = "SELECT * FROM prescription WHERE presc_id="+alarm_index;
         transaction.executeSql(executeQuery, [], function(tx, result) {
-        	alarm_array.push(result.rows.item(0).next_alarm);
-        	alarm_array.push(result.rows.item(0).hrs_dur);
-        	alarm_array.push(result.rows.item(0).mins_dur);
-        	alarm_array.push(result.rows.item(0).interval_times);
+            alarm_array.push(result.rows.item(0).next_alarm);
+            alarm_array.push(result.rows.item(0).hrs_dur);
+            alarm_array.push(result.rows.item(0).mins_dur);
+            alarm_array.push(result.rows.item(0).interval_times);
         },
         function(error) {
             alert('Error:' + error);
@@ -291,39 +297,39 @@ function getPrescAlarmArray(alarm_index) {
 
 
 function getAlarmLastId() {
-	var temp_id=0;
+    var temp_id=0;
 
-	db.transaction(function(transaction) {
-		var executeQuery = "SELECT * FROM event";
-		transaction.executeSql(executeQuery, [], function(tx, result) {
-			alert("LENGTH: "+ result.rows.length);
-			temp_id = result.rows.length;
-		},
-		function(error) {
-			alert('Error (getLastId):' + error);
-		});
-	},
-	function(error) {
-		alert('Error transaction (getAlarmLastId): ' + error);
-	},
-	function() {
-		alert('Success getAlarmLastId');
-		
-	});
-	alert("temp_a_id: " + temp_id);
-	return temp_id;
+    db.transaction(function(transaction) {
+        var executeQuery = "SELECT * FROM event";
+        transaction.executeSql(executeQuery, [], function(tx, result) {
+            alert("LENGTH: "+ result.rows.length);
+            temp_id = result.rows.length;
+        },
+        function(error) {
+            alert('Error (getLastId):' + error);
+        });
+    },
+    function(error) {
+        alert('Error transaction (getAlarmLastId): ' + error);
+    },
+    function() {
+        alert('Success getAlarmLastId');
+        
+    });
+    alert("temp_a_id: " + temp_id);
+    return temp_id;
 }
 
 function calcAllInterv() {
-	var sum=0;
+    var sum=0;
 
-	db.transaction(function(transaction) {
+    db.transaction(function(transaction) {
 
         var executeQuery = "SELECT * FROM prescription";
         transaction.executeSql(executeQuery, [], function(tx, result) {
             var p_number = result.rows.length;
             for(i=0; i<p_number;i++){
-            	sum = sum + result.rows.item(i).interval_times;
+                sum = sum + result.rows.item(i).interval_times;
             }
 
         },
@@ -343,15 +349,15 @@ function calcAllInterv() {
 
 
 function showAlarmList() {
-	var alarmLength = 0;
-	var newLine = "<p>";
-	db.transaction(function(transaction) {
+    var alarmLength = 0;
+    var newLine = "<p>";
+    db.transaction(function(transaction) {
         var executeQuery = "SELECT * FROM prescription";
         transaction.executeSql(executeQuery, [], function(tx, result) {
-        	alarmLength = result.rows.length;
-        	for (i=0; i<alarmLength; i++) {
-        		newLine = newLine + result.rows.item(i).med_name + ": " + result.rows.item(i).next_alarm + ", " + result.rows.item(i).interval_times + " more times.<br>";
-        	}
+            alarmLength = result.rows.length;
+            for (i=0; i<alarmLength; i++) {
+                newLine = newLine + result.rows.item(i).med_name + ": " + result.rows.item(i).next_alarm + ", " + result.rows.item(i).interval_times + " more times.<br>";
+            }
         },
         function(error) {
             alert('Error:' + error);
@@ -364,29 +370,37 @@ function showAlarmList() {
         alert('Success showAlarmList');
         alert('alarmLength: ' + alarmLength);
         newLine = newLine + "</p>";
-		if(alarmLength>0) {
-			document.getElementById('current_alarms').innerHTML = newLine;
-		}
+        if(alarmLength>0) {
+            document.getElementById('current_alarms').innerHTML = newLine;
+        }
 
-		else {
-			document.getElementById('current_alarms').innerHTML = "<p>No alarms!</p>";
-		}
+        else {
+            document.getElementById('current_alarms').innerHTML = "<p>No alarms!</p>";
+        }
     });
 
 }
 
 //fix this one.
+function currentDate(){
+    date = new Date();
 
+    var year = ("0" + date.getFullYear()).slice(-2);
+    var mm = (("0" + date.getMonth()).slice(-2) * 1) + 1;
+    var day = ("0" + getDate(0)).slice(-2);
+
+    return "" + year + "-" + mm + "-" + day;
+}
 function checkAlarm(cuttime) {
     var row_id;
     var willUpdate=false, willSnooze=false;
-	db.transaction(function(transaction) {
+    db.transaction(function(transaction) {
         var executeQuery = "SELECT * FROM prescription";
         
         transaction.executeSql(executeQuery, [], function(tx, result) {
-        	var presc_len = result.rows.length;
-        	for(i=0; i<presc_len; i++) {
-        		 if((result.rows.item(i).next_alarm == cuttime) && (result.rows.item(i).interval_times>0)) {
+            var presc_len = result.rows.length;
+            for(i=0; i<presc_len; i++) {
+                 if((result.rows.item(i).next_alarm == cuttime) && (result.rows.item(i).interval_times>0)) {
                     var med_alert = result.rows.item(i).med_name;
                     cordova.plugins.notification.local.schedule({
                         id: 123,
@@ -412,11 +426,11 @@ function checkAlarm(cuttime) {
                         );
                         
                     }, this);
-        		 	alert("Drink your " + med_alert);
-        		 	
-        		 }
-        	}
-    	  	
+                    alert("Drink your " + med_alert);
+                    
+                 }
+            }
+            
         },
         function(error) {
             alert('Error:' + error);
@@ -454,17 +468,17 @@ function snooze(alarm_index,new_next_alarm) {
 
 
 function updateNextAlarm(alarm_index, setMode) {
-	var temp_array = [];
-	db.transaction(function(transaction) {
+    var temp_array = [];
+    db.transaction(function(transaction) {
         var executeQuery = "SELECT * FROM prescription WHERE presc_id=" + alarm_index;
         
         transaction.executeSql(executeQuery, [], function(tx, result) {
-        	temp_array.push(result.rows.item(0).next_alarm);
-        	temp_array.push(result.rows.item(0).med_name);
-        	temp_array.push(result.rows.item(0).hrs_dur);
-        	temp_array.push(result.rows.item(0).mins_dur);
-        	temp_array.push(result.rows.item(0).interval_times);
-    	  	
+            temp_array.push(result.rows.item(0).next_alarm);
+            temp_array.push(result.rows.item(0).med_name);
+            temp_array.push(result.rows.item(0).hrs_dur);
+            temp_array.push(result.rows.item(0).mins_dur);
+            temp_array.push(result.rows.item(0).interval_times);
+            
         },
         function(error) {
             alert('Error:' + error);
@@ -489,16 +503,16 @@ function updateNextAlarm(alarm_index, setMode) {
 }
 
 function setNextAlarm(alarm_index, new_next_alarm) {
-	db.transaction(function(transaction) {
-		var executeQuery = "UPDATE prescription SET next_alarm=?, interval_times=interval_times-1 WHERE presc_id=?";
-		transaction.executeSql(executeQuery, [new_next_alarm, alarm_index],nullHandler,errorHandler);
-	},
-	function (error) {
-		alert('Error' + error);
-	},
-	function() {
-		alert('Success update');
-	});
+    db.transaction(function(transaction) {
+        var executeQuery = "UPDATE prescription SET next_alarm=?, interval_times=interval_times-1 WHERE presc_id=?";
+        transaction.executeSql(executeQuery, [new_next_alarm, alarm_index],nullHandler,errorHandler);
+    },
+    function (error) {
+        alert('Error' + error);
+    },
+    function() {
+        alert('Success update');
+    });
 
 }
 
@@ -522,13 +536,13 @@ function showMeds() {
 }
 
 function errorHandler() {
-	alert("There is error");
+    alert("There is error");
 }
 
 function nullHandler() {
-	//nothing
+    //nothing
 }
 
 function successCb() {
-	alert("This is success");
+    alert("This is success");
 }
