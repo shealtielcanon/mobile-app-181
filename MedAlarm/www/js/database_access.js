@@ -52,7 +52,6 @@ function onDeviceReady() {
     });
 
     var urlPath = window.location.pathname;
-    alert("urlPath: " + urlPath);
     if(urlPath=="/android_asset/www/home.html") {
         loadUser();
         //checkEvent();
@@ -61,7 +60,6 @@ function onDeviceReady() {
 
     if(urlPath=="/android_asset/www/searchresult.html") {
         var urlWithParams = window.location.href;
-        alert("urlWithParams: "+urlWithParams);
         var sv = getParameterByName('s', urlWithParams);
         
         searchResults(sv);
