@@ -245,6 +245,7 @@
   border-color: #FFFFFF;
  border-radius: 20px;
  box-shadow:inset 0 0 5px 5px #888;
+
 }
 #homebodytable tr {
   border-color: #FFFFFF;
@@ -257,7 +258,9 @@
 
 @media (min-width: 480px) {
   #homebodytable th, #homebodytable td {
-    padding: 15px !important;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    font-size: 20px;
   }
 }
 
