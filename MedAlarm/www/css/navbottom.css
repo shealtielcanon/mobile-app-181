@@ -350,7 +350,7 @@
 
 
 
-#searchinput{
+#searchinput, #search_id{
 
   position: relative;
   max-width: 100%;
@@ -372,7 +372,7 @@
   
 
 }
-#searchinput: active{
+#searchinput:active, #search_id:active{
 background-color: #820099;
 }
 

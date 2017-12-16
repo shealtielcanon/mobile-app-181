@@ -622,6 +622,27 @@ function updateLogText(ev_id, added_text) {
 
 }
 
+function search() {
+    var search_result = document.getElementById('search_id').value;
+    db.transaction(function(transaction) {
+        var executeQuery = "SELECT * FROM Medicine WHERE LOWER(GenericName) LIKE LOWER('%"+search_result+"%')";
+        alert(executeQuery);
+        transaction.executeSql(executeQuery, [], function(tx, result) {
+            var len = result.rows.length;
+            alert(result.rows.item(0).GenericName);
+        },
+        function(error) {
+            alert('Error:' + error);
+        });
+    },
+    function(error) {
+        alert('Error search: ' + error);
+    },
+    function() {
+        alert('Success search');
+    });
+}
+
 function errorHandler() {
     alert("There is error");
 }

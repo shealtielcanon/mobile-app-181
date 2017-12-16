@@ -33,9 +33,9 @@
   <div  class="col-lg-6">
           <div class="form-group">
             <div class="input-group">
-              <input placeholder=" Enter Medicine name " id="searchinput" type="text" class="form-control">
+              <input placeholder=" Enter Medicine name " id="search_id" type="text" class="form-control">
               <span id="searchinput" class="input-group-btn">
-                <a id="searchbutton" class="btn   glyphicon glyphicon-search btn-default" type="submit" href="searchresult.html" ></a>
+                <input id="searchbutton" type="button" class="btn glyphicon glyphicon-search btn-default"  onclick="search()" />
               </span>
             </div><!-- /input-group -->
           </div><!-- /.form-group -->
@@ -57,7 +57,9 @@
     </div>
 </nav>
 </div>   
-
+     <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/SQLitePlugin.js"></script>
+        <script type="text/javascript" src="js/database_access.js"></script>    
 
 
 </body>
