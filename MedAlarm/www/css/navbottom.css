@@ -61,6 +61,7 @@
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   background-image: url("../images/all.jpg");
+
 }
 .rwd1-table {
   margin: 1em 0;
@@ -195,7 +196,7 @@
 
 }
 
-
+}
 .rwd-table {
   background:#820099;
   color: #fff;
