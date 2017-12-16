@@ -161,6 +161,7 @@ input:focus, textarea:focus {
 	transition: all 0.3s;
   margin-top:-4px;
   font-weight:700;
+  outline: none;
 }
 
 #button-blue:hover{
@@ -176,7 +177,7 @@ input:focus, textarea:focus {
 	
 .ease {
 	width: 0px;
-	height: 74px;
+	height: 45px;
 	background-color: #821499;
 	-webkit-transition: .3s ease;
 	-moz-transition: .3s ease;
