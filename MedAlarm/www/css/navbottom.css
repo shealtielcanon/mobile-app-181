@@ -159,15 +159,6 @@
 
 }
 
-.h1history {
-  text-align: center;
-  font-weight: normal;
-  letter-spacing: 3px;
-  color: white;
-  padding-right: 10px;
-  font-weight: bold;
-  font-size:: 20px;
-}
 
 .rwd1-table {
   background:#820099;
@@ -427,6 +418,19 @@ background-color: #820099;
   font-weight: bold;
 
 }
+.searchheader1{
+  position: relative;
+  margin-top: 0;
+font-size: 30px;
+
+  text-align: center;
+  font-weight: normal;
+  letter-spacing: 3px;
+  color: white;
+  padding-right: 10px;
+  font-weight: bold;
+
+}
 
 .addillnessheader{
   position: relative;
@@ -439,6 +443,21 @@ background-color: #820099;
   padding-right: 10px;
   font-weight: bold;
   font-size: 30px;
+
+}
+.medicalhistory{
+
+ position: relative;
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: normal;
+  letter-spacing: 3px;
+  color: white;
+  padding-right: 10px;
+  font-weight: bold;
+  font-size: 30px;
+
 
 }
 #addillnessinput{
