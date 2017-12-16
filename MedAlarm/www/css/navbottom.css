@@ -62,6 +62,7 @@
   text-rendering: optimizeLegibility;
   background-image: url("../images/all.jpg");
 
+
 }
 .rwd1-table {
   margin: 1em 0;
@@ -126,6 +127,25 @@
   text-rendering: optimizeLegibility;
   background-image: url("../images/all.jpg");
 }
+.alarmbody {
+ 
+  font-family: Montserrat, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  background-image: url("../images/all.jpg");
+}
+
+
+.searchresultbody {
+ 
+  font-family: Montserrat, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  background-image: url("../images/all.jpg");
+  margin-bottom: 30px;
+  overflow-y: scroll;
+}
+
 
 .homebody {
 
@@ -614,7 +634,7 @@ box-sizing: border-box;
   position: relative;
   max-width: 100%;
   width: 25%;
-  margin: auto;
+  display: inline-block;
   padding-top:  15px;
 
   }
