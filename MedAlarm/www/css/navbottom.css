@@ -162,10 +162,11 @@
 .h1history {
   text-align: center;
   font-weight: normal;
-  letter-spacing: 10px;
+  letter-spacing: 3px;
   color: white;
   padding-right: 10px;
   font-weight: bold;
+  font-size:: 20px;
 }
 
 .rwd1-table {
@@ -378,25 +379,37 @@ background-color: #820099;
 
 
 #searchbutton{
-  color: white;
-  background-color:  #4A0057;
-  border-color:  #820099;
-  border-width: 4px;
-  outline: none;
-  border-radius: 30px;
-  height: 47px;
-  width: 70px;
-  font-weight: bolder;
-  font-size: 20px;
-  box-shadow:inset 0 0 5px 5px #888;
+  
+  max-width: 100%;
+  width: 60px;
+  position: relative;
+  height: 45px;
+  margin: auto;
+  display: inline-block;
+
+  border: #fbfbfb solid 4px;
+  border-radius: 50px;
+  cursor:pointer;
+  background-color: #783F99;
+  color:white;
+  
+  box-shadow:inset 0 0 5px 5px #4D0D6B;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+ 
+
+ 
+    
+   
+    
 
 }
 #searchbutton:focus{
   border-width: 5px;
   font-size: 15px;
-  background-color: #FFFFFF;
-  border-color: #820099;
-  color: #820099;
+ 
+
 
 
 }
@@ -404,11 +417,11 @@ background-color: #820099;
 
 .searchheader{
   position: relative;
-  margin-top: 35px;
+  margin-top: 0;
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  letter-spacing: 10px;
+  letter-spacing: 3px;
   color: white;
   padding-right: 10px;
   font-weight: bold;
@@ -417,14 +430,15 @@ background-color: #820099;
 
 .addillnessheader{
   position: relative;
-  margin-top: 10px;
+  margin-top: 0;
   margin-bottom: 10px;
   text-align: center;
   font-weight: normal;
-  letter-spacing: 10px;
+  letter-spacing: 3px;
   color: white;
   padding-right: 10px;
   font-weight: bold;
+  font-size: 30px;
 
 }
 #addillnessinput{
@@ -544,7 +558,7 @@ background-color: #820099;
   max-width: 100%;
   width: 40%;
   position: relative;
-  top: 150px;
+  top: 30px;
   margin: auto;
   display: inline-block;
 
@@ -553,7 +567,7 @@ background-color: #820099;
   cursor:pointer;
   background-color: #783F99;
   color:white;
-  f
+  
   padding-top:10px;
   padding-bottom:10px;
   -webkit-transition: all 0.3s;
@@ -587,7 +601,7 @@ background-color: #820099;
   width: 83%;
   top: 60px;
   border-radius: 30px;
-  display: block;
+  display: inline-block;
   margin: 0 auto;
   background-color: #FFFFFF;
   border-width: 2px;
@@ -599,7 +613,49 @@ background-color: #820099;
   box-shadow:inset 0 0 3px 3px #888;
   
 }
+#addillnessinputs{
+  text-align: center;
 
+}
+
+#addmedicine{
+  position: relative;
+  max-width: 100%;
+  width: 40%;
+  top: 60px;
+  border-radius: 30px;
+  display: inline-block;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  border-width: 2px;
+  border-color: #820099; 
+  outline: none;
+  height: 45px;
+  font-weight: bold;
+  font-size: 13px;
+  box-shadow:inset 0 0 3px 3px #888;
+  
+}
+#addmedicinebutton{
+
+ position: relative;
+  max-width: 100%;
+  width: 20%;
+  top: 60px;
+  border-radius: 30px;
+  display: inline-block;
+  margin: 0 auto;
+  background-color: #820099;
+  border-width: 4px;
+  border-color: #FFFFFF; 
+  outline: none;
+  height: 45px;
+  font-weight: bold;
+  padding-bottom:  5px;
+  
+
+
+}
 
 #days{
 
@@ -638,3 +694,4 @@ box-sizing: border-box;
   padding-top:  15px;
 
   }
+
