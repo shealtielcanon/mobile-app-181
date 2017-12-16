@@ -166,6 +166,8 @@ input:focus, textarea:focus {
 #button-blue:hover{
 	background-color: rgba(0,0,0,0);
 	color: #783F99;
+	
+
 }
 	
 .submit:hover {
