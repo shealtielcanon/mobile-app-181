@@ -221,7 +221,7 @@ function addAlarmToDB(nextAlarm, meds, hrs, mins, times) {
     db.transaction(function(transaction) {
         alert('Here daw!');
         var executeQuery;
-        if(hrs=24){
+        if(hrs==24){
             executeQuery = "INSERT INTO prescription (pmed_id, next_alarm, hrs_dur, mins_dur, interval_times, e_id, next_alarm_date, is_one_day_alarm) VALUES (?,?,?,?,?,?, date('now', '+1 day'), 1)"
         }
         else{
@@ -356,7 +356,7 @@ function showAlarmList() {
         transaction.executeSql(executeQuery, [], function(tx, result) {
             alarmLength = result.rows.length;
             for (i=0; i<alarmLength; i++) {
-                newLine = newLine + result.rows.item(i).med_name + ": " + result.rows.item(i).next_alarm + ", " + result.rows.item(i).interval_times + " more times.<br>";
+                newLine = newLine + result.rows.item(i).pmed_id + ": " + result.rows.item(i).next_alarm + ", " + result.rows.item(i).interval_times + " more times., One day?: " + result.rows.item(i).is_one_day_alarm + "<br>";
             }
         },
         function(error) {
@@ -399,15 +399,30 @@ function checkAlarm(cuttime) {
         
         transaction.executeSql(executeQuery, [], function(tx, result) {
             var presc_len = result.rows.length;
+            var med_alert;
             for(i=0; i<presc_len; i++) {
                  if((result.rows.item(i).next_alarm == cuttime) && (result.rows.item(i).interval_times>0)) {
-                    var med_alert = result.rows.item(i).med_name;
-                    cordova.plugins.notification.local.schedule({
-                        id: 123,
-                        title: 'Drink your medicine',
-                        text: 'Drink '+ med_alert,
-                        foreground: true
-                    });
+                    if(result.rows.item(i).is_one_day_alarm==1) {
+                        if(result.rows.item(i).next_alarm_date==currentDate()){
+                            med_alert = result.rows.item(i).med_name;
+                            cordova.plugins.notification.local.schedule({
+                                id: 123,
+                                title: 'Drink your medicine',
+                                text: 'Drink '+ med_alert,
+                                foreground: true
+                            });
+                        }
+                    }
+                    else{
+                        med_alert = result.rows.item(i).med_name;
+                        cordova.plugins.notification.local.schedule({
+                            id: 123,
+                            title: 'Drink your medicine',
+                            text: 'Drink '+ med_alert,
+                            foreground: true
+                        });
+                    }
+                    
                     
                     row_id = result.rows.item(i).presc_id;
                     cordova.plugins.notification.local.on("click", function (notification, state) {
