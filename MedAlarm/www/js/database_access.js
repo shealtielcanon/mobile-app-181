@@ -83,8 +83,8 @@ function checkEvent(){
 function addEvent() { //check and debug this!
     alert("Addevent is clicked!");
     db.transaction(function(transaction) {
-        var new_event_name = document.getElementById('eventname');
-        var new_event_desc = document.getElementById('eventdesc');
+        var new_event_name = document.getElementById('addillnessinput');
+        var new_event_desc = document.getElementById('addillnessarea');
         var executeQuery = "INSERT INTO event (event_name, event_desc, start_date, is_running) VALUES (?,?, date('now'), 1)";
         transaction.executeSql(executeQuery, [new_event_name, new_event_desc],nullHandler,errorHandler);
 
@@ -94,7 +94,7 @@ function addEvent() { //check and debug this!
     },
     function() {
         alert('Success event: ' );
-        window.location = "alarm.html";
+        window.location = "alarm3.html";
     });
     
 }
@@ -571,7 +571,7 @@ function showMeds() {
         transaction.executeSql(executeQuery, [], function(tx, result) {
             var len = result.rows.length;
 
-            for(int i=0; i<len; i++) {
+            for(i=0; i<len; i++) {
                 med_option = med_option + "<option value=" + result.rows.item(i+1).GenericName + ">";
             }
         },
