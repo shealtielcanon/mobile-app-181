@@ -94,7 +94,9 @@ function addEvent() { //check and debug this!
     },
     function() {
         alert('Success event: ' );
-        window.location = "alarm3.html";
+        //window.location = "alarm3.html";
+        var last_id = getLastId();
+        newLogEntry(last_id);
     });
     
 }
@@ -233,6 +235,7 @@ function addAlarmToDB(nextAlarm, meds, hrs, mins, times) {
     },
     function() {
         alert('Success addAlarmToDB');
+        updateLogText(recentNewEventId, meds);
     });
 
 }
@@ -585,6 +588,36 @@ function showMeds() {
     function() {
         alert('Success showMeds');
         document.getElementById('med_option_id') = med_option;
+    });
+
+}
+
+function newLogEntry(ev_id) { //check and debug this!
+    alert("newLogEntry is clicked!");
+    db.transaction(function(transaction) {
+        var executeQuery = "INSERT INTO logs (e_id, start_date) VALUES (?,date('now'))";
+        transaction.executeSql(executeQuery, [ev_id],nullHandler,errorHandler);
+
+    },
+    function (error) {
+        alert('Error' + error);
+    },
+    function() {
+        alert('Success log new event: ' );
+        window.location = "alarm3.html";
+    });
+}
+
+function updateLogText(ev_id, added_text) {
+    db.transaction(function(transaction) {
+        var executeQuery = "UPDATE logs SET generated_text = generated_text || ? || "+"','"+" WHERE e_id=?";
+        transaction.executeSql(executeQuery, [ev_id, added_text],nullHandler,errorHandler);
+    },
+    function (error) {
+        alert('Error' + error);
+    },
+    function() {
+        alert('Success updateLogText');
     });
 
 }
