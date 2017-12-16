@@ -467,6 +467,22 @@ function checkAlarm(cuttime) {
 
 }
 
+function deleteEvent(ev_id) {
+    db.transaction(function(transaction) {
+        var executeQuery = "UPDATE event SET is_running=0 WHERE presc_id=ev_id";
+        transaction.executeSql(executeQuery, [],nullHandler,errorHandler);
+    },
+    function (error) {
+        alert('Error' + error);
+    },
+    function() {
+        alert('Success deleteEvent');
+    });
+}
+
+
+
+
 function snooze(alarm_index,new_next_alarm) {
     db.transaction(function(transaction) {
         var executeQuery = "UPDATE prescription SET next_alarm=? WHERE presc_id=?";
@@ -484,6 +500,7 @@ function snooze(alarm_index,new_next_alarm) {
 
 function updateNextAlarm(alarm_index, setMode) {
     var temp_array = [];
+    var is_one_day;
     db.transaction(function(transaction) {
         var executeQuery = "SELECT * FROM prescription WHERE presc_id=" + alarm_index;
         
@@ -493,6 +510,7 @@ function updateNextAlarm(alarm_index, setMode) {
             temp_array.push(result.rows.item(0).hrs_dur);
             temp_array.push(result.rows.item(0).mins_dur);
             temp_array.push(result.rows.item(0).interval_times);
+            is_one_day = result.rows.item(0).is_one_day_alarm;
             
         },
         function(error) {
@@ -506,7 +524,10 @@ function updateNextAlarm(alarm_index, setMode) {
         alert('Success updateNextAlarm');
         if(setMode=='u'){
             setAlarm(new Date(), temp_array, 'u');
-            setNextAlarm(alarm_index, temp_array[0]);      
+            setNextAlarm(alarm_index, temp_array[0]);
+            if(is_one_day==1) {
+                setNextAlarmDate(alarm_index);
+            }      
         }
         else {
             setAlarm(new Date(), temp_array, 'sn');
@@ -517,7 +538,20 @@ function updateNextAlarm(alarm_index, setMode) {
 
 }
 
-function setNextAlarm(alarm_index, new_next_alarm) {
+function setNextAlarmDate(alarm_index) {
+    db.transaction(function(transaction) {
+        var executeQuery = "UPDATE prescription SET next_alarm_date=date('now', '+day') WHERE presc_id=?";
+        transaction.executeSql(executeQuery, [new_next_alarm, alarm_index],nullHandler,errorHandler);
+    },
+    function (error) {
+        alert('Error' + error);
+    },
+    function() {
+        alert('Success update next alarm date');
+    });
+}
+
+function setNextAlarm(alarm_index, new_next_alarm) {//update for 24 hours alarms
     db.transaction(function(transaction) {
         var executeQuery = "UPDATE prescription SET next_alarm=?, interval_times=interval_times-1 WHERE presc_id=?";
         transaction.executeSql(executeQuery, [new_next_alarm, alarm_index],nullHandler,errorHandler);
