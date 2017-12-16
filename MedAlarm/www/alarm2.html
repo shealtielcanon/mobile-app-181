@@ -25,10 +25,7 @@
   <div  class="col-lg-6">
           <div class="form-group">
             <div class="">
-              <input list="medlist" placeholder=" Enter Your Disease if you know it " id="addillnessinput" class="form-control">
-              <datalist id="medlist">
-                <div id="med_option_id"></div>
-              </datalist>
+              <input type="text" placeholder=" Enter Your Disease if you know it " id="addillnessinput" class="form-control">
               <textarea name="styled-textarea" id="addillnessarea" onblur="" >   I feel like,</textarea>
             <a id="addillnessbutton" class="btn btn-default" type="submit" href="alarm3.html" >Go!</a>
             </div><!-- /input-group -->
@@ -55,7 +52,9 @@
 </nav>
 </div>   
 
-
+      <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/SQLitePlugin.js"></script>
+        <script type="text/javascript" src="js/database_access.js"></script>    
 
 </body>
 </html>                            

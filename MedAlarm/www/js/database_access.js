@@ -58,10 +58,6 @@ function onDeviceReady() {
         showAlarmList();
     }
 
-    if(urlPath=="/android_asset/www/alarm2.html") {
-        showMeds();
-    }
-
 }
 
 
@@ -575,7 +571,7 @@ function showMeds() {
         transaction.executeSql(executeQuery, [], function(tx, result) {
             var len = result.rows.length;
 
-            for(int i=0; i<len; i++){
+            for(int i=0; i<len; i++) {
                 med_option = med_option + "<option value=" + result.rows.item(i+1).GenericName + ">";
             }
         },
@@ -588,7 +584,7 @@ function showMeds() {
     },
     function() {
         alert('Success showMeds');
-        document.getElementById('med_option_id') = med_option
+        document.getElementById('med_option_id') = med_option;
     });
 
 }
