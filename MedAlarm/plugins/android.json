@@ -21,6 +21,9 @@
     },
     "cordova-sqlite-ext": {
       "PACKAGE_NAME": "com.project181.medalarm"
+    },
+    "cordova-plugin-autostart": {
+      "PACKAGE_NAME": "com.project181.medalarm"
     }
   },
   "dependent_plugins": {

@@ -58,6 +58,10 @@ function onDeviceReady() {
         showAlarmList();
     }
 
+    if(urlPath=="/android_asset/www/alarm2.html") {
+        showMeds();
+    }
+
 }
 
 
@@ -168,7 +172,6 @@ function confirmUser() {
 
 function checkForNewUser() {
     alert("Checking for registered user...");
-    showMeds();
     db.transaction(function(transaction) {
         var executeQuery = "SELECT * FROM user";
         transaction.executeSql(executeQuery, [], function(tx, result) {
@@ -221,7 +224,7 @@ function addAlarmToDB(nextAlarm, meds, hrs, mins, times) {
     db.transaction(function(transaction) {
         alert('Here daw!');
         var executeQuery;
-        if(hrs=24){
+        if(hrs==24){
             executeQuery = "INSERT INTO prescription (pmed_id, next_alarm, hrs_dur, mins_dur, interval_times, e_id, next_alarm_date, is_one_day_alarm) VALUES (?,?,?,?,?,?, date('now', '+1 day'), 1)"
         }
         else{
@@ -356,7 +359,7 @@ function showAlarmList() {
         transaction.executeSql(executeQuery, [], function(tx, result) {
             alarmLength = result.rows.length;
             for (i=0; i<alarmLength; i++) {
-                newLine = newLine + result.rows.item(i).med_name + ": " + result.rows.item(i).next_alarm + ", " + result.rows.item(i).interval_times + " more times.<br>";
+                newLine = newLine + result.rows.item(i).pmed_id + ": " + result.rows.item(i).next_alarm + ", " + result.rows.item(i).interval_times + " more times., One day?: " + result.rows.item(i).is_one_day_alarm + "<br>";
             }
         },
         function(error) {
@@ -399,15 +402,30 @@ function checkAlarm(cuttime) {
         
         transaction.executeSql(executeQuery, [], function(tx, result) {
             var presc_len = result.rows.length;
+            var med_alert;
             for(i=0; i<presc_len; i++) {
                  if((result.rows.item(i).next_alarm == cuttime) && (result.rows.item(i).interval_times>0)) {
-                    var med_alert = result.rows.item(i).med_name;
-                    cordova.plugins.notification.local.schedule({
-                        id: 123,
-                        title: 'Drink your medicine',
-                        text: 'Drink '+ med_alert,
-                        foreground: true
-                    });
+                    if(result.rows.item(i).is_one_day_alarm==1) {
+                        if(result.rows.item(i).next_alarm_date==currentDate()){
+                            med_alert = result.rows.item(i).med_name;
+                            cordova.plugins.notification.local.schedule({
+                                id: 123,
+                                title: 'Drink your medicine',
+                                text: 'Drink '+ med_alert,
+                                foreground: true
+                            });
+                        }
+                    }
+                    else{
+                        med_alert = result.rows.item(i).med_name;
+                        cordova.plugins.notification.local.schedule({
+                            id: 123,
+                            title: 'Drink your medicine',
+                            text: 'Drink '+ med_alert,
+                            foreground: true
+                        });
+                    }
+                    
                     
                     row_id = result.rows.item(i).presc_id;
                     cordova.plugins.notification.local.on("click", function (notification, state) {
@@ -452,6 +470,22 @@ function checkAlarm(cuttime) {
 
 }
 
+function deleteEvent(ev_id) {
+    db.transaction(function(transaction) {
+        var executeQuery = "UPDATE event SET is_running=0 WHERE presc_id=ev_id";
+        transaction.executeSql(executeQuery, [],nullHandler,errorHandler);
+    },
+    function (error) {
+        alert('Error' + error);
+    },
+    function() {
+        alert('Success deleteEvent');
+    });
+}
+
+
+
+
 function snooze(alarm_index,new_next_alarm) {
     db.transaction(function(transaction) {
         var executeQuery = "UPDATE prescription SET next_alarm=? WHERE presc_id=?";
@@ -469,6 +503,7 @@ function snooze(alarm_index,new_next_alarm) {
 
 function updateNextAlarm(alarm_index, setMode) {
     var temp_array = [];
+    var is_one_day;
     db.transaction(function(transaction) {
         var executeQuery = "SELECT * FROM prescription WHERE presc_id=" + alarm_index;
         
@@ -478,6 +513,7 @@ function updateNextAlarm(alarm_index, setMode) {
             temp_array.push(result.rows.item(0).hrs_dur);
             temp_array.push(result.rows.item(0).mins_dur);
             temp_array.push(result.rows.item(0).interval_times);
+            is_one_day = result.rows.item(0).is_one_day_alarm;
             
         },
         function(error) {
@@ -491,7 +527,10 @@ function updateNextAlarm(alarm_index, setMode) {
         alert('Success updateNextAlarm');
         if(setMode=='u'){
             setAlarm(new Date(), temp_array, 'u');
-            setNextAlarm(alarm_index, temp_array[0]);      
+            setNextAlarm(alarm_index, temp_array[0]);
+            if(is_one_day==1) {
+                setNextAlarmDate(alarm_index);
+            }      
         }
         else {
             setAlarm(new Date(), temp_array, 'sn');
@@ -502,7 +541,20 @@ function updateNextAlarm(alarm_index, setMode) {
 
 }
 
-function setNextAlarm(alarm_index, new_next_alarm) {
+function setNextAlarmDate(alarm_index) {
+    db.transaction(function(transaction) {
+        var executeQuery = "UPDATE prescription SET next_alarm_date=date('now', '+day') WHERE presc_id=?";
+        transaction.executeSql(executeQuery, [new_next_alarm, alarm_index],nullHandler,errorHandler);
+    },
+    function (error) {
+        alert('Error' + error);
+    },
+    function() {
+        alert('Success update next alarm date');
+    });
+}
+
+function setNextAlarm(alarm_index, new_next_alarm) {//update for 24 hours alarms
     db.transaction(function(transaction) {
         var executeQuery = "UPDATE prescription SET next_alarm=?, interval_times=interval_times-1 WHERE presc_id=?";
         transaction.executeSql(executeQuery, [new_next_alarm, alarm_index],nullHandler,errorHandler);
@@ -517,10 +569,15 @@ function setNextAlarm(alarm_index, new_next_alarm) {
 }
 
 function showMeds() {
+    var med_option = "";
     db.transaction(function(transaction) {
         var executeQuery = "SELECT * FROM Medicine";
         transaction.executeSql(executeQuery, [], function(tx, result) {
-            alert("SHOWMEDS: " + result.rows.length);
+            var len = result.rows.length;
+
+            for(int i=0; i<len; i++){
+                med_option = med_option + "<option value=" + result.rows.item(i+1).GenericName + ">";
+            }
         },
         function(error) {
             alert('Error:' + error);
@@ -531,6 +588,7 @@ function showMeds() {
     },
     function() {
         alert('Success showMeds');
+        document.getElementById('med_option_id') = med_option
     });
 
 }

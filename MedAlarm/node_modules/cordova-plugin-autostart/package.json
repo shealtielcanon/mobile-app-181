@@ -1,0 +1,60 @@
+{
+  "_from": "cordova-plugin-autostart",
+  "_id": "cordova-plugin-autostart@2.0.1",
+  "_inBundle": false,
+  "_integrity": "sha1-DLNxAcuLRxc1+OkX9xmYwoJt2jY=",
+  "_location": "/cordova-plugin-autostart",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-plugin-autostart",
+    "name": "cordova-plugin-autostart",
+    "escapedName": "cordova-plugin-autostart",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-autostart/-/cordova-plugin-autostart-2.0.1.tgz",
+  "_shasum": "0cb37101cb8b471735f8e917f71998c2826dda36",
+  "_spec": "cordova-plugin-autostart",
+  "_where": "C:\\Users\\HARRIE\\Desktop\\mobile-app-181\\MedAlarm",
+  "author": {
+    "name": "Toni Korin"
+  },
+  "bugs": {
+    "url": "https://github.com/ToniKorin/cordova-plugin-autostart/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-autostart",
+    "platforms": [
+      "android"
+    ]
+  },
+  "deprecated": false,
+  "description": "\r\n        The application will be automatically started after the every boot and the automatic update of your application. \r\n        You can enable or disable the autostart function in your app.\r\n    ",
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "homepage": "https://github.com/ToniKorin/cordova-plugin-autostart",
+  "keywords": [
+    "autostart",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "license": "Apache 2.0",
+  "name": "cordova-plugin-autostart",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ToniKorin/cordova-plugin-autostart.git"
+  },
+  "version": "2.0.1"
+}

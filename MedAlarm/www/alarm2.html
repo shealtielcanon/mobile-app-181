@@ -25,7 +25,10 @@
   <div  class="col-lg-6">
           <div class="form-group">
             <div class="">
-              <input placeholder=" Enter Your Disease if you know it " id="addillnessinput" type="text" class="form-control">
+              <input list="medlist" placeholder=" Enter Your Disease if you know it " id="addillnessinput" class="form-control">
+              <datalist id="medlist">
+                <div id="med_option_id"></div>
+              </datalist>
               <textarea name="styled-textarea" id="addillnessarea" onblur="" >   I feel like,</textarea>
             <a id="addillnessbutton" class="btn btn-default" type="submit" href="alarm3.html" >Go!</a>
             </div><!-- /input-group -->

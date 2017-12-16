@@ -67,6 +67,14 @@ module.exports = [
     "clobbers": [
       "SQLitePlugin"
     ]
+  },
+  {
+    "id": "cordova-plugin-autostart.AutoStart",
+    "file": "plugins/cordova-plugin-autostart/www/auto-start.js",
+    "pluginId": "cordova-plugin-autostart",
+    "clobbers": [
+      "cordova.plugins.autoStart"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -78,7 +86,8 @@ module.exports.metadata =
   "de.appplant.cordova.plugin.local-notification": "0.8.4.1",
   "cordova-plugin-dialogs": "1.3.4",
   "cordova-plugin-background-mode": "0.7.2",
-  "cordova-sqlite-ext": "0.10.6"
+  "cordova-sqlite-ext": "0.10.6",
+  "cordova-plugin-autostart": "2.0.1"
 };
 // BOTTOM OF METADATA
 });
