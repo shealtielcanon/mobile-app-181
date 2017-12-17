@@ -676,7 +676,7 @@ font-size: 30px;
 
 }
 
-#days{
+#days, #med_id{
 
 position: relative;
   max-width: 100%;

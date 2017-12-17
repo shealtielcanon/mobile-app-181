@@ -15,16 +15,15 @@ setInterval(function() {
     var cuttime = getCurDate(date);
     
     $('#clock-wrapper').html(cuttime);
-    
+    showHistList();
+    showEventList();
     checkAlarm(cuttime);
-
+    
 }, 500);
 
-$(".btntosetalrm").click(function(){ //fix this next!
+function clickSet() {
     setMultipleAlarm(new Date());
-    alert("CLICKED!");
-    //window.location = "home.html";
-});
+}
 
 function setMultipleAlarm(date) {
     //var alarmArray = [];
@@ -52,12 +51,12 @@ function checkAlarmList(date,cuttime) {
     });
 }
 
-function addNew(num) {
-    var med = document.getElementById('med_id' + num).value;
-    var days = document.getElementById('times_id' + num).value;
+function addNew() {
+    var med = document.getElementById('med_id').value;
+    var days = document.getElementById('days').value;
     var dur_times_t;
-    var dur_h_t = document.getElementById('hr_id' + num).value * 1;
-    var dur_m_t = document.getElementById('min_id' + num).value * 1;
+    var dur_h_t = document.getElementById('hrs').value * 1;
+    var dur_m_t = document.getElementById('mins').value * 1;
 
     var addedhr = parseInt(dur_m_t / 60);
     if(addedhr>0) {
@@ -80,19 +79,18 @@ function addNew(num) {
     temp_alarm_array.push([getCurDate(date), med, dur_h_t, dur_m_t, dur_times_t]);
     //addAlarmToDB(getCurDate(date), med, dur_h_t, dur_m_t, dur_times_t);
 
-    var stringInput = "<p>"+ med +": " + dur_h_t + " hour/s, " + dur_m_t + " min/s, " + dur_times_t + " times. <br></p>";
-    var newLine = stringInput +" <div id=\"alarm_list_id"+(num+1)+"\">";
-    newLine = newLine + "<input id=\"med_id"+(num+1)+"\" type=\"text\" placeholder=\"Enter medicine here\" class=\"addeventx\">";
-    newLine = newLine + "<input id=\"hr_id"+(num+1)+"\" type=\"text\" placeholder=\"Hours\" class=\"addeventx\" >";
-    newLine = newLine + "<input id=\"min_id"+(num+1)+"\" type=\"text\" placeholder=\"Minutes\" class=\"addeventx\" >";
-    newLine = newLine + "<input id=\"times_id"+(num+1)+"\" type=\"text\" placeholder=\"How many days you want to set a reminder for this medicine?\" class=\"addeventx\" >"
-    newLine = newLine + "<br><input type=\"button\" class=\"bttn\" value=\"+\" onclick=\"addNew("+(num+1)+")\"/><br><br><br>";
+    alert("Added: " + med);
+    var newLine = "";
+    newLine = newLine + hmtlForAlarmSetting();
     console.log(newLine);
-    document.getElementById('alarm_list_id' + num).innerHTML = newLine;
+    document.getElementById('alarm_list_id').innerHTML = newLine;
+    var medLine = "";
+    medLine = medLine + "<select id=\"med_id\" data-toggle=\"\" class=\" form-control select-primary mrs mbm\"></select>";
+    document.getElementById('med_select').innerHTML = medLine;
 }
 
 function setAlarm(date, current_row, setMode) {
-    alert("setAlarm");
+    //alert("setAlarm");
     var array_row = [];
     array_row = current_row;
     temp_med = array_row[1];
@@ -141,6 +139,7 @@ function setAlarm(date, current_row, setMode) {
 
 function finalizeAlarm(current_row) {
     addAlarmToDB(current_row[0], current_row[1], current_row[2], current_row[3], current_row[4]);
+    //window.location = "home.html";
 }
 
 function getCurDate(date) {
@@ -177,6 +176,30 @@ function setAlarmInterval(days, duration) {
     }
 
     return intervalCtr;
+}
+
+function hmtlForAlarmSetting() {
+    var new_html_line = "";
+
+    new_html_line = new_html_line + "<select id=\"hrs\" data-toggle=\"select\" class=\"  select-inverse mrs mbm form-control\"><option value=\"0\">Hrs</option>";
+
+    for(i=0; i<=24; i++){
+        new_html_line = new_html_line + "<option value=\""+i+"\">"+i+"</option>";
+    }
+    new_html_line = new_html_line + "</select>";
+
+    new_html_line = new_html_line + "<select id=\"mins\" data-toggle=\"select\" class=\"  form-control  select-primary mrs mbm\"><option value=\"0\">Mins</option>";
+    for(i=0; i<=60; i++){
+        new_html_line = new_html_line + "<option value=\""+i+"\">"+i+"</option>";
+    }
+    new_html_line = new_html_line + "</select>";
+
+    new_html_line = new_html_line + "<select id=\"days\" data-toggle=\"select\" class=\" form-control select-primary mrs mbm\"><option value=\"0\">Days</option>";
+    for(i=0; i<=31; i++){
+        new_html_line = new_html_line + "<option value=\""+i+"\">"+i+"</option>";
+    }
+    new_html_line = new_html_line + "</select>";
+    return new_html_line;
 }
 
 function playAudio() {

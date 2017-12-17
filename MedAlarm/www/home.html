@@ -40,72 +40,10 @@
         
         <div id="homebodytable" class="table-responsive">
 
-                
-              <table class="table table-bordred ">
-                   
-                   <thead>                
-                   <th>Illness</th>
-                    <th>Delete</th>
-                   </thead>
-    <tbody>
+      
     
-    
- <tr>
-    
-    <td> <a class="atags" href="list.html"> Labad ulo</a></td>
-    
+      <div id ="event_list"></div>
    
-    
-    <td><p data-placement="top"  title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
-    </tr>
-    
-    
- <tr>
-    
-    <td> <a class="atags" href="list.html"> Sakit lawas</a></td>
-   
-    
-    
-    <td><p data-placement="top"  title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
-    </tr>
-    
-    
-    
- <tr>
-   
-    <td><a class="atags" href="list.html"> Lipong2</a></td>
-   
-   
-    
-    <td><p data-placement="top"  title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
-    </tr>
-    
-    
- <tr>
-    
-    <td><a class="atags" href="list.html"> HIV </a></td>
-   
-    
-    
-    <td><p data-placement="top" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
-    </tr>
-
-<tr>
-    
-    <td><a class="atags" href="list.html"> HIV-AIDS </a></td>
-   
-    
-    
-    <td><p data-placement="top"  title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
-    </tr>
-   
-    
-   
-    
-    </tbody>
-        
-</table>
-
 
                 
             </div>
@@ -146,28 +84,24 @@
     </div>
     
     
+    <div id="modal_del_id"></div>
     
-    <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
-      <div class="modal-dialog">
-    <div class="modal-content">
-          <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-        <h4 class="modal-title custom_align" id="Heading">Delete Alarm</h4>
-      </div>
-          <div class="modal-body">
+      
+    
+          
+        
+        
+      
+          
        
-       <div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> Are you sure you want to delete this alarm?</div>
        
-      </div>
-        <div class="modal-footer ">
-        <button type="button" class="btn btn-success" ><span class="glyphicon glyphicon-ok-sign"></span> Yes</button>
-        <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> No</button>
-      </div>
-        </div>
-    <!-- /.modal-content --> 
-  </div>
-      <!-- /.modal-dialog --> 
-    </div>
+       
+      
+        
+        
+        
+      
+
 
 </div>
 <div class="navbarclass">
@@ -189,7 +123,10 @@
     </div>
 </nav>
 </div>
-
+<script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/SQLitePlugin.js"></script>
+        <script type="text/javascript" src="js/database_access.js"></script>    
+        <script type="text/javascript" src="js/alarm.js"></script>
 
 </body>
 </html>                            

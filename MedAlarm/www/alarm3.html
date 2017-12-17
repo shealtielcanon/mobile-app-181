@@ -30,7 +30,9 @@
 
 
 <h1 class="addillnessheader">Set An Alarm</h1>
+
    <div class="Timeinput">
+    <div id="alarm_list_id">
 <select id="hrs" data-toggle="" class="  select-inverse mrs mbm form-control">
         <option value="0">Hrs</option>
         <option value="0">0</option>
@@ -125,8 +127,7 @@
         <option value="60">60</option>
         
       </select>
-</div>
- <div class="Timeinput">
+
  <select id="days" data-toggle="" class=" form-control select-primary mrs mbm">
         <option value="0">Days</option>
        <option value="0">0</option>
@@ -164,17 +165,25 @@
       </select>
 
 </div>
+</div>
 
   <div id="setalarm" class="col-lg-6">
           <div class="form-group">
             <div >
                 <div id="addillnessinputs">
-              <input placeholder=" Enter name of Medicine here " id="addmedicine" type="text" class="  form-control">
-              <a id="addmedicinebutton" class=" glyphicon glyphicon-search btn btn-default" type="submit" href="#" ></a>
+              <input placeholder=" Enter name of Medicine here " id="addmedicine" type="text" class="  form-control"/>
+              <button id="addmedicinebutton"  class="glyphicon glyphicon-search btn btn-default"  onclick="miniSearch()"></button>
+              <br><br>
+              <div id="med_select">
+              <select id="med_id" data-toggle="" class=" form-control select-primary mrs mbm">
+                <option value=0>Medicine</option>
+            </select>
+                </div>
               </div>
             <div id="alarmbuttoncont">
-            <a id="alarmbutton" class="glyphicon glyphicon-plus btn btn-default" type="submit" href="#" ></a>
-            <a id="alarmbutton" class="glyphicon glyphicon-ok btn btn-default" type="submit" href="#" ></a>
+                <button id="alarmbutton"  class="glyphicon glyphicon-plus btn btn-default"  onclick="addNew()"></button>
+                <button id="alarmbutton"  class="glyphicon glyphicon-ok btn btn-default"  onclick="clickSet()"></button>
+            
             </div> 
             </div><!-- /input-group -->
           </div><!-- /.form-group -->
@@ -199,8 +208,10 @@
 </nav>
 </div>   
 
-
-
+<script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/SQLitePlugin.js"></script>
+        <script type="text/javascript" src="js/database_access.js"></script>    
+        <script type="text/javascript" src="js/alarm.js"></script>
 
 
 </body>
