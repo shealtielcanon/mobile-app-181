@@ -57,11 +57,15 @@
 
 .historybody {
  
+  display: block;
+  text-align: center;
   font-family: Montserrat, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  background-image: url("../images/all.jpg");
-
+   background: red; /* For browsers that do not support gradients */
+    background: linear-gradient(to bottom right,#10A0B7,#2A2868); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 
 }
 .rwd1-table {
@@ -122,39 +126,52 @@
 
 .searchbody {
  
+  
+  text-align: center;
   font-family: Montserrat, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  background-image: url("../images/all.jpg");
+   background: red; /* For browsers that do not support gradients */
+    background: linear-gradient(to bottom right,#10A0B7,#2A2868); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 .alarmbody {
  
+ display: block;
+ text-align: center;
   font-family: Montserrat, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  background-image: url("../images/all.jpg");
+    background: linear-gradient(to bottom right,#10A0B7,#2A2868); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 
 .searchresultbody {
  
+ display: block;
   font-family: Montserrat, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  background-image: url("../images/all.jpg");
-  margin-bottom: 30px;
-  overflow-y: scroll;
+    background: linear-gradient(to bottom right,#10A0B7,#2A2868); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 
 .homebody {
 
- display: block;
+  text-align: center;
   font-family: Montserrat, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  background-image: url("../images/all.jpg");
- 
+    background: linear-gradient(to bottom right,#10A0B7,#2A2868); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
   
 
 }
@@ -342,50 +359,46 @@
 
 
 
-#searchinput, #search_id{
+ #search_id{
 
   position: relative;
   max-width: 100%;
 
-  top: 60px;
-  border-radius: 30px;
+  top: 70px;
+  border-radius: 50px;
   margin: auto;
   left: 0;
   right: 10%;
   margin:auto;
-  background-color: #FFFFFF;
-  border-width: 4px;
-  border-color: #820099; 
+ background-color:rgba(167, 200, 255, .3);
+ 
   outline: none;
   height: 45px;
   font-weight: bold;
   font-size: 15px;
-  box-shadow:inset 0 0 5px 5px #888;
+
   
 
-}
-#searchinput:active, #search_id:active{
-background-color: #820099;
 }
 
 
 #searchbutton{
   
   max-width: 100%;
-  width: 60px;
+  width: 30%;
   position: relative;
   height: 45px;
   margin: auto;
+  top: 90px;
   display: inline-block;
 
-  border: #fbfbfb solid 4px;
-  border-radius: 50px;
-  cursor:pointer;
-  background-color: #783F99;
-  color:white;
   
-  box-shadow:inset 0 0 5px 5px #4D0D6B;
-  -webkit-transition: all 0.3s;
+  border-radius: 30px;
+  cursor:pointer;
+  background-color:rgba(167, 200, 255, .3);
+  color:white;
+ 
+  
   -moz-transition: all 0.3s;
   transition: all 0.3s;
  
@@ -396,67 +409,112 @@ background-color: #820099;
     
 
 }
-#searchbutton:focus{
-  border-width: 5px;
-  font-size: 15px;
- 
 
 
 
-}
-
-
-.searchheader{
-  position: relative;
-  margin-top: 0;
-  margin-bottom: 30px;
-  text-align: center;
-  font-weight: normal;
-  letter-spacing: 3px;
-  color: white;
-  padding-right: 10px;
-  font-weight: bold;
-
-}
 .searchheader1{
+
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  display: inline-block;
+  
   position: relative;
   margin-top: 0;
-font-size: 30px;
-
+  margin-bottom: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
   text-align: center;
   font-weight: normal;
   letter-spacing: 3px;
   color: white;
-  padding-right: 10px;
+  width: 100%;
+ 
+ padding-top: 10px;
+ padding-bottom: 10px;
+border-width: 3px;
+border-color: #FFFFFF;
   font-weight: bold;
+  font-size: 30px;
+  background-color:rgba(150, 50, 30, .3);
+box-shadow: 0 0 3px 3px #404040;
 
 }
 
 .addillnessheader{
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+   display: inline-block;
+  
   position: relative;
   margin-top: 0;
   margin-bottom: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
   text-align: center;
   font-weight: normal;
   letter-spacing: 3px;
   color: white;
-  padding-right: 10px;
+  width: 100%;
+ 
+ padding-top: 13px;
+ padding-bottom: 12px;
+border-width: 3px;
+border-color: #FFFFFF;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 27px;
+  background-color:rgba(150, 50, 30, .3);
+box-shadow: 0 0 3px 3px #404040;
+
 
 }
-.medicalhistory{
-
- position: relative;
+.homeheader{
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+   display: inline-block;
+  
+  position: relative;
   margin-top: 0;
   margin-bottom: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
   text-align: center;
   font-weight: normal;
   letter-spacing: 3px;
   color: white;
-  padding-right: 10px;
+  width: 100%;
+ 
+ padding-top: 10px;
+ padding-bottom: 10px;
+border-width: 3px;
+border-color: #FFFFFF;
   font-weight: bold;
   font-size: 30px;
+  background-color:rgba(150, 50, 30, .3);
+box-shadow: 0 0 3px 3px #404040;
+
+
+}
+.medicalhistoryheader{
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+
+   display: inline-block;
+  
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+  text-align: center;
+  font-weight: normal;
+  letter-spacing: 3px;
+  color: white;
+  width: 100%;
+ 
+ padding-top: 10px;
+ padding-bottom: 10px;
+border-width: 3px;
+border-color: #FFFFFF;
+  font-weight: bold;
+  font-size: 30px;
+  background-color:rgba(150, 50, 30, .3);
+box-shadow: 0 0 3px 3px #404040;
 
 
 }
@@ -464,65 +522,60 @@ font-size: 30px;
 
   position: relative;
   max-width: 100%;
-  width: 83%;
-  top: 10px;
-  border-radius: 30px;
-  display: block;
-  margin: 0 auto;
-  background-color: #FFFFFF;
-  border-width: 2px;
-  border-color: #820099; 
+  width: 50%;
+  top: 55px;
+  border-radius: 10px;
+  margin: auto;
+  float: left;
+  margin:auto;
+ background-color:rgba(167, 200, 255, .3);
+ 
   outline: none;
   height: 45px;
   font-weight: bold;
-  font-size: 13px;
-  box-shadow:inset 0 0 3px 3px #888;
+  font-size: 15px;
+  color: #FFFFFF;
   
 
 }
 
 #addillnessarea{
 
-  height: 200px;
-  border: 3px solid #820099;
-  
-  font-family: "Lato", Calibri, Arial, sans-serif;
+ position: relative;
+  max-width: 100%;
+
+  top: 65px;
+  border-radius: 10px;
+  border-width: 2px;
+  margin: auto;
+  float: left;
+ background-color:rgba(167, 200, 255, .3);
+ 
+  outline: none;
+  height: 50px;
   font-weight: bold;
   font-size: 15px;
-  color:#747474;
-  background-position: bottom right;
-  background-color: #EBF0F4;
-  background-repeat: no-repeat;
-  display: block;
-  position: relative;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 30px;
-  border-radius: 30px;
-  outline: none;
-  box-shadow:inset 0 0 3px 3px #888
 }
 
 #addillnessbutton{
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
- border-radius: 50px;
-  width: 80%;
-  border: #fbfbfb solid 4px;
+max-width: 100%;
+  width: 50%;
+  position: relative;
+  height: 45px;
+  float: left;
+  top: 80px;
+ 
+
+  border-radius: 30px;
   cursor:pointer;
-  background-color: #783F99;
+  background-color:rgba(167, 200, 255, .3);
   color:white;
-  font-size:20px;
-  padding-top:12px;
-  padding-bottom:10px;
-  -webkit-transition: all 1.3s;
+ 
+  
   -moz-transition: all 0.3s;
   transition: all 0.3s;
-  position: fixed;
-   margin-left:5%;
-  margin-right: auto;
-  margin-top: 100px;
-    font-weight:700;
+ 
 
 }
 
@@ -712,5 +765,44 @@ box-sizing: border-box;
   display: inline-block;
   padding-top:  15px;
 
+box-shadow: 0px -3px 0px 0px rgba(0,0,0,0.33);
+
   }
+
+.container-fluid{
+
+  margin-left: 15px;
+  margin-left: 0;
+}
+
+.navdivalarm{
+  text-align: center;
+}
+
+.ask1image{
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  position:relative;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  float: right;
+
+   
+
+}
+
+.informative{
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  position:relative;
+ margin-top: 0;
+  float:right;
+
+   
+    
+
+}
+
 
