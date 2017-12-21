@@ -1,3 +1,11 @@
+html, body {
+height:100%;
+min-height: 100%;
+font-family: 'Lato', sans-serif;
+
+
+}
+
 @import 'https://fonts.googleapis.com/css?family=Montserrat:300,400,700';
 .rwd-table {
   margin: 1em 0;
@@ -55,24 +63,7 @@
   }
 }
 
-.historybody {
- 
-  display: block;
-  text-align: center;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-    background: linear-gradient(to bottom right,#10A0B7,#2A2868); 
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -ms-background-size: cover;
-  font-family: 'Lato', sans-serif;
-    min-height: 100%;
 
-}
 .rwd1-table {
   margin: 1em 0;
   min-width: 300px;
@@ -132,10 +123,11 @@
 .searchbody {
  
   
+  
+  display: block;
   text-align: center;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-   background: red; /* For browsers that do not support gradients */
     background: linear-gradient(to bottom right,#10A0B7,#2A2868); 
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -145,17 +137,21 @@
     -o-background-size: cover;
     -ms-background-size: cover;
   font-family: 'Lato', sans-serif;
+  width: 100%;
+  height: 100%
     min-height: 100%;
+ background-position: 0px 0px;
+  margin: 0;
 
 }
 .alarmbody {
  
- display: block;
- text-align: center;
-  font-family: Montserrat, sans-serif;
+ 
+  display: block;
+  text-align: center;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-     background: linear-gradient(to bottom right,#10A0B7,#2A2868); 
+    background: linear-gradient(to bottom right,#10A0B7,#2A2868); 
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -164,14 +160,19 @@
     -o-background-size: cover;
     -ms-background-size: cover;
   font-family: 'Lato', sans-serif;
+  width: 100%;
+  height: 100%
     min-height: 100%;
+ background-position: 0px 0px;
+  margin: 0;
 }
 
 
 .searchresultbody {
  
- display: block;
-  font-family: Montserrat, sans-serif;
+ 
+  display: block;
+  text-align: center;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
     background: linear-gradient(to bottom right,#10A0B7,#2A2868); 
@@ -183,14 +184,19 @@
     -o-background-size: cover;
     -ms-background-size: cover;
   font-family: 'Lato', sans-serif;
+  width: 100%;
+  height: 100%
     min-height: 100%;
+ background-position: 0px 0px;
+  margin: 0;
 }
 
 
 .homebody {
 
+  
+  display: block;
   text-align: center;
-  font-family: Montserrat, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
     background: linear-gradient(to bottom right,#10A0B7,#2A2868); 
@@ -202,9 +208,34 @@
     -o-background-size: cover;
     -ms-background-size: cover;
   font-family: 'Lato', sans-serif;
+  width: 100%;
+  height: 100%
     min-height: 100%;
+ background-position: 0px 0px;
+  margin: 0;
   
 
+}
+.historybody {
+ 
+  display: block;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+    background: linear-gradient(to bottom right,#10A0B7,#2A2868); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+  font-family: 'Lato', sans-serif;
+  width: 100%;
+  height: 100%
+    min-height: 100%;
+ background-position: 0px 0px;
+  margin: 0;
 }
 
 
@@ -396,7 +427,7 @@
   max-width: 100%;
 
   top: 70px;
-  border-radius: 50px;
+  border-radius: 10px;
   margin: auto;
   left: 0;
   right: 10%;
@@ -408,6 +439,7 @@
   height: 45px;
   font-weight: bold;
   font-size: 15px;
+  color: #FFFFFF;
 
   
 
@@ -563,7 +595,7 @@ box-shadow: 0 0 3px 3px #404040;
  background-color:rgba(27, 33, 50, .4);
  
   outline: none;
-  height: 45px;
+  height: 40px;
   font-weight: bold;
   font-size: 15px;
   color: #FFFFFF;
@@ -588,7 +620,7 @@ box-shadow: 0 0 3px 3px #404040;
   height: 40px;
   font-weight: bold;
   font-size: 15px;
-  color: #ACB5C0;
+  color: #FFFFFF;
 }
 #addillnessarea:focus {
   height: 50px;
