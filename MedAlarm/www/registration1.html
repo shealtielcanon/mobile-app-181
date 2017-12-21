@@ -24,7 +24,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <h1 class="header-w3ls">Registration</h1>
 <div class="content-w3ls">
 	<div class="form-w3ls">
-		<form action="#" method="post">
+		
 			<div class="content-wthree1">
 				<div class="form-control">
 					
@@ -32,28 +32,28 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="grid-agileits1">
 					<div class="form-control"> 
 						<label class="header">First Name :</label>
-						<input type="text" id="name" name="name" placeholder="" title="Please enter your Full Name" required="">
+						<input type="text" id="fname" name="name" placeholder="" title="Please enter your Full Name" required="">
 					</div>
 		
 					<div class="form-control">	
 						<label class="header">Middle Name :</label>
-						<input type="email" id="name" name="email" placeholder="" title="Please enter a Valid Email Address" required="">
+						<input type="email" id="mname" name="email" placeholder="" title="Please enter a Valid Email Address" required="">
 					</div>
 					<div class="form-control"> 
 						<label class="header">Last Name :</label>
-						<input type="text" id="name" name="address" placeholder="" title="Please enter your Address" required="">
+						<input type="text" id="lname" name="address" placeholder="" title="Please enter your Address" required="">
 					</div>
 					<div class="form-control"> 
 						<label class="header">Email :</label>
-						<input type="text" id="name" name="phone" placeholder="" title="Please enter your Phone No" required="">
+						<input type="text" id="email" name="phone" placeholder="" title="Please enter your Phone No" required="">
 					</div>
 					<div class="form-control"> 
 						<label class="header">Age :</label>
-						<input type="text" id="name" name="phone" placeholder="" title="Please enter your Phone No" required="">
+						<input type="text" id="age" name="phone" placeholder="" title="Please enter your Phone No" required="">
 					</div>
 					<div class="main-row">
 						<label class="header">Gender :</label>
-							<select name="country">
+							<select name="country" id="gender">
 								<option value="none" selected="" disabled="">Gender</option>
 								
 								<option value="Design">Male</option>
@@ -67,12 +67,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>
 			<div class="w3ls-btn">		
 				<div class="wthreesubmitaits">
-					<input type="submit" name="submit" value="Send">
+					<input type="button" name="submit" value="Send" onclick="createUser()">
 				</div>	
 			</div>
-		</form>	
+		
 	</div>
 </div>
-
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/SQLitePlugin.js"></script>
+<script type="text/javascript" src="js/database_access.js"></script>
 </body>
 </html>

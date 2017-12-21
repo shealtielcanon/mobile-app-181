@@ -181,7 +181,7 @@ ul.w3-size li.white{
 	background:#fff;
 	height:50px;
 }
-input#name, input#email, input#orgn, textarea#message {
+input#fname, input#mname, input#lname, input#age, input#email, input#orgn, textarea#message {
      border-width: 3px;
     border-color: #FFFFFF;
 
@@ -196,7 +196,7 @@ input#name, input#email, input#orgn, textarea#message {
 	    margin-bottom: 16px;
   
 }
-input#name,input#email,input#orgn {
+input#fname, input#mname, input#lname, input#age, input#email,input#orgn {
      border-width: 3px;
     border-color:  #FFFFFF;
      border-radius: 10px;
@@ -279,7 +279,7 @@ label.rating {
 .content-wthree3 {
 	margin-top:70px;
 }
-.wthreesubmitaits input[type="submit"] {
+.wthreesubmitaits input[type="button"] {
     outline: none;
     border-radius: 30px;
     padding: 10px 30px;
@@ -291,7 +291,7 @@ label.rating {
 	letter-spacing: 1px;
     cursor: pointer;
 }
-.wthreesubmitaits input[type="submit"]:hover{
+.wthreesubmitaits input[type="button"]:hover{
     background: #16b6ce;
     outline: none;
 }
