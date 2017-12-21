@@ -370,7 +370,8 @@
   left: 0;
   right: 10%;
   margin:auto;
- background-color:rgba(167, 200, 255, .3);
+ background-color:rgba(27, 33, 50, .4);
+ 
  
   outline: none;
   height: 45px;
@@ -522,19 +523,20 @@ box-shadow: 0 0 3px 3px #404040;
 
   position: relative;
   max-width: 100%;
-  width: 50%;
+  width: 60%;
   top: 55px;
   border-radius: 10px;
   margin: auto;
   float: left;
   margin:auto;
- background-color:rgba(167, 200, 255, .3);
+ background-color:rgba(27, 33, 50, .4);
  
   outline: none;
   height: 45px;
   font-weight: bold;
   font-size: 15px;
   color: #FFFFFF;
+
   
 
 }
@@ -543,18 +545,24 @@ box-shadow: 0 0 3px 3px #404040;
 
  position: relative;
   max-width: 100%;
-
+  width: 60%;
   top: 65px;
   border-radius: 10px;
   border-width: 2px;
   margin: auto;
   float: left;
- background-color:rgba(167, 200, 255, .3);
+ background-color:rgba(27, 33, 50, .4);
  
   outline: none;
-  height: 50px;
+  height: 40px;
   font-weight: bold;
   font-size: 15px;
+  color: #ACB5C0;
+}
+#addillnessarea:focus {
+  height: 50px;
+  width: 70%;
+  border-color: #FFFFFF;
 }
 
 #addillnessbutton{
@@ -569,7 +577,8 @@ max-width: 100%;
 
   border-radius: 30px;
   cursor:pointer;
-  background-color:rgba(167, 200, 255, .3);
+   background-color:rgba(167, 200, 255, .3);
+ 
   color:white;
  
   
