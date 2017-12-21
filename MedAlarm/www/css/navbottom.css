@@ -247,7 +247,6 @@ font:inherit;
   background-color:rgba(27, 33, 50, .4);
   border-color: #FFFFFF;
   color: #fff;
-  border-radius: 25px;
     overflow: hidden;
     max-width: 100%;
     max-height: 100%;
@@ -297,7 +296,6 @@ font:inherit;
   background-color:rgba(27, 33, 50, .4);
   border-color: #FFFFFF;
    color: #fff;
-  border-radius: 25px;
     overflow: hidden;
     max-width: 100%;
     max-height: 100%;
@@ -343,6 +341,7 @@ font:inherit;
 }
 
 #homebodytable{
+  text-align: left;
   display: block;
   color: white;
   background-color:rgba(27, 33, 50, .4);
