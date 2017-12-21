@@ -368,61 +368,6 @@ font:inherit;
   }
 }
 
-#search_table_result{
-
-  display: block;
-  color: white;
-  background-color:rgba(27, 33, 50, .4);
-  border-color: #FFFFFF;
- border-radius: 20px;
- box-shadow:inset 0 0 5px 5px #888;
-}
-
-#search_table_result tr {
-  border-color: #FFFFFF;
-  font-size: 15px;
-  
-  border-width: 3px;
-
-}
-
-
-@media (min-width: 480px) {
-  #search_table_result th, #search_table_result td {
-    padding-top: 15px !important;
-    padding-bottom: 15px !important;
-    font-size: 20px;
-  }
-}
-
-
-#hist_list{
-
-  display: block;
-  color: white;
-  background-color:rgba(27, 33, 50, .4);
-  border-color: #FFFFFF;
- border-radius: 20px;
- box-shadow:inset 0 0 5px 5px #888;
-}
-#hist_list tr {
-  border-color: #FFFFFF;
-  font-size: 15px;
-  
-  border-width: 3px;
-
-}
-@media (min-width: 480px) {
-  #hist_list th, #hist_list td {
-    padding-top: 15px !important;
-    padding-bottom: 15px !important;
-    font-size: 20px;
-  }
-}
-
-
-
-
 #button-blue{
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   float:left;
