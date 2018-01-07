@@ -54,6 +54,7 @@ function onDeviceReady() {
     var urlPath = window.location.pathname;
     if(urlPath=="/android_asset/www/home.html") {
         loadUser();
+        showEventList();
         //checkEvent();
         //showAlarmList();
 
@@ -552,6 +553,22 @@ function deleteEvent(ev_id) {
     },
     function() {
         console.log('Success deleteEvent');
+        showEventList();
+    });
+}
+
+function deleteAlarm(a_id) {
+    console.log("delete event clicked!");
+    db.transaction(function(transaction) {
+        var executeQuery = "DELETE FROM prescription WHERE presc_id=?";
+        transaction.executeSql(executeQuery, [a_id],nullHandler,errorHandler);
+    },
+    function (error) {
+        console.log('Error' + error);
+    },
+    function() {
+        console.log('Success deleteAlarm');
+        showPList();
     });
 }
 
@@ -799,6 +816,7 @@ function showEventList() {
 }
 
 function showPList() {
+    var modal_html = "";
     var p_line = "<table class=\"table table-bordred \"> <thead><th>Medicine</th><th>Next Alarm</th><th>Remaining</th><th></th></thead><tbody>";
     console.log("showEventList pasok!");
     db.transaction(function(transaction) {
@@ -808,7 +826,10 @@ function showPList() {
 
             for(i=0; i<len; i++) {
                 p_line = p_line + "<tr><td>"+result.rows.item(i).pmed_id+"</td><td>"+result.rows.item(i).next_alarm+"</td><td>"+result.rows.item(i).interval_times+"</td>";
-                p_line = p_line + "<td><p data-placement=\"top\"  title=\"Edit\"><button class=\"btn btn-primary btn-xs\" data-title=\"Edit\" data-toggle=\"modal\" data-target=\"#edit\" ><span class=\"glyphicon glyphicon-pencil\"></span></button></p></td></tr>";
+                p_line = p_line + "<td><p data-placement=\"top\"  title=\"Delete\"><button class=\"btn btn-danger btn-xs\" data-title=\"Delete\" data-toggle=\"modal\" data-target=\"#delete"+result.rows.item(i).presc_id+"\" ><span class=\"glyphicon glyphicon-trash\"></span></button></p></td>";
+                p_line = p_line + "</tr>";
+
+                modal_html = modal_html + modalDivAlarm(result.rows.item(i).presc_id);
             }
         },
         function(error) {
@@ -822,6 +843,7 @@ function showPList() {
         console.log('Success showPList');
         p_line = p_line + " </tbody></table>"
         document.getElementById('plist_id').innerHTML = p_line;
+        document.getElementById('modal_del_id').innerHTML = modal_html;
     });
 }
 
@@ -856,16 +878,24 @@ function modalDiv(idnum) {
     var modal_line = "<div class=\"modal fade\" id=\"delete"+idnum+"\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"edit\" aria-hidden=\"true\">";
     modal_line = modal_line + "<div class=\"modal-dialog\"><div class=\"modal-content\"><div class=\"modal-header\">";
     modal_line = modal_line + "<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\"><span class=\"glyphicon glyphicon-remove\" aria-hidden=\"true\"></span></button>";
-    modal_line = modal_line + "<h4 class=\"modal-title custom_align\" id=\"Heading\">Delete Alarm</h4>";
+    modal_line = modal_line + "<h4 class=\"modal-title custom_align\" id=\"Heading\">Delete Event</h4>";
     modal_line = modal_line + "</div><div class=\"modal-body\"><div class=\"console.log console.log-danger\"><span class=\"glyphicon glyphicon-warning-sign\"></span> Are you sure you want to delete this alarm?</div>";
     modal_line = modal_line + "</div><div class=\"modal-footer \"><button type=\"button\" class=\"btn btn-success\" data-dismiss=\"modal\" onclick=\"deleteEvent("+idnum+")\"><span class=\"glyphicon glyphicon-ok-sign\"></span> Yes</button>";
     modal_line = modal_line + "<button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\"><span class=\"glyphicon glyphicon-remove\"></span> No</button></div></div></div></div>";
     return modal_line;
-    
-
-
-
 }
+
+function modalDivAlarm(idnum) {
+    var modal_line = "<div class=\"modal fade\" id=\"delete"+idnum+"\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"edit\" aria-hidden=\"true\">";
+    modal_line = modal_line + "<div class=\"modal-dialog\"><div class=\"modal-content\"><div class=\"modal-header\">";
+    modal_line = modal_line + "<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\"><span class=\"glyphicon glyphicon-remove\" aria-hidden=\"true\"></span></button>";
+    modal_line = modal_line + "<h4 class=\"modal-title custom_align\" id=\"Heading\">Delete Alarm</h4>";
+    modal_line = modal_line + "</div><div class=\"modal-body\"><div class=\"console.log console.log-danger\"><span class=\"glyphicon glyphicon-warning-sign\"></span> Are you sure you want to delete this alarm?</div>";
+    modal_line = modal_line + "</div><div class=\"modal-footer \"><button type=\"button\" class=\"btn btn-success\" data-dismiss=\"modal\" onclick=\"deleteAlarm("+idnum+")\"><span class=\"glyphicon glyphicon-ok-sign\"></span> Yes</button>";
+    modal_line = modal_line + "<button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\"><span class=\"glyphicon glyphicon-remove\"></span> No</button></div></div></div></div>";
+    return modal_line;
+}
+
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, "\\$&");

@@ -1,10 +1,45 @@
+html, body {
+height:100%;
+min-height: 100%;
+font-family: 'Lato', sans-serif;
+margin:0;
+padding:0;
+border:0;
+font:inherit;
 
 
+}
 
+#buttonregister{
+
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+max-width: 100%;
+  width: 50%;
+  position: relative;
+  height: 45px;
+    top: 220px;
+ outline: none;
+
+  border-radius: 30px;
+  cursor:pointer;
+   background-color:rgba(27, 33, 50, .4);
+  color:white;
+ 
+  
+ 
+}
 
 #body {
 
-	background-color:#FFFFFF;
+	display: block;
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+   background: red; /* For browsers that do not support gradients */
+    background: linear-gradient(to bottom right,#10A0B7,#2A2868); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 
 
 	}
@@ -12,87 +47,18 @@
 
 
 #convo1 {
-
-	position: relative;
-	margin: 0 auto;
-	display: block;
+	top: 80px;
 	max-width: 100%;
-	width: 800px;
-	overflow-x: hidden;
+  width: 100%;
+  height: auto;
+  position:relative;
+ margin-top: 0;
+
 	
    
 
     }
-#button1 {
-	  position: relative;
- 	  top:10px;
-      left: 43%;
-      
-	  width: 30%;
-	  height: 30%;
-	  max-width: 100%;
-	  display: block;
-	  font-size: 20px;
-	  font-weight: bold;
-	  font-style: ubuntu bold;
-	  cursor: pointer;
-	  outline: none;
-	  color: #fff;
-	  background-color: #505463;
-	  border: none;
-	  border-radius: 50px;
-	  box-shadow: 0 9px #999;
 
-	}
-
-#button1:hover {
-  
-  background-color:#838586}
-
-#button1:active {
- 
-  background-color: #2EA4A4;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-	}
-
-#button2 {
-	  position: relative;
- 	  top: 100px;
-      margin: 25px auto;
-      display: block;
-      align-content: center; 
-     
-      width: 70%;
-      max-width: 100%;
-	  height: 30px;
-	  
-	  font-size: 20px;
-	  font-weight: bold;
-	  font-style: arial bold;
-	  cursor: pointer;
-	  text-align: center;
-
-	  text-decoration: none;
-	  outline: none;
-	  color: #fff;
-	  background-color: #505463;
-	  border: none;
-	  border-radius: 50px;
-	  box-shadow: 0 9px #999;
-
-	}
-
-#button2:hover {
-  
-  background-color:#838586}
-
-#button2:active {
- 
-  background-color: #212E61;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-	}
 
 #Regheader{
 	font-size:13px;
@@ -401,13 +367,3 @@ label {
 }
 
 
- .navbar-nav > li > a{ 
- 	
- 	box-shadow:inset 0 0 5px 5px #888;
- 	margin:auto;
- 	left: 0;
- 	right: 0;
- 	bottom: 0;
- 	 padding: 15px 90px;
-
-  }

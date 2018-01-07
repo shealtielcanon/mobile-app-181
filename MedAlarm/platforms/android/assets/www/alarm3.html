@@ -6,49 +6,214 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Medical Alarm App</title>
 
-<link rel="stylesheet" href="css/bootstrap.css">
 
-<link rel="stylesheet" type="text/css" href="css/navbottom.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta charset="utf-8">
 
+
+<link href="bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link href="css/flat-ui.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/navbottom.css">
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/flat-ui.min.js"></script>
+
+    <script src="js/application.js"></script>
+    <script type="test.js"></script>
 </style>
 </head> 
-<body class="searchbody">
+<body class="alarmbody">
 
 
-<h1 class="addillnessheader">Add what you feel</h1>
-   
-  <div  class="col-lg-6">
+<h1 class="addillnessheader">Set An Alarm</h1>
+
+   <div class="Timeinput">
+    <div id="alarm_list_id">
+<select id="hrs" data-toggle="" class="  select-inverse mrs mbm form-control">
+        <option value="0">Hrs</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+      </select>
+
+      <select id="mins" data-toggle="" class=" form-control  select-primary mrs mbm">
+        <option value="0">Mins</option>
+        <option value="0">0</option>
+       <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+        <option value="31">31</option>
+        <option value="32">32</option>
+        <option value="33">33</option>
+        <option value="34">34</option>
+        <option value="35">35</option>
+        <option value="36">36</option>
+        <option value="37">37</option>
+        <option value="38">38</option>
+        <option value="39">39</option>
+        <option value="40">40</option>
+        <option value="41">41</option>
+        <option value="42">42</option>
+        <option value="43">43</option>
+        <option value="44">44</option>
+        <option value="45">45</option>
+        <option value="46">46</option>
+        <option value="47">47</option>
+        <option value="48">48</option>
+        <option value="49">49</option>
+        <option value="50">50</option>
+        <option value="51">51</option>
+        <option value="52">52</option>
+        <option value="53">53</option>
+        <option value="54">54</option>
+        <option value="55">55</option>
+        <option value="56">56</option>
+        <option value="57">57</option>
+        <option value="58">58</option>
+        <option value="59">59</option>
+        <option value="60">60</option>
+        
+      </select>
+
+ <select id="days" data-toggle="" class=" form-control select-primary mrs mbm">
+        <option value="0">Days</option>
+       <option value="0">0</option>
+       <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+        <option value="31">31</option>
+      </select>
+
+</div>
+</div>
+
+  <div id="setalarm" class="col-lg-6">
           <div class="form-group">
-            <div class="">
-              <input placeholder=" Enter Your Disease if you know it " id="addillnessinput" type="text" class="form-control">
-              <textarea name="styled-textarea" id="addillnessarea" onblur="" >   I feel like,</textarea>
-            <a id="addillnessbutton" class="btn btn-default" type="submit" href="#" >Go!</a>
+            <div >
+                
+                <div id="addillnessinputs">
+              <input placeholder=" Enter name of Medicine here " id="addmedicine" type="text" class="  form-control"/>
+              <button id="addmedicinebutton"  class="glyphicon glyphicon-search btn btn-default"  onclick="miniSearch()"></button>
+              <br><br>
+              <div id="med_select">
+              <select id="med_id" data-toggle="" class=" form-control select-primary mrs mbm">
+                <option value=0>Medicine</option>
+            </select>
+                </div>
+
+              </div>
+            <div id="alarmbuttoncont">
+                <button id="alarmbutton"  class="glyphicon glyphicon-plus btn btn-default"  onclick="addNew()"></button>
+                <button id="alarmbutton"  class="glyphicon glyphicon-ok btn btn-default"  onclick="clickSet()"></button>
+            
+            </div> 
             </div><!-- /input-group -->
           </div><!-- /.form-group -->
         </div><!-- /.col-lg-6 -->
+<img id="iinformativeimage" src="images/iinformative.png">
 
 <nav class="navbar navbar-default navbar-fixed-bottom">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
        
         <!-- Collection of nav links and other content for toggling -->
-        <div>
+        <div class="navdivalarm">
             <ul class="nav navbar-nav">
-                <li><a href="home.html">Dashboard</a></li>
-                <li><a href="alarm2.html">Alarm</a>
-                <li><a href="medicalhistory.html">History</a></li>
-                <li><a href="search.html">Search</a></li>
+                <li><a class="  glyphicon glyphicon-search" style="color:#113E63" href="search.html"></a></li>
+                <li><a class="glyphicon glyphicon-time" style="color:#113E63" href="alarm2.html"></a>
+                <li><a class="glyphicon glyphicon-list-alt" style="color:#113E63" href="medicalhistory.html"></a></li>
+                <li><a class="  glyphicon glyphicon-home" style="color:#113E63" href="home.html"></a></li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
-                
-            </ul>
+           
         </div>
     </div>
 </nav>
 </div>   
 
+<script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/SQLitePlugin.js"></script>
+        <script type="text/javascript" src="js/database_access.js"></script>    
+        <script type="text/javascript" src="js/alarm.js"></script>
 
 
 </body>

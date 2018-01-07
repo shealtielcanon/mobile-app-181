@@ -19,6 +19,9 @@
     <feature name="SQLitePlugin">
         <param name="android-package" value="io.sqlc.SQLitePlugin" />
     </feature>
+    <feature name="AutoStart">
+        <param name="android-package" value="com.tonikorin.cordova.plugin.autostart.AutoStart" />
+    </feature>
     <name>MedAlarm</name>
     <description>
         An app that utilizes the use of ALARMS for notifying users to take medications.
@@ -38,7 +41,4 @@
     <preference name="loglevel" value="DEBUG" />
     <preference name="KeepRunning" value="true" />
     <preference name="AndroidLaunchMode" value="singleInstance" />
-    <feature name="AutoStart">
-        <param name="android-package" value="com.tonikorin.cordova.plugin.autostart.AutoStart" />
-    </feature>
 </widget>

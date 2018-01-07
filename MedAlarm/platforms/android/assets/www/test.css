@@ -1,84 +1,70 @@
-.center-block {
-    float: none;
-    margin-left: auto;
-    margin-right: auto;
-}
+@padding-large-vertical: 10px;
+@padding-base-vertical: 6px;
+@font-size-h3: 24px;
 
-.input-group .icon-addon .form-control {
-    border-radius: 0;
-}
+.dropmenu-item-btn {
+  text-align: center;
 
-.icon-addon {
-    position: relative;
-    color: #555;
+  // Unfortunate cascade in Bootstrap
+  .dropdown-menu > li > & {
+    padding: @padding-large-vertical;
+    
+    &:hover,
+    &:focus,
+    &:active {
+      color: darken(#428bca, 6.5%);
+    }
+  }
+
+  > .glyphicon {
     display: block;
+    font-size: @font-size-h3; // 24px
+    margin-bottom: @padding-base-vertical;
+  }
 }
 
-.icon-addon:after,
-.icon-addon:before {
-    display: table;
-    content: " ";
+.open > .dropdown-menu--horizontal {
+  display: flex;
+  
+  > li > a {
+    min-width: 80px;
+  }
+  > .divider {
+    width: 1px;
+    height: auto;
+    margin: 0 9px;
+  }
 }
-
-.icon-addon:after {
-    clear: both;
+/* General styles to improve presentation */
+html, body {
+  height: 100%;
 }
-
-.icon-addon.addon-md .glyphicon,
-.icon-addon .glyphicon, 
-.icon-addon.addon-md .fa,
-.icon-addon .fa {
-    position: absolute;
-    z-index: 2;
-    left: 10px;
-    font-size: 14px;
-    width: 20px;
-    margin-left: -2.5px;
-    text-align: center;
-    padding: 10px 0;
-    top: 1px
+body {
+  background: linear-gradient(to bottom, #44a17d 0, #365e81 100%);
+  position: relative;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  flex-wrap:wrap;
+  padding:0;
+  margin:0;
+  color: #fff;
 }
-
-.icon-addon.addon-lg .form-control {
-    line-height: 1.33;
-    height: 46px;
-    font-size: 18px;
-    padding: 10px 16px 10px 40px;
+h3 {
+  position: absolute;
+  left: -340px;
+  top: -25px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  max-width: 300px;
+  text-align: center;
+  line-height: 1.3;
+  margin-bottom: 2rem;
 }
-
-.icon-addon.addon-sm .form-control {
-    height: 30px;
-    padding: 5px 10px 5px 28px;
-    font-size: 12px;
-    line-height: 1.5;
+.dropdown {
+  margin-top: -100px;
+  margin-left: 40px;
 }
-
-.icon-addon.addon-lg .fa,
-.icon-addon.addon-lg .glyphicon {
-    font-size: 18px;
-    margin-left: 0;
-    left: 11px;
-    top: 4px;
-}
-
-.icon-addon.addon-md .form-control,
-.icon-addon .form-control {
-    padding-left: 30px;
-    float: left;
-    font-weight: normal;
-}
-
-.icon-addon.addon-sm .fa,
-.icon-addon.addon-sm .glyphicon {
-    margin-left: 0;
-    font-size: 12px;
-    left: 5px;
-    top: -1px
-}
-
-.icon-addon .form-control:focus + .glyphicon,
-.icon-addon:hover .glyphicon,
-.icon-addon .form-control:focus + .fa,
-.icon-addon:hover .fa {
-    color: #2580db;
+.dropdown-menu {
+  min-width: 80px;
 }

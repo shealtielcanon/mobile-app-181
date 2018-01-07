@@ -15,8 +15,8 @@ setInterval(function() {
     var cuttime = getCurDate(date);
     
     $('#clock-wrapper').html(cuttime);
-    showHistList();
-    showEventList();
+    //showHistList();
+    //showEventList();//fix
     checkAlarm(cuttime);
     
 }, 500);
