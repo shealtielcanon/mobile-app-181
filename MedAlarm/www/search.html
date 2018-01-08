@@ -46,6 +46,7 @@
             </div><!-- /input-group -->
           </div><!-- /.form-group -->
         </div><!-- /.col-lg-6 -->
+<br><br><br><br><br><br><br><br><br><br>
 <nav class="navbar navbar-default navbar-fixed-bottom">
     <div class="container-fluid contalarm">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -65,7 +66,17 @@
 </div>   
      <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8" src="js/SQLitePlugin.js"></script>
-        <script type="text/javascript" src="js/database_access.js"></script>    
+        <script type="text/javascript" src="js/database_access.js"></script>
+
+    <script type="text/javascript">
+      document.getElementById("search_id")
+          .addEventListener("keyup", function(event) {
+          event.preventDefault();
+          if (event.keyCode === 13) {
+              document.getElementById("searchbutton").click();
+          }
+      });
+    </script>    
 
 
 </body>

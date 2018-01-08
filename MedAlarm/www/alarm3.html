@@ -221,7 +221,15 @@
         <script type="text/javascript" charset="utf-8" src="js/SQLitePlugin.js"></script>
         <script type="text/javascript" src="js/database_access.js"></script>    
         <script type="text/javascript" src="js/alarm.js"></script>
-
+        <script type="text/javascript">
+            document.getElementById("addmedicine")
+                .addEventListener("keyup", function(event) {
+                event.preventDefault();
+                if (event.keyCode === 13) {
+                    document.getElementById("addmedicinebutton").click();
+                }
+            });
+        </script>
 
 </body>
 </html>                            

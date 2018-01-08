@@ -713,9 +713,13 @@ function updateLogText(ev_id, added_text) {
 
 }
 
-function search() {
+function search() {//fix this one!
     var search_result = document.getElementById('search_id').value;
-    window.location = "searchresult.html?s=" + search_result;
+    if (search_result.trim() == '') {
+        alert("ERROR. Search input is empty.");
+    } else  {
+        window.location = "searchresult.html?s=" + search_result;
+    }
 }
 
 function searchResults(search_result) {
@@ -754,30 +758,35 @@ function searchResults(search_result) {
 function miniSearch() {
     console.log("miniSearch is clicked!");
     var search_result = document.getElementById('addmedicine').value;
-    var option_result = "<select id=\"med_id\" data-toggle=\"select\" class=\" form-control select-primary mrs mbm\">";
-    db.transaction(function(transaction) {
-        var executeQuery = "SELECT * FROM Medicine WHERE LOWER(GenericName) LIKE LOWER('%"+search_result+"%')";
-        console.log(executeQuery);
-        transaction.executeSql(executeQuery, [], function(tx, result) {
-            var len = result.rows.length;
-            for(i=0; i<len; i++) {
-                option_result = option_result + "<option value=" + result.rows.item(i).GenericName +">" + result.rows.item(i).GenericName + "</option>";
-            }
+    if (search_result.trim() == '') {
+        alert("ERROR. Search input is empty.");
+    } else  {
+        var option_result = "<select id=\"med_id\" data-toggle=\"select\" class=\" form-control select-primary mrs mbm\">";
+        db.transaction(function(transaction) {
+            var executeQuery = "SELECT * FROM Medicine WHERE LOWER(GenericName) LIKE LOWER('%"+search_result+"%')";
+            console.log(executeQuery);
+            transaction.executeSql(executeQuery, [], function(tx, result) {
+                var len = result.rows.length;
+                for(i=0; i<len; i++) {
+                    option_result = option_result + "<option value=" + result.rows.item(i).GenericName +">" + result.rows.item(i).GenericName + "</option>";
+                }
+            },
+            function(error) {
+                console.log('Error:' + error);
+            });
         },
         function(error) {
-            console.log('Error:' + error);
+            console.log('Error searchResults: ' + error);
+            option_result = option_result + "</select>";
+        },
+        function() {
+            console.log('Success miniSearch');
+            option_result = option_result + "</select>";
+            document.getElementById('med_select').innerHTML = option_result;
+            //console.log(table_results);
         });
-    },
-    function(error) {
-        console.log('Error searchResults: ' + error);
-        option_result = option_result + "</select>";
-    },
-    function() {
-        console.log('Success miniSearch');
-        option_result = option_result + "</select>";
-        document.getElementById('med_select').innerHTML = option_result;
-        //console.log(table_results);
-    });  
+    }
+      
 
 }
 
@@ -917,3 +926,8 @@ function nullHandler() {
 function successCb() {
     console.log("This is success");
 }
+
+
+    
+
+
