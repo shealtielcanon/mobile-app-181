@@ -754,11 +754,31 @@ max-width: 100%;
   transition: all 0.3s;
 }
 
+#alarmbutton2{
+
+  
+ 
+max-width: 100%;
+  width: 50%;
+  position: relative;
+  height: 45px;
+  top: 150px;
+ 
+
+  border-radius: 30px;
+  cursor:pointer;
+   background-color:rgba(167, 200, 255, .3);
+ 
+  color:white;
+  
+  
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+
 #alarmbuttoncont{
   text-align: center;
-  
-
-
 }
 #alarmbutton:focus{
   
@@ -889,6 +909,7 @@ box-sizing: border-box;
 box-shadow: 0px -3px 0px 0px rgba(0,0,0,0.33);
 
   }
+
 
 .container-fluid{
 
