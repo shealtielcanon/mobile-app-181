@@ -34,7 +34,7 @@
     <br>
    <div class="Timeinput">
     <div id="alarm_list_id">
-<select id="hrs" data-toggle="" class="  select-inverse mrs mbm form-control">
+<select id="hrs" data-toggle="" class="  select-inverse mrs mbm form-control" onchange="updateTextHr()">
         <option value="0">Hrs</option>
         <option value="0">0</option>
         <option value="1">1</option>
@@ -63,7 +63,7 @@
         <option value="24">24</option>
       </select>
 
-      <select id="mins" data-toggle="" class=" form-control  select-primary mrs mbm">
+      <select id="mins" data-toggle="" class=" form-control  select-primary mrs mbm" onchange="updateTextMin()">
         <option value="0">Mins</option>
         <option value="0">0</option>
        <option value="1">1</option>
@@ -129,7 +129,7 @@
         
       </select>
 
- <select id="days" data-toggle="" class=" form-control select-primary mrs mbm">
+ <select id="days" data-toggle="" class=" form-control select-primary mrs mbm" onchange="updateTextDay()">
         <option value="0">Days</option>
        <option value="0">0</option>
        <option value="1">1</option>
@@ -168,7 +168,7 @@
 </div>
 </div>
 <div  id="updates" class="boxed">
-    Take your next medicine after 00:00 within 00 days
+    Take your next medicine after <span id="txtHr">00</span> hours and <span id="txtMin">00</span> mins within <span id="txtDay">00</span> days
     
 </div>
  
@@ -229,6 +229,19 @@
                     document.getElementById("addmedicinebutton").click();
                 }
             });
+
+            function updateTextHr() {
+                var x = document.getElementById("hrs").value;
+                document.getElementById("txtHr").innerHTML = x;
+            }
+            function updateTextMin() {
+                var x = document.getElementById("mins").value;
+                document.getElementById("txtMin").innerHTML = x;
+            }
+            function updateTextDay() {
+                var x = document.getElementById("days").value;
+                document.getElementById("txtDay").innerHTML = x;
+            }
         </script>
 
 </body>

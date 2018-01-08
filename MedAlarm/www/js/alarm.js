@@ -181,20 +181,20 @@ function setAlarmInterval(days, duration) {
 function hmtlForAlarmSetting() {
     var new_html_line = "";
 
-    new_html_line = new_html_line + "<select id=\"hrs\" data-toggle=\"select\" class=\"  select-inverse mrs mbm form-control\"><option value=\"0\">Hrs</option>";
+    new_html_line = new_html_line + "<select id=\"hrs\" data-toggle=\"select\" class=\"  select-inverse mrs mbm form-control\" onchange=\"updateTextHr()\"><option value=\"0\">Hrs</option>";
 
     for(i=0; i<=24; i++){
         new_html_line = new_html_line + "<option value=\""+i+"\">"+i+"</option>";
     }
     new_html_line = new_html_line + "</select>";
 
-    new_html_line = new_html_line + "<select id=\"mins\" data-toggle=\"select\" class=\"  form-control  select-primary mrs mbm\"><option value=\"0\">Mins</option>";
+    new_html_line = new_html_line + "<select id=\"mins\" data-toggle=\"select\" class=\"  form-control  select-primary mrs mbm\" onchange=\"updateTextMin()\"><option value=\"0\">Mins</option>";
     for(i=0; i<=60; i++){
         new_html_line = new_html_line + "<option value=\""+i+"\">"+i+"</option>";
     }
     new_html_line = new_html_line + "</select>";
 
-    new_html_line = new_html_line + "<select id=\"days\" data-toggle=\"select\" class=\" form-control select-primary mrs mbm\"><option value=\"0\">Days</option>";
+    new_html_line = new_html_line + "<select id=\"days\" data-toggle=\"select\" class=\" form-control select-primary mrs mbm\" onchange=\"updateTextDay()\"><option value=\"0\">Days</option>";
     for(i=0; i<=31; i++){
         new_html_line = new_html_line + "<option value=\""+i+"\">"+i+"</option>";
     }
