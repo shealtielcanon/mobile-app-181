@@ -1,5 +1,6 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 var db = null;
+var doNotify = true;
 function onDeviceReady() {
     db = window.sqlitePlugin.openDatabase({name: "med_alarm_db.db", location: 'default', createFromLocation: 1});
     db.transaction(function(tx) {
@@ -460,9 +461,11 @@ function checkAlarm(cuttime) {
             
             var presc_len = result.rows.length;
             var med_alert;
+            if(doNotify) {
             for(i=0; i<presc_len; i++) {
                 med_n = result.rows.item(i).pmed_id;
                  if((result.rows.item(i).next_alarm == cuttime) && (result.rows.item(i).interval_times>0)) {
+                    doNotify=false;
                     if(result.rows.item(i).is_one_day_alarm==1) {
                         if(result.rows.item(i).next_alarm_date==currentDate()){
                             
@@ -491,21 +494,43 @@ function checkAlarm(cuttime) {
                             'Drink' + med_n,
                              function(buttonIndex) {
                                 if(buttonIndex==1) {
-                                    willUpdate=true;
+                                    //willUpdate=true;
+                                    updateNextAlarm(row_id, 'u');
                                 }
                                 else {
-                                    willSnooze=true;
+                                    //willSnooze=true;
+                                    updateNextAlarm(row_id, 'sn');
                                 }
+                                doNotify=true;
                              },            
                             'Drink your medicine',
                             ['Drink','Snooze']     
                         );
                         
                     }, this);
-                    alert("Drink your " + med_n); //12345678
+                    //alert("Drink your " + med_n); //12345678
+                    navigator.notification.confirm(
+                        'Drink' + med_n,
+                         function(buttonIndex) {
+                            cordova.plugins.notification.local.clearAll(function() {
+                                //alert("done");
+                            }, this);
+                            if(buttonIndex==1) {
+                                //willUpdate=true;
+                                updateNextAlarm(row_id, 'u');
+                            }
+                            else {
+                                //willSnooze=true;
+                                updateNextAlarm(row_id, 'sn');
+                            }
+                            doNotify=true;
+                         },            
+                        'Drink your medicine',
+                        ['Drink','Snooze']     
+                    );
                     
                  }
-            }
+            }}
             
         },
         function(error) {
@@ -517,13 +542,14 @@ function checkAlarm(cuttime) {
     },
     function() {
         console.log('Success checkAlarm');
-        if(willUpdate) {
-            updateNextAlarm(row_id, 'u');
-        }
+        //if(willUpdate) {
+        //    updateNextAlarm(row_id, 'u');
+        //}
 
-        else if(willSnooze) {
-             updateNextAlarm(row_id, 'sn');
-        }        
+        //else if(willSnooze) {
+        //     updateNextAlarm(row_id, 'sn');
+        //}        
+                
     });
 
 }
@@ -660,7 +686,7 @@ function setNextAlarm(alarm_index, new_next_alarm) {//update for 24 hours alarms
         console.log('Error' + error);
     },
     function() {
-        console.log('Success update');
+        console.log('Success update setNextAlarm');
     });
 
 }
