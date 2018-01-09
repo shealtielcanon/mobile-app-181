@@ -52,7 +52,7 @@ function checkAlarmList(date,cuttime) {
 }
 
 function addNew() {
-    var med = document.getElementById('med_id').value;
+    var med = document.getElementById('addmedicine').value;
     var days = document.getElementById('days').value;
     var dur_times_t;
     var dur_h_t = document.getElementById('hrs').value * 1;
