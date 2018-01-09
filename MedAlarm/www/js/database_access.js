@@ -798,7 +798,12 @@ function showEventList() {
         var executeQuery = "SELECT * FROM event WHERE is_running=1";
         transaction.executeSql(executeQuery, [], function(tx, result) {
             var len = result.rows.length;
-            
+            if(len>0) {
+                document.getElementById("changeImage").innerHTML = "<img id=\"happyimg\" src=\"images/happy3.png\">";
+            }
+            else {
+                document.getElementById("changeImage").innerHTML = "<img id=\"happyimg\" src=\"images/happy1.png\">";
+            }
             for(i=0; i<len; i++) {
                 console.log(result.rows.item(i).event_name);
                 event_line = event_line + "<tr><td> <a class=\"atags\" href=\"list.html?e="+result.rows.item(i).event_id+"\">" +result.rows.item(i).event_name+"</a></td>";
