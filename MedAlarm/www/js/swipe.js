@@ -116,7 +116,7 @@ function processingRoutine() {
 		if(urlPath=="/android_asset/www/medicalhistory.html") {
 			var options = {
 			  "direction"        : "right", 
-			  "duration"         :  250, 
+			  "duration"         :  200, 
 			  
 			  "iosdelay"         :  100, 
 			  "androiddelay"     :  150, 
@@ -132,7 +132,7 @@ function processingRoutine() {
 		else if(urlPath=="/android_asset/www/home.html") {
 			var options = {
 			  "direction"        : "right", 
-			  "duration"         :  250, 
+			  "duration"         :  200, 
 			  
 			  "iosdelay"         :  100, 
 			  "androiddelay"     :  150, 
@@ -147,7 +147,7 @@ function processingRoutine() {
 		else if(urlPath=="/android_asset/www/search.html") {
 			var options = {
 			  "direction"        : "right", 
-			  "duration"         :  250, 
+			  "duration"         :  200, 
 			  
 			  "iosdelay"         :  100, 
 			  "androiddelay"     :  150, 
@@ -164,7 +164,7 @@ function processingRoutine() {
 		if(urlPath=="/android_asset/www/alarm2.html") {
 			var options = {
 			  "direction"        : "left", 
-			  "duration"         :  250, 
+			  "duration"         :  200, 
 			  
 			  "iosdelay"         :  100, 
 			  "androiddelay"     :  150, 
@@ -179,7 +179,7 @@ function processingRoutine() {
 		else if(urlPath=="/android_asset/www/medicalhistory.html") {
 			var options = {
 			  "direction"        : "left", 
-			  "duration"         :  250, 
+			  "duration"         :  200, 
 			  
 			  "iosdelay"         :  100, 
 			  "androiddelay"     :  150, 
@@ -194,7 +194,7 @@ function processingRoutine() {
 		else if(urlPath=="/android_asset/www/home.html") {
 			var options = {
 			  "direction"        : "left", 
-			  "duration"         :  250, 
+			  "duration"         :  200, 
 			  
 			  "iosdelay"         :  100, 
 			  "androiddelay"     :  150, 
