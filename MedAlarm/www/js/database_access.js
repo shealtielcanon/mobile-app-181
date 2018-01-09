@@ -98,15 +98,20 @@ function checkEvent(){
     });
 }
 
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 function addEvent() { //check and debug this!
     console.log("Addevent is clicked!");
     var new_event_name = "";
     var new_event_desc = "";
+    var randomNum = getRandomInt(0,10000);
     db.transaction(function(transaction) {
         new_event_name = document.getElementById('addillnessinput').value;
         new_event_desc = document.getElementById('addillnessarea').value;
-        var executeQuery = "INSERT INTO event (event_name, event_desc, start_date, is_running) VALUES (?,?, date('now'), 1)";
-        transaction.executeSql(executeQuery, [new_event_name, new_event_desc],nullHandler,errorHandler);
+        var executeQuery = "INSERT INTO event (event_id, event_name, event_desc, start_date, is_running) VALUES (?, ?,?, date('now'), 1)";
+        transaction.executeSql(executeQuery, [randomNum, new_event_name, new_event_desc],nullHandler,errorHandler);
 
     },
     function (error) {
@@ -115,8 +120,8 @@ function addEvent() { //check and debug this!
     function() {
         console.log('Success event: ' );
         //window.location = "alarm3.html";
-        var last_id = getLastId();
-        newLogEntry(last_id, new_event_name, new_event_desc);
+
+        newLogEntry(randomNum, new_event_name, new_event_desc);
     });
     
 }
@@ -240,7 +245,10 @@ function loadUser() {
 function addAlarmToDB(nextAlarm, meds, hrs, mins, times) { 
     console.log("Accessed! " + nextAlarm + ", " + meds + ", " + hrs + ", " + mins + ", " + times);
     console.log(getLastId());
-    var recentNewEventId = getLastId();
+  
+    var urlWithParams = window.location.href;
+    var eid = getParameterByName('a', urlWithParams);
+
     db.transaction(function(transaction) {
         console.log('Here daw!');
         var executeQuery;
@@ -250,7 +258,7 @@ function addAlarmToDB(nextAlarm, meds, hrs, mins, times) {
         else{
             executeQuery = "INSERT INTO prescription (pmed_id, next_alarm, hrs_dur, mins_dur, interval_times, e_id, is_one_day_alarm) VALUES (?,?,?,?,?,?, 0)"
         }
-        transaction.executeSql(executeQuery, [meds, nextAlarm, hrs, mins, times, recentNewEventId],nullHandler,errorHandler);
+        transaction.executeSql(executeQuery, [meds, nextAlarm, hrs, mins, times, eid],nullHandler,errorHandler);
     },
     function (error) {
         console.log('Error' + error);
@@ -695,7 +703,7 @@ function newLogEntry(ev_id, e_name, e_desc) { //check and debug this!
     },
     function() {
         console.log('Success log new event: ' );
-        window.location = "alarm3.html";
+        window.location = "alarm3.html?a=" + ev_id;
     });
 }
 
@@ -800,9 +808,9 @@ function showEventList() {
             var len = result.rows.length;
             if(len>0) {
                 document.getElementById("changeImage").innerHTML = "<img id=\"happyimg\" src=\"images/happy3.png\">";
+                event_line = event_line + "<table class=\"table table-bordred \"><thead> <th>Illness</th><th>Delete</th></thead><tbody>";
                 for(i=0; i<len; i++) {
                     console.log(result.rows.item(i).event_name);
-                    event_line = event_line + "<table class=\"table table-bordred \"><thead> <th>Illness</th><th>Delete</th></thead><tbody>";
                     event_line = event_line + "<tr><td> <a class=\"atags\" href=\"list.html?e="+result.rows.item(i).event_id+"\">" +result.rows.item(i).event_name+"</a></td>";
                     event_line = event_line + "<td><p data-placement=\"top\"  title=\"Delete\"><button class=\"btn btn-danger btn-xs\" data-title=\"Delete\" data-toggle=\"modal\" data-target=\"#delete"+result.rows.item(i).event_id+"\" ><span class=\"glyphicon glyphicon-trash\"></span></button></p></td>";
                     event_line = event_line + "</tr>";
@@ -832,11 +840,14 @@ function showEventList() {
 }
 
 function showPList() {
+    var urlWithParams = window.location.href;
+    var eid = getParameterByName('e', urlWithParams);
+
     var modal_html = "";
     var p_line = "<table class=\"table table-bordred \"> <thead><th>Medicine</th><th>Next Alarm</th><th>Remaining</th><th></th></thead><tbody>";
     console.log("showEventList pasok!");
     db.transaction(function(transaction) {
-        var executeQuery = "SELECT * FROM prescription WHERE interval_times>=1";
+        var executeQuery = "SELECT * FROM prescription WHERE interval_times>=1 and e_id="+eid;
         transaction.executeSql(executeQuery, [], function(tx, result) {
             var len = result.rows.length;
 

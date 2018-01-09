@@ -51,7 +51,8 @@
         </div>
     </div>
     <div id="alarmbuttoncont">
-                <button id="alarmbutton2"  class="glyphicon glyphicon-plus btn btn-default"  onclick="window.location.href='alarm3.html'"></button>
+      <div id="button_id"></div>
+                
             
             </div>
 
@@ -114,6 +115,15 @@
         <script type="text/javascript" charset="utf-8" src="js/SQLitePlugin.js"></script>
         <script type="text/javascript" src="js/database_access.js"></script>    
         <script type="text/javascript" src="js/alarm.js"></script>
+        <script type="text/javascript">
+            //put function to dynamically change the button link
+            var urlWithParams = window.location.href;
+            var eid = getParameterByName('e', urlWithParams);
+            var htmlLine = "<button id=\"alarmbutton2\"  class=\"glyphicon glyphicon-plus btn btn-default\"  onclick=\"window.location.href='alarm3.html?a="+eid+"'\"></button>";
+
+            document.getElementById("button_id").innerHTML = htmlLine;
+
+        </script>
 
 </body>
 </html>                            
