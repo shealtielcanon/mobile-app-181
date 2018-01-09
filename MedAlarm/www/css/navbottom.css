@@ -252,7 +252,7 @@ font:inherit;
     max-height: 100%;
     margin-left: auto;
     margin-right: auto;
-    box-shadow:inset 0 0 5px 5px #888;
+    box-shadow:inset 0 0 2px 2px #888;
     font-size: 10px;
 }
 
@@ -301,14 +301,14 @@ font:inherit;
     max-height: 100%;
     margin-left: auto;
     margin-right: auto;
-    box-shadow:inset 0 0 5px 5px #888;
+    box-shadow:inset 0 0 2px 2px #888;
     font-size: 10px;
 }
 
 .rwd-table tr {
   border-color: #FFFFFF;
   font-size: 15px;
-  box-shadow:inset 0 0 5px 5px #888;
+  box-shadow:inset 0 0 2px 2px #888;
   border-width: 3px;
 
 }
@@ -347,7 +347,7 @@ font:inherit;
   background-color:rgba(27, 33, 50, .4);
   border-color: #FFFFFF;
  border-radius: 20px;
- box-shadow:inset 0 0 5px 5px #888;
+ box-shadow:inset 0 0 2px 2px #888;
 
 }
 #homebodytable tr {
@@ -420,7 +420,6 @@ font:inherit;
 
   position: relative;
   max-width: 100%;
-
   top: 70px;
   border-radius: 10px;
   margin: auto;
@@ -741,7 +740,7 @@ max-width: 100%;
   height: 45px;
   float: left;
   top: 300px;
- 
+  
 
   border-radius: 30px;
   cursor:pointer;
@@ -979,4 +978,41 @@ font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   background-color:rgba(27, 90, 50, .3);
   box-shadow: 0 0 4px 1px #404040;
 
+}
+
+#happyimg {
+
+  max-width: 100%;
+  width: 100%;
+  
+  position: absolute;
+  bottom:  10%;
+  right: 0;
+}
+
+#happyimg2 {
+
+  max-width: 100%;
+  width: 100%;
+  
+  position: absolute;
+  bottom:  10%;
+  right: 0;
+}
+
+#historyinstructions{
+
+  color: white;
+  height: 50px;
+  width: 90%;
+  position: absolute;
+  bottom: 10%;
+  padding-top: 5px;
+  text-align: center;
+  max-width: 100%;
+border-radius: 5px;
+float: left;
+
+background-color:rgba(27, 33, 50, .4);
+font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
