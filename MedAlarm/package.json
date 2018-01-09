@@ -10,6 +10,7 @@
   "author": "Apache Cordova Team",
   "license": "Apache-2.0",
   "dependencies": {
+    "com.telerik.plugins.nativepagetransitions": "git+https://github.com/Telerik-Verified-Plugins/NativePageTransitions.git",
     "cordova-android": "^6.3.0",
     "cordova-plugin-app-event": "^1.2.1",
     "cordova-plugin-autostart": "^2.0.1",
@@ -27,7 +28,8 @@
       "cordova-plugin-dialogs": {},
       "cordova-plugin-background-mode": {},
       "cordova-sqlite-ext": {},
-      "cordova-plugin-autostart": {}
+      "cordova-plugin-autostart": {},
+      "com.telerik.plugins.nativepagetransitions": {}
     },
     "platforms": [
       "android"

@@ -24,6 +24,9 @@
     },
     "cordova-plugin-autostart": {
       "PACKAGE_NAME": "com.project181.medalarm"
+    },
+    "com.telerik.plugins.nativepagetransitions": {
+      "PACKAGE_NAME": "com.project181.medalarm"
     }
   },
   "dependent_plugins": {

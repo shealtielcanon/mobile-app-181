@@ -114,24 +114,97 @@ function processingRoutine() {
 	var swipedElement = document.getElementById(triggerElementID);
 	if ( swipeDirection == 'right' ) {
 		if(urlPath=="/android_asset/www/medicalhistory.html") {
-			window.location = "alarm2.html";
+			var options = {
+			  "direction"        : "right", 
+			  "duration"         :  250, 
+			  
+			  "iosdelay"         :  100, 
+			  "androiddelay"     :  150, 
+			  "winphonedelay"    :  250, 
+			  "fixedPixelsTop"   :    0, 
+			  "fixedPixelsBottom":   55,
+			  "href" : "alarm2.html"
+			  };  
+			window.plugins.nativepagetransitions.slide(options);
+
+			//window.location = "alarm2.html";
 		}
 		else if(urlPath=="/android_asset/www/home.html") {
-			window.location = "medicalhistory.html";
+			var options = {
+			  "direction"        : "right", 
+			  "duration"         :  250, 
+			  
+			  "iosdelay"         :  100, 
+			  "androiddelay"     :  150, 
+			  "winphonedelay"    :  250, 
+			  "fixedPixelsTop"   :    0, 
+			  "fixedPixelsBottom":   55,
+			  "href" : "medicalhistory.html"
+			  };  
+			window.plugins.nativepagetransitions.slide(options);
+			//window.location = "medicalhistory.html";
 		}
 		else if(urlPath=="/android_asset/www/search.html") {
-			window.location = "home.html";
+			var options = {
+			  "direction"        : "right", 
+			  "duration"         :  250, 
+			  
+			  "iosdelay"         :  100, 
+			  "androiddelay"     :  150, 
+			  "winphonedelay"    :  250, 
+			  "fixedPixelsTop"   :    0, 
+			  "fixedPixelsBottom":   55,
+			  "href" : "home.html"
+			 };  
+			window.plugins.nativepagetransitions.slide(options);
+			//window.location = "home.html";
 		}
 
 	} else if ( swipeDirection == 'left' ) {
 		if(urlPath=="/android_asset/www/alarm2.html") {
-			window.location = "medicalhistory.html";
+			var options = {
+			  "direction"        : "left", 
+			  "duration"         :  250, 
+			  
+			  "iosdelay"         :  100, 
+			  "androiddelay"     :  150, 
+			  "winphonedelay"    :  250, 
+			  "fixedPixelsTop"   :    0, 
+			  "fixedPixelsBottom":   55,
+			  "href" : "medicalhistory.html"
+			  };  
+			window.plugins.nativepagetransitions.slide(options);
+			//window.location = "medicalhistory.html";
 		}
 		else if(urlPath=="/android_asset/www/medicalhistory.html") {
-			window.location = "home.html";
+			var options = {
+			  "direction"        : "left", 
+			  "duration"         :  250, 
+			  
+			  "iosdelay"         :  100, 
+			  "androiddelay"     :  150, 
+			  "winphonedelay"    :  250, 
+			  "fixedPixelsTop"   :    0, 
+			  "fixedPixelsBottom":   55,
+			  "href" : "home.html"
+			  };  
+			window.plugins.nativepagetransitions.slide(options);
+			//window.location = "home.html";
 		}
 		else if(urlPath=="/android_asset/www/home.html") {
-			window.location = "search.html";
+			var options = {
+			  "direction"        : "left", 
+			  "duration"         :  250, 
+			  
+			  "iosdelay"         :  100, 
+			  "androiddelay"     :  150, 
+			  "winphonedelay"    :  250, 
+			  "fixedPixelsTop"   :    0, 
+			  "fixedPixelsBottom":   55,
+			  "href" : "search.html"
+			  };  
+			window.plugins.nativepagetransitions.slide(options);
+			//window.location = "search.html";
 		}
 	}
 }

@@ -75,6 +75,14 @@ module.exports = [
     "clobbers": [
       "cordova.plugins.autoStart"
     ]
+  },
+  {
+    "id": "com.telerik.plugins.nativepagetransitions.NativePageTransitions",
+    "file": "plugins/com.telerik.plugins.nativepagetransitions/www/NativePageTransitions.js",
+    "pluginId": "com.telerik.plugins.nativepagetransitions",
+    "clobbers": [
+      "window.plugins.nativepagetransitions"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -87,7 +95,8 @@ module.exports.metadata =
   "cordova-plugin-dialogs": "1.3.4",
   "cordova-plugin-background-mode": "0.7.2",
   "cordova-sqlite-ext": "0.10.6",
-  "cordova-plugin-autostart": "2.0.1"
+  "cordova-plugin-autostart": "2.0.1",
+  "com.telerik.plugins.nativepagetransitions": "0.6.5"
 };
 // BOTTOM OF METADATA
 });

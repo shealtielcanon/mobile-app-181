@@ -29,4 +29,5 @@
     <plugin name="cordova-plugin-background-mode" spec="^0.7.2" />
     <plugin name="cordova-sqlite-ext" spec="^0.10.6" />
     <plugin name="cordova-plugin-autostart" spec="^2.0.1" />
+    <plugin name="com.telerik.plugins.nativepagetransitions" spec="https://github.com/Telerik-Verified-Plugins/NativePageTransitions" />
 </widget>
