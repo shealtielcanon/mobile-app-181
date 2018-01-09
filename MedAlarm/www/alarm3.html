@@ -176,14 +176,17 @@
             <div >
                 
                 <div id="addillnessinputs">
-              <input placeholder=" Enter name of Medicine here " id="addmedicine" type="text" class="  form-control"/>
-              <button id="addmedicinebutton"  class="glyphicon glyphicon-search btn btn-default"  onclick="miniSearch()"></button>
+              <input placeholder=" Enter name of Medicine here " id="addmedicine" type="text" class="  form-control" list="mlist"  oninput="miniSearch()"/>
+              
               <br><br>
+              <datalist id="mlist">
               <div id="med_select">
-              <select id="med_id" data-toggle="" class=" form-control select-primary mrs mbm">
-                <option value=0>Medicine</option>
+              <select id="med_id" class=" form-control select-primary mrs mbm" style="display: none;">
+                
             </select>
+            
                 </div>
+                </datalist>
 
               </div>
             <div id="alarmbuttoncont">

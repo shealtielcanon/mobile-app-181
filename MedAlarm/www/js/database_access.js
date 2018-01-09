@@ -767,16 +767,16 @@ function miniSearch() {
     console.log("miniSearch is clicked!");
     var search_result = document.getElementById('addmedicine').value;
     if (search_result.trim() == '') {
-        alert("ERROR. Search input is empty.");
+        //something
     } else  {
-        var option_result = "<select id=\"med_id\" data-toggle=\"select\" class=\" form-control select-primary mrs mbm\">";
+        var option_result = "<select id=\"med_id\"  class=\" form-control select-primary mrs mbm\" style=\"display: none;\">";
         db.transaction(function(transaction) {
-            var executeQuery = "SELECT * FROM Medicine WHERE LOWER(GenericName) LIKE LOWER('%"+search_result+"%')";
+            var executeQuery = "SELECT * FROM Medicine WHERE LOWER(GenericName) LIKE LOWER('%"+search_result+"%') OR LOWER(BrandName) LIKE LOWER('%"+search_result+"%')";
             console.log(executeQuery);
             transaction.executeSql(executeQuery, [], function(tx, result) {
                 var len = result.rows.length;
                 for(i=0; i<len; i++) {
-                    option_result = option_result + "<option value=" + result.rows.item(i).GenericName +">" + result.rows.item(i).GenericName + "</option>";
+                    option_result = option_result + "<option value=\"" + result.rows.item(i).GenericName +"\">" + result.rows.item(i).BrandName + "</option>";
                 }
             },
             function(error) {
@@ -814,9 +814,10 @@ function showEventList() {
                     event_line = event_line + "<tr><td> <a class=\"atags\" href=\"list.html?e="+result.rows.item(i).event_id+"\">" +result.rows.item(i).event_name+"</a></td>";
                     event_line = event_line + "<td><p data-placement=\"top\"  title=\"Delete\"><button class=\"btn btn-danger btn-xs\" data-title=\"Delete\" data-toggle=\"modal\" data-target=\"#delete"+result.rows.item(i).event_id+"\" ><span class=\"glyphicon glyphicon-trash\"></span></button></p></td>";
                     event_line = event_line + "</tr>";
-                    event_line = event_line + " </tbody></table>";
+                    
                     modal_html = modal_html + modalDiv(result.rows.item(i).event_id);
                 }
+                event_line = event_line + " </tbody></table>";
             }
             else {
                 document.getElementById("changeImage").innerHTML = "<img id=\"happyimg\" src=\"images/happy1.png\">";
