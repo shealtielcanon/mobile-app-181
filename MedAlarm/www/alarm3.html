@@ -188,7 +188,7 @@
               </div>
             <div id="alarmbuttoncont">
                 <button id="alarmbutton"  class="glyphicon glyphicon-plus btn btn-default"  onclick="addNew()"></button>
-                <button id="alarmbutton"  class="glyphicon glyphicon-ok btn btn-default"  onclick="clickSet()"></button>
+                <button id="alarmbutton"  class="glyphicon glyphicon-ok btn btn-default"  onclick="clickSet()" data-title="Confrim" data-toggle="modal" data-target="#confirm"></button>
               </div> 
             </div><!-- /input-group -->
           </div><!-- /.form-group -->
@@ -217,7 +217,25 @@
     </div>
 </nav>
 </div>   
-
+<div class="modal fade" id="confirm" tabindex="-1" role="dialog" aria-labelledby="confirm" aria-hidden="true">
+      <div class="modal-dialog">
+    <div class="modal-content">
+          <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+        <h4 class="modal-title custom_align" id="Heading">SUCCESS!</h4>
+      </div>
+          <div class="modal-body">
+          Added new event!
+      </div>
+          <div class="modal-footer ">
+        <button type="button" class="btn btn-warning btn-lg" style="width: 100%;" onclick="window.location.href='home.html'"><span class="glyphicon glyphicon-ok-sign"></span> Okay</button>
+      </div>
+        </div>
+    <!-- /.modal-content --> 
+  </div>
+      <!-- /.modal-dialog --> 
+    </div>
+    
 <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8" src="js/SQLitePlugin.js"></script>
         <script type="text/javascript" src="js/database_access.js"></script>    
