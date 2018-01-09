@@ -19,7 +19,7 @@ setInterval(function() {
     //showEventList();//fix
     checkAlarm(cuttime);
     
-}, 500);
+}, 1000);
 
 function clickSet() {
     setMultipleAlarm(new Date());
