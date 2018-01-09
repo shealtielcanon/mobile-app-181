@@ -53,6 +53,22 @@
 </div>
      <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8" src="js/SQLitePlugin.js"></script>
-        <script type="text/javascript" src="js/database_access.js"></script>    
+        <script type="text/javascript" src="js/database_access.js"></script>
+        <script type="text/javascript">
+            function backAct() {
+                var options = {
+                  "direction"        : "right", 
+                  "duration"         :  300, 
+                  
+                  "iosdelay"         :  100, 
+                  "androiddelay"     :  150, 
+                  "winphonedelay"    :  250, 
+                  "fixedPixelsTop"   :    0, 
+                  "fixedPixelsBottom":   55,
+                  "href" : "search.html"
+                    };  
+                window.plugins.nativepagetransitions.flip(options);
+                }
+        </script>    
 </body>
 </html>                            

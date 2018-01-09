@@ -29,7 +29,7 @@
 <body class="alarmbody">
 
 
-<h1 class="addillnessheader"><button id="backbutton" class="glyphicon glyphicon-chevron-left"></button> Set An Alarm</h1>
+<h1 class="addillnessheader"><button id="backbutton" class="glyphicon glyphicon-chevron-left" onclick="backAct()"></button> Set An Alarm</h1>
 <div class="boxed">
     <br>
    <div class="Timeinput">
@@ -264,6 +264,21 @@
                 var x = document.getElementById("days").value;
                 document.getElementById("txtDay").innerHTML = x;
             }
+
+            function backAct() {
+                var options = {
+                  "direction"        : "right", 
+                  "duration"         :  300, 
+                  
+                  "iosdelay"         :  100, 
+                  "androiddelay"     :  150, 
+                  "winphonedelay"    :  250, 
+                  "fixedPixelsTop"   :    0, 
+                  "fixedPixelsBottom":   55,
+                  "href" : "alarm2.html"
+                    };  
+                window.plugins.nativepagetransitions.flip(options);
+                }
         </script>
 
 </body>
