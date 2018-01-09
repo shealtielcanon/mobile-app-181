@@ -27,7 +27,7 @@
 </head> 
 <body class="searchbody">
 
-
+<div id="swipeBox" ontouchstart="touchStart(event,'swipeBox')" ontouchend="touchEnd(event)" ontouchmove="touchMove(event)" ontouchcancel="touchCancel(event)" style="position:relative;width:100%;height:100%;">
 <h1 class="searchheader1">Search</h1>
    
   <div  class="col-lg-6">
@@ -47,6 +47,7 @@
           </div><!-- /.form-group -->
         </div><!-- /.col-lg-6 -->
 <br><br><br><br><br><br><br><br><br><br>
+</div>
 <nav class="navbar navbar-default navbar-fixed-bottom">
     <div class="container-fluid contalarm">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -54,7 +55,7 @@
         <!-- Collection of nav links and other content for toggling -->
         <div class="navdivalarm">
             <ul class="nav navbar-nav">
-                <li><a class="  glyphicon glyphicon-search" style="color:#113E63" href="search.html"></a></li>
+                <li><a class="  glyphicon glyphicon-search" style="color:#7F00FF" href="search.html"></a></li>
                 <li><a class="glyphicon glyphicon-dashboard" style="color:#113E63" href="home.html"></a>
                 <li><a class="glyphicon glyphicon-list-alt" style="color:#113E63" href="medicalhistory.html"></a></li>
                 <li><a class="  glyphicon glyphicon-time" style="color:#113E63" href="alarm2.html"></a></li>
@@ -67,6 +68,7 @@
      <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8" src="js/SQLitePlugin.js"></script>
         <script type="text/javascript" src="js/database_access.js"></script>
+        <script type="text/javascript" src="js/swipe.js"></script>
 
     <script type="text/javascript">
       document.getElementById("search_id")
