@@ -63,36 +63,41 @@ function addNew() {
     var dur_times_t;
     var dur_h_t = document.getElementById('hrs').value * 1;
     var dur_m_t = document.getElementById('mins').value * 1;
-
-    var addedhr = parseInt(dur_m_t / 60);
-    if(addedhr>0) {
-        var finalmin = dur_m_t - (addedhr * 60);
-
-        dur_h_t = (dur_h_t + addedhr)*1;
-        dur_m_t = finalmin;
+    if(dur_h_t==0 && dur_m_t==0) {
+        alert("Don't put zeroes(0) on both hours and minutes.");
     }
-    var temp_min;
-    if(dur_m_t>0) {
-        temp_min = dur_m_t/60;
+    else {
+        var addedhr = parseInt(dur_m_t / 60);
+        if(addedhr>0) {
+            var finalmin = dur_m_t - (addedhr * 60);
+
+            dur_h_t = (dur_h_t + addedhr)*1;
+            dur_m_t = finalmin;
+        }
+        var temp_min;
+        if(dur_m_t>0) {
+            temp_min = dur_m_t/60;
+        }
+        else{
+            temp_min = 0;
+        }
+
+        dur_times_t = setAlarmInterval(days, (dur_h_t + temp_min));
+        var date = new Date();
+
+        temp_alarm_array.push([getCurDate(date), med, dur_h_t, dur_m_t, dur_times_t]);
+        //addAlarmToDB(getCurDate(date), med, dur_h_t, dur_m_t, dur_times_t);
+
+        alert("Added: " + med);
+        var newLine = "";
+        newLine = newLine + hmtlForAlarmSetting();
+        console.log(newLine);
+        document.getElementById('alarm_list_id').innerHTML = newLine;
+        var medLine = "";
+        medLine = medLine + "<select id=\"med_id\" data-toggle=\"\" class=\" form-control select-primary mrs mbm\"></select>";
+        document.getElementById('med_select').innerHTML = medLine;
     }
-    else{
-        temp_min = 0;
-    }
-
-    dur_times_t = setAlarmInterval(days, (dur_h_t + temp_min));
-    var date = new Date();
-
-    temp_alarm_array.push([getCurDate(date), med, dur_h_t, dur_m_t, dur_times_t]);
-    //addAlarmToDB(getCurDate(date), med, dur_h_t, dur_m_t, dur_times_t);
-
-    alert("Added: " + med);
-    var newLine = "";
-    newLine = newLine + hmtlForAlarmSetting();
-    console.log(newLine);
-    document.getElementById('alarm_list_id').innerHTML = newLine;
-    var medLine = "";
-    medLine = medLine + "<select id=\"med_id\" data-toggle=\"\" class=\" form-control select-primary mrs mbm\"></select>";
-    document.getElementById('med_select').innerHTML = medLine;
+    
 }
 
 function setAlarm(date, current_row, setMode) {
