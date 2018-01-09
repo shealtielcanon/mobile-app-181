@@ -12,7 +12,7 @@ var temp_alarm_array = [];
 
 setInterval(function() {
     if (temp_alarm_array.length==0) {
-        document.getElementById('buttoncolor').innerHTML = "<button id=\"alarmbutton\"  class=\"glyphicon glyphicon-ok btn btn-default\"  onclick=\"clickSet()\" data-title=\"Confrim\" data-toggle=\"modal\" data-target=\"#confirm\" disabled></button>";
+        document.getElementById('buttoncolor').innerHTML = "<button style=\"background-color:rgba(160,160,160,1);\" id=\"alarmbutton\"  class=\"glyphicon glyphicon-ok btn btn-default\"  onclick=\"clickSet()\" data-title=\"Confrim\" data-toggle=\"modal\" data-target=\"#confirm\" disabled></button>";
     }
     else {
         document.getElementById('buttoncolor').innerHTML = "<button id=\"alarmbutton\"  class=\"glyphicon glyphicon-ok btn btn-default\"  onclick=\"clickSet()\" data-title=\"Confrim\" data-toggle=\"modal\" data-target=\"#confirm\"></button>";
