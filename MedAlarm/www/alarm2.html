@@ -37,7 +37,7 @@
 
               <input type="text" placeholder="How are you feeling?" id="addillnessinput" class="form-control">
               <textarea name="styled-textarea" placeholder="Elaborate what you feel" id="addillnessarea" onblur="" ></textarea>
-              <input id="addillnessbutton" type="button" class="btn btn-default" value="Go!" onclick="addEvent()" />
+              <input id="addillnessbutton" type="button" class="btn btn-default" value="Go!" onclick="checkForBlank()" />
               
 
              
@@ -68,7 +68,32 @@
      <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8" src="js/SQLitePlugin.js"></script>
         <script type="text/javascript" src="js/database_access.js"></script>
-        <script type="text/javascript" src="js/swipe.js"></script>    
+        <script type="text/javascript" src="js/swipe.js"></script>
+        <script type="text/javascript">
+          document.getElementById("addillnessinput")
+                .addEventListener("keyup", function(event) {
+                  event.preventDefault();
+                  if (event.keyCode === 13) {
+                      document.getElementById("addillnessbutton").click();
+                  }
+              });
+          document.getElementById("addillnessarea")
+                .addEventListener("keyup", function(event) {
+                  event.preventDefault();
+                  if (event.keyCode === 13) {
+                      document.getElementById("addillnessbutton").click();
+                  }
+              });
+
+          function checkForBlank() {
+              var search_result = document.getElementById('addillnessinput').value;
+              if (search_result.trim() == '') {
+                  alert("Please fill up all the boxes.");
+              } else  {
+                  addEvent();
+              }
+          }
+        </script>    
 
 </body>
 </html>                            
