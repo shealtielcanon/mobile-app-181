@@ -1,112 +1,13 @@
-<!DOCTYPE HTML>
-<html>
-<head>
+<link rel="stylesheet" type="text/css" href="test.css">
 
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Medical Alarm App</title>
-
-
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta charset="utf-8">
-
-
-<link href="bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-    <link href="css/flat-ui.css" rel="stylesheet">
-
-    <link rel="shortcut icon" href="img/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="css/navbottom.css">
-    <script src="js/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/flat-ui.min.js"></script>
-
-    <script src="js/application.js"></script>
-    <script type="test.js"></script>
-<style>
-html {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-}
-*, *:before, *:after {
-    -moz-box-sizing: inherit;
-    -webkit-box-sizing: inherit;
-    -ms-box-sizing: inherit;
-    box-sizing: inherit;
-}
-html, body {
-    margin:0;
-    padding:0;
-}
-.header {
-    position:fixed;
-    left:0;
-    right:0;
-    width:1000px;
-    max-width:1000px;
-    height:30px;
-    background:red;
-    margin:auto;
-}
-@media screen and (max-width:1000px) {
-.header {
-    width:auto
-}
-}
-.wrap {
-    max-width:1000px;
-    margin:auto;
-    
-    padding:50px 10px 10px;
-    
-}
-</style>
-
-<!--[if lt IE 9]>
-<style>
-.header{width:auto}
-</style>
-<![endif]-->
-
-</head>
-
-<body>
-<div class="header">Search</div>
-<div class="wrap">
-        <div  class="col-lg-6">
-          <div class="form-group">
-            <div class="input-group">
-              <input placeholder=" Enter Medicine name " id="search_id" type="text" class="form-control">
-              <span id="searchinput" class="input-group-btn">
-                <button id="searchbutton"  class="btn glyphicon glyphicon-search btn-default"  onclick="search()"></button>
-              </span>
-            </div><!-- /input-group -->
-          </div><!-- /.form-group -->
-        </div><!-- /.col-lg-6 -->
-<nav class="navbar navbar-default navbar-fixed-bottom">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-       
-        <!-- Collection of nav links and other content for toggling -->
-        <div>
-            <ul class="nav navbar-nav">
-                 <li><a class="  glyphicon glyphicon-search" href="search.html"></a></li>
-                <li><a class="glyphicon glyphicon-time" href="alarm2.html"></a>
-                <li><a class="glyphicon glyphicon-list-alt" href="medicalhistory.html"></a></li>
-                <li><a class="  glyphicon glyphicon-home" href="home.html"></a></li>
-            </ul>
-           
-        </div>
+<div class="container">
+<div class="page-header"><h1>Bootstrap 3 input-spinner</h1></div>  
+  <div class="input-group spinner">
+    <input type="text" class="form-control" value="42">
+    <div class="input-group-btn-vertical">
+      <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+      <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
     </div>
-</nav>
-</div>   
-     <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" charset="utf-8" src="js/SQLitePlugin.js"></script>
-        <script type="text/javascript" src="js/database_access.js"></script>    
+  </div>
 </div>
-</body>
-</html>
+<script type="text/javascript" src="test.js"></script>

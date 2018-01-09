@@ -1,70 +1,35 @@
-@padding-large-vertical: 10px;
-@padding-base-vertical: 6px;
-@font-size-h3: 24px;
-
-.dropmenu-item-btn {
-  text-align: center;
-
-  // Unfortunate cascade in Bootstrap
-  .dropdown-menu > li > & {
-    padding: @padding-large-vertical;
-    
-    &:hover,
-    &:focus,
-    &:active {
-      color: darken(#428bca, 6.5%);
-    }
-  }
-
-  > .glyphicon {
-    display: block;
-    font-size: @font-size-h3; // 24px
-    margin-bottom: @padding-base-vertical;
-  }
+.spinner {
+  width: 100px;
 }
-
-.open > .dropdown-menu--horizontal {
-  display: flex;
-  
-  > li > a {
-    min-width: 80px;
-  }
-  > .divider {
-    width: 1px;
-    height: auto;
-    margin: 0 9px;
-  }
+.spinner input {
+  text-align: right;
 }
-/* General styles to improve presentation */
-html, body {
-  height: 100%;
-}
-body {
-  background: linear-gradient(to bottom, #44a17d 0, #365e81 100%);
+.input-group-btn-vertical {
   position: relative;
-  display:flex;
-  justify-content: center;
-  align-items:center;
-  flex-wrap:wrap;
-  padding:0;
-  margin:0;
-  color: #fff;
+  white-space: nowrap;
+  width: 1%;
+  vertical-align: middle;
+  display: table-cell;
 }
-h3 {
+.input-group-btn-vertical > .btn {
+  display: block;
+  float: none;
+  width: 100%;
+  max-width: 100%;
+  padding: 8px;
+  margin-left: -1px;
+  position: relative;
+  border-radius: 0;
+}
+.input-group-btn-vertical > .btn:first-child {
+  border-top-right-radius: 4px;
+}
+.input-group-btn-vertical > .btn:last-child {
+  margin-top: -2px;
+  border-bottom-right-radius: 4px;
+}
+.input-group-btn-vertical i{
   position: absolute;
-  left: -340px;
-  top: -25px;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: bold;
-  max-width: 300px;
-  text-align: center;
-  line-height: 1.3;
-  margin-bottom: 2rem;
-}
-.dropdown {
-  margin-top: -100px;
-  margin-left: 40px;
-}
-.dropdown-menu {
-  min-width: 80px;
+  top: 0;
+  left: 4px;
 }
