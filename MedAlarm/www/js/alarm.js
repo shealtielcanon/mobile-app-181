@@ -36,7 +36,7 @@ function setMultipleAlarm(date) {
     temp_alarm_array.forEach(function(item, index, array) {
         setAlarm(date, item, 's');
     });
-    window.location.href='home.html';
+    //window.location.href='home.html';
 }
 
 function checkAlarmList(date,cuttime) {
