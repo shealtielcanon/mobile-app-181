@@ -4,7 +4,7 @@ var doNotify = true;
 
 if(window.location.href=="/android_asset/www/list.html") {
     $(".clickable-row").click(function() {
-        window.location = $(this).data("href");
+        window.location.href = $(this).data("href");
     });
 }
 
