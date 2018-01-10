@@ -29,7 +29,7 @@
 <body class="alarmbody">
 <div id="swipeBox" ontouchstart="touchStart(event,'swipeBox')" ontouchend="touchEnd(event)" ontouchmove="touchMove(event)" ontouchcancel="touchCancel(event)" style="position:relative;width:100%;height:100%;">
 
-<h1 class="addillnessheader"><button id="questionbutton" class="glyphicon glyphicon-question-sign" onclick="window.location.href='home.html'"></button>  How Are You Today?</h1>
+<h1 class="addillnessheader"><button id="questionbutton" class="glyphicon glyphicon-question-sign" data-title="Tutorial" data-toggle="modal" data-target="#tutorial"></button>  How Are You Today?</h1>
 <img class="ask1image" src="images/ask3.png">
   <div  class="col-lg-6">
           <div class="form-group">
@@ -77,6 +77,26 @@
           <div class="modal-footer ">
         <button id="okaybutton" type="button" class="btn btn-warning btn-lg" style="width: 100%;" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-ok-sign"></span> Okay</button>
       </div>
+        </div>
+    <!-- /.modal-content --> 
+  </div>
+      <!-- /.modal-dialog --> 
+    </div>
+
+    <div class="modal fade" id="tutorial" tabindex="-1" role="dialog" aria-labelledby="tutorial" aria-hidden="true">
+      <div class="modal-dialog">
+    <div id="popupbox" class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" onclick="window.location.href='alarm2.html'">SKIP<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+        
+      </div>
+        <div id="changeimage">
+         <img src="tutorial/1.png" style="width:75%;"></img>
+          
+          <div class="modal-footer ">
+        <button id="okaybutton" type="button" class="btn btn-warning btn-lg" style="width: 100%;" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-ok-sign"></span> Done</button>
+      </div>
+    </div>
         </div>
     <!-- /.modal-content --> 
   </div>
