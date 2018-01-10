@@ -769,14 +769,42 @@ function search() {//fix this one!
         $("#error1").modal('show');
         //alert("ERROR. Search input is empty.");
     } else  {
-        window.location = "searchresult.html?s=" + search_result;
+        searchCheck(search_result);
     }
+}
+
+function searchCheck(search_result) {
+    
+    db.transaction(function(transaction) {
+        var executeQuery = "SELECT * FROM Medicine WHERE LOWER(GenericName) LIKE LOWER('%"+search_result+"%') OR LOWER(BrandName) LIKE LOWER('%"+search_result+"%')";
+        console.log(executeQuery);
+        transaction.executeSql(executeQuery, [], function(tx, result) {
+            var len = result.rows.length;
+            if(len>0) {
+                window.location = "searchresult.html?s=" + search_result;
+            }
+            else {
+                $("#error2").modal('show');
+            }
+        },
+        function(error) {
+            console.log('Error:' + error);
+        });
+    },
+    function(error) {
+        console.log('Error searchResults: ' + error);
+    },
+    function() {
+        
+        console.log('Success searchResults');
+        
+    });    
 }
 
 function searchResults(search_result) {
     var table_results = "<table  id=\"\" class=\" rwd1-table table-responsive \"><tr><th>Generic name</th><th>Type</th><th>Brand name</th><th>Indications</th><th>Side effects</th><th>Dosage</th></tr>";
     db.transaction(function(transaction) {
-        var executeQuery = "SELECT * FROM Medicine WHERE LOWER(GenericName) LIKE LOWER('%"+search_result+"%')";
+        var executeQuery = "SELECT * FROM Medicine WHERE LOWER(GenericName) LIKE LOWER('%"+search_result+"%') OR LOWER(BrandName) LIKE LOWER('%"+search_result+"%')";
         console.log(executeQuery);
         transaction.executeSql(executeQuery, [], function(tx, result) {
             var len = result.rows.length;
