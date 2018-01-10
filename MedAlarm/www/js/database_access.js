@@ -83,6 +83,10 @@ function onDeviceReady() {
         showPList();
     }
 
+    if(urlPath=="/android_asset/www/medicalhistory.html") {
+        showHistList();
+    }
+
 
 
     cordova.plugins.autoStart.enable();
@@ -1007,7 +1011,10 @@ function showHistList() {
         var executeQuery = "SELECT * FROM logs";
         transaction.executeSql(executeQuery, [], function(tx, result) {
             var len = result.rows.length;
-
+            if(len==0) {
+                var x = document.getElementById("historyinstructions");
+                x.style.display = "none";
+            }
             for(i=0; i<len; i++) {
                 hist_line = hist_line + "<tr><td data-th=\"Date\">"+result.rows.item(i).start_date+"</td><td data-th=\"Info\">"+result.rows.item(i).generated_text+"</td></tr>";
             }
