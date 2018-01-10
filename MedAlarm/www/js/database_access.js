@@ -773,14 +773,14 @@ function newLogEntry(ev_id, e_name, e_desc) { //check and debug this!
 
 function updateLogText(ev_id, added_text) {
     db.transaction(function(transaction) {
-        var executeQuery = "UPDATE logs SET generated_text = generated_text || '," +added_text+"' WHERE e_id=?";
+        var executeQuery = "UPDATE logs SET generated_text = generated_text || ', " +added_text+"' WHERE e_id=?";
         transaction.executeSql(executeQuery, [ev_id],nullHandler,errorHandler);
     },
     function (error) {
-        alert('Error' + error);
+        console.log('Error' + error);
     },
     function() {
-        alert('Success updateLogText');
+        console.log('Success updateLogText');
     });
 
 }
