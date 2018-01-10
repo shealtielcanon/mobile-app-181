@@ -1,13 +1,11 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 var db = null;
 var doNotify = true;
+//if(window.location.pathname=="/C:/Users/HARRIE/Desktop/repo-2018/mobile-app-181/MedAlarm/www/tutorials.html") {
 
-if(window.location.pathname=="/android_asset/www/list.html") {
-    alert("wew");
-    $(".clickable-row").click(function() {
-        window.location.href = $(this).data("href");
-    });
-}
+//    $("#tutorial").modal('show');
+//}
+
 
 function onDeviceReady() {
     db = window.sqlitePlugin.openDatabase({name: "med_alarm_db.db", location: 'default', createFromLocation: 1});
@@ -68,7 +66,7 @@ function onDeviceReady() {
         //showAlarmList();
 
     }
-
+    //if(urlPath=="/C:/Users/HARRIE/Desktop/repo-2018/mobile-app-181/MedAlarm/www/tutorials.html") {
     if(urlPath=="/android_asset/www/tutorials.html") {
         $("#tutorial").modal('show');
     }
@@ -83,6 +81,10 @@ function onDeviceReady() {
 
     if(urlPath=="/android_asset/www/list.html") {
         showPList();
+    }
+
+    if(urlPath=="/android_asset/www/medicalhistory.html") {
+        showHistList();
     }
 
 
@@ -508,12 +510,12 @@ function checkAlarm(cuttime) {
                                 if(buttonIndex==1) {
                                     //willUpdate=true;
                                     updateNextAlarm(row_id, 'u');
-                                    window.location.href="home.html";
+                                    //window.location.href="home.html";
                                 }
                                 else {
                                     //willSnooze=true;
                                     updateNextAlarm(row_id, 'sn');
-                                    window.location.href="home.html";
+                                    //window.location.href="home.html";
                                 }
                                 doNotify=true;
                              },            
@@ -532,12 +534,12 @@ function checkAlarm(cuttime) {
                             if(buttonIndex==1) {
                                 //willUpdate=true;
                                 updateNextAlarm(row_id, 'u');
-                                window.location.href="home.html";
+                                //window.location.href="home.html";
                             }
                             else {
                                 //willSnooze=true;
                                 updateNextAlarm(row_id, 'sn');
-                                window.location.href="home.html";
+                                //window.location.href="home.html";
                             }
                             doNotify=true;
                          },            
@@ -558,6 +560,7 @@ function checkAlarm(cuttime) {
     },
     function() {
         console.log('Success checkAlarm');
+
         //if(willUpdate) {
         //    updateNextAlarm(row_id, 'u');
         //}
@@ -691,6 +694,7 @@ function updateNextAlarm(alarm_index, setMode) {
             setAlarm(new Date(), temp_array, 'sn');
             snooze(alarm_index, temp_array[0]);
         }
+        showPList();
         
     });
 
@@ -921,6 +925,8 @@ function miniSearch2() {
 
 }
 
+
+
 function showEventList() {
     var modal_html = "";
     var event_line = "";
@@ -931,12 +937,11 @@ function showEventList() {
             var len = result.rows.length;
             if(len>0) {
                 document.getElementById("changeImage").innerHTML = "<img id=\"happyimg\" src=\"images/happy3.png\">";
-                event_line = event_line + "<table class=\"table table-bordred \"><thead> <th>Illness</th><th></th><th></th></thead><tbody>";
+                event_line = event_line + "<table class=\"table table-bordred \"><thead> <th>Illness</th><th></th></thead><tbody>";
                 for(i=0; i<len; i++) {
                     console.log(result.rows.item(i).event_name);
-                    event_line = event_line + "<tr class='clickable-row' data-href=\"list.html?e="+result.rows.item(i).event_id+"\"><td> <a class=\"atags\" href=\"list.html?e="+result.rows.item(i).event_id+"\">" +result.rows.item(i).event_name+"</a></td>";
+                    event_line = event_line + "<tr><td onclick=\"window.location.href='list.html?e="+result.rows.item(i).event_id+"'\"> <a class=\"atags\" href=\"list.html?e="+result.rows.item(i).event_id+"\">" +result.rows.item(i).event_name+"</a></td>";
                     event_line = event_line + "<td><p data-placement=\"top\"  title=\"Delete\"><button class=\"btn btn-primary btn-xs\" data-title=\"Delete\" data-toggle=\"modal\" data-target=\"#delete"+result.rows.item(i).event_id+"\" ><span class=\"glyphicon glyphicon-trash\"></span></button></p></td>";
-                    event_line = event_line + "<td><p data-placement=\"top\"  title=\"Open\"><button class=\"btn btn-info btn-xs\" onclick=\"window.location.href='list.html?e="+result.rows.item(i).event_id+"'\" ><span class=\"glyphicon glyphicon-pencil\"></span></button></p></td>";
                     event_line = event_line + "</tr>";
                     
                     modal_html = modal_html + modalDiv(result.rows.item(i).event_id);
@@ -1006,7 +1011,10 @@ function showHistList() {
         var executeQuery = "SELECT * FROM logs";
         transaction.executeSql(executeQuery, [], function(tx, result) {
             var len = result.rows.length;
-
+            if(len==0) {
+                var x = document.getElementById("historyinstructions");
+                x.style.display = "none";
+            }
             for(i=0; i<len; i++) {
                 hist_line = hist_line + "<tr><td data-th=\"Date\">"+result.rows.item(i).start_date+"</td><td data-th=\"Info\">"+result.rows.item(i).generated_text+"</td></tr>";
             }

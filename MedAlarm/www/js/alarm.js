@@ -13,7 +13,9 @@ var temp_alarm_array = [];
 setInterval(function() {
     var urlPath = window.location.pathname;
     
-    
+    //if(window.location.pathname=="/android_asset/www/list.html") {
+    //    showPList();
+    //}
     var date = new Date();
     var cuttime = getCurDate(date);
     
@@ -25,7 +27,7 @@ setInterval(function() {
 }, 1000);
 
 function clickSet() {
-    alert("Hi!");
+    //alert("Hi!");
     setMultipleAlarm(new Date());
 }
 
@@ -36,6 +38,7 @@ function setMultipleAlarm(date) {
     temp_alarm_array.forEach(function(item, index, array) {
         setAlarm(date, item, 's');
     });
+    //window.location.href='home.html';
 }
 
 function checkAlarmList(date,cuttime) {
