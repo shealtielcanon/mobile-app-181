@@ -576,9 +576,25 @@ function getMedicineName(m_id) {
     return med_name;
 }
 
+function deleteAlarmByEvId(eid) {
+    console.log("delete event clicked!");
+    db.transaction(function(transaction) {
+        var executeQuery = "DELETE FROM prescription WHERE e_id=?";
+        transaction.executeSql(executeQuery, [eid],nullHandler,errorHandler);
+    },
+    function (error) {
+        console.log('Error' + error);
+    },
+    function() {
+        console.log('Success deleteAlarmByEvId');
+    });
+}
+
+
 function deleteEvent(ev_id) {
     console.log("delete event clicked!");
     db.transaction(function(transaction) {
+        deleteAlarmByEvId(ev_id);
         var executeQuery = "UPDATE event SET is_running=0 WHERE event_id=?";
         transaction.executeSql(executeQuery, [ev_id],nullHandler,errorHandler);
     },

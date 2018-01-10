@@ -70,6 +70,9 @@ function addNew() {
     if(dur_h_t==0 && dur_m_t==0) {
         alert("Don't put zeroes(0) on both hours and minutes.");
     }
+    else if(days == 0) {
+        alert("You have entered zero(o) on days. Please re-enter proper value for days.");
+    }
     else {
         var addedhr = parseInt(dur_m_t / 60);
         if(addedhr>0) {
