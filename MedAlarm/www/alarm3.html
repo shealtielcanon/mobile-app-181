@@ -35,7 +35,7 @@
    <div class="Timeinput">
     <div id="alarm_list_id">
  <div  class="input-group spinner">
-    <input type="text" class="form-control" id="hrs" value="" placeholder="Hours" >
+    <input type="text" class="form-control" id="hrs" value="" placeholder="Hours" onchange="check('hrs')">
     <div id="inputsss" class="input-group-btn-vertical">
       <button id="buttonup" class="btn btn-default glyphicon glyphicon-arrow-up" type="button" onclick="incVal('hrs')"><i class="fa fa-caret-up"></i></button>
       <button id="buttondown" class="btn btn-default glyphicon glyphicon-arrow-down" type="button" onclick="decVal('hrs')"><i class="fa fa-caret-down"></i></button>
@@ -44,7 +44,7 @@
 </div>
 
      <div  class="input-group spinner">
-    <input type="text" class="form-control" id="mins" value="" placeholder="Mins">
+    <input type="text" class="form-control" id="mins" value="" placeholder="Mins" onchange="check('mins')">
     <div id="inputsss" class="input-group-btn-vertical">
       <button id="buttonup" class="btn btn-default glyphicon glyphicon-arrow-up" type="button" onclick="incVal('mins')"><i class="fa fa-caret-up"></i></button>
       <button id="buttondown" class="btn btn-default glyphicon glyphicon-arrow-down" type="button" onclick="decVal('mins')"><i class="fa fa-caret-down"></i></button>
@@ -52,7 +52,7 @@
   </div>
 
 <div  class="input-group spinner">
-    <input type="text" class="form-control" id="days" value="" placeholder="Days">
+    <input type="text" class="form-control" id="days" value="" placeholder="Days" onchange="check('days')">
     <div id="inputsss" class="input-group-btn-vertical">
       <button id="buttonup" class="btn btn-default glyphicon glyphicon-arrow-up" type="button" onclick="incVal('days')"><i class="fa fa-caret-up"></i></button>
       <button id="buttondown" class="btn btn-default glyphicon glyphicon-arrow-down" type="button" onclick="decVal('days')"><i class="fa fa-caret-down"></i></button>
@@ -246,6 +246,29 @@
                 
               }
 
+            function check(inp_id) {
+                var val = document.getElementById(inp_id).value * 1;
+
+                if(inp_id=='hrs') {
+                  if(val>24) {
+                    document.getElementById(inp_id).value = 24;
+                  }
+                }
+                else if(inp_id=='mins') {
+                  if(val>60) {
+                    document.getElementById(inp_id).value = 60;
+                  }
+                }
+                else if(inp_id=='days') {
+                  if(val>30) {
+                    document.getElementById(inp_id).value = 30;
+                  }
+                }
+
+                if(val<0) {
+                  document.getElementById(inp_id).value = 0;
+                }
+            }
         </script>
 
 </body>
