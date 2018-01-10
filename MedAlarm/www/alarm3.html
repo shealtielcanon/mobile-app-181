@@ -305,6 +305,9 @@
                 updateTextMin();
                 updateTextDay();
             }
+            $('button').click(function(event) {
+                event.stopPropagation();
+            });
         </script>
 
 </body>
