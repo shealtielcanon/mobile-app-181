@@ -851,11 +851,12 @@ function showEventList() {
             var len = result.rows.length;
             if(len>0) {
                 document.getElementById("changeImage").innerHTML = "<img id=\"happyimg\" src=\"images/happy3.png\">";
-                event_line = event_line + "<table class=\"table table-bordred \"><thead> <th>Illness</th><th>Delete</th></thead><tbody>";
+                event_line = event_line + "<table class=\"table table-bordred \"><thead> <th>Illness</th><th></th><th></th></thead><tbody>";
                 for(i=0; i<len; i++) {
                     console.log(result.rows.item(i).event_name);
                     event_line = event_line + "<tr><td> <a class=\"atags\" href=\"list.html?e="+result.rows.item(i).event_id+"\">" +result.rows.item(i).event_name+"</a></td>";
-                    event_line = event_line + "<td><p data-placement=\"top\"  title=\"Delete\"><button class=\"btn btn-danger btn-xs\" data-title=\"Delete\" data-toggle=\"modal\" data-target=\"#delete"+result.rows.item(i).event_id+"\" ><span class=\"glyphicon glyphicon-trash\"></span></button></p></td>";
+                    event_line = event_line + "<td><p data-placement=\"top\"  title=\"Delete\"><button class=\"btn btn-Primary btn-xs\" data-title=\"Delete\" data-toggle=\"modal\" data-target=\"#delete"+result.rows.item(i).event_id+"\" ><span class=\"glyphicon glyphicon-trash\"></span></button></p></td>";
+                    event_line = event_line + "<td><p data-placement=\"top\"  title=\"Delete\"><button class=\"btn btn-Info btn-xs\" onclick=\"'window.location.href=list.html?e="+result.rows.item(i).event_id+"'\" ><span class=\"glyphicon glyphicon-pencil\"></span></button></p></td>";
                     event_line = event_line + "</tr>";
                     
                     modal_html = modal_html + modalDiv(result.rows.item(i).event_id);
