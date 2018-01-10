@@ -622,6 +622,7 @@ function deleteEvent(ev_id) {
     },
     function() {
         console.log('Success deleteEvent');
+        updateLogText(ev_id, "DELETED");
         showEventList();
     });
 }
@@ -755,7 +756,7 @@ function showMeds() {
 
 function newLogEntry(ev_id, e_name, e_desc) { //check and debug this!
     console.log("newLogEntry is clicked!");
-    var temp_gt = "Illness: " + e_name + ", ---- Description: " + e_desc;
+    var temp_gt = e_name + ", \"" + e_desc +"\"";
     db.transaction(function(transaction) {
         var executeQuery = "INSERT INTO logs (e_id, generated_text ,start_date) VALUES (?,?,date('now'))";
         transaction.executeSql(executeQuery, [ev_id, temp_gt],nullHandler,errorHandler);
@@ -772,14 +773,14 @@ function newLogEntry(ev_id, e_name, e_desc) { //check and debug this!
 
 function updateLogText(ev_id, added_text) {
     db.transaction(function(transaction) {
-        var executeQuery = "UPDATE logs SET generated_text = generated_text || ? || "+"','"+" WHERE e_id=?";
-        transaction.executeSql(executeQuery, [ev_id, added_text],nullHandler,errorHandler);
+        var executeQuery = "UPDATE logs SET generated_text = generated_text || ', +"added_text"+' WHERE e_id=?";
+        transaction.executeSql(executeQuery, [ev_id],nullHandler,errorHandler);
     },
     function (error) {
-        console.log('Error' + error);
+        alert('Error' + error);
     },
     function() {
-        console.log('Success updateLogText');
+        alert('Success updateLogText');
     });
 
 }
@@ -1005,18 +1006,18 @@ function showPList() {
 }
 
 function showHistList() {
-    var hist_line = "<table class=\"rwd-table table-responsive\"><tr><th>Date</th><th>Info</th></tr>";
+    var hist_line = "<table class=\"rwd-table table-responsive\"><tr><th>Start Date</th><th>Finish Date</th><th>Info</th></tr>";
     console.log("showEventList pasok!");
     db.transaction(function(transaction) {
         var executeQuery = "SELECT * FROM logs";
         transaction.executeSql(executeQuery, [], function(tx, result) {
             var len = result.rows.length;
-            if(len==0) {
+            if(len>0) {
                 var x = document.getElementById("historyinstructions");
                 x.style.display = "none";
             }
             for(i=0; i<len; i++) {
-                hist_line = hist_line + "<tr><td data-th=\"Date\">"+result.rows.item(i).start_date+"</td><td data-th=\"Info\">"+result.rows.item(i).generated_text+"</td></tr>";
+                hist_line = hist_line + "<tr><td data-th=\"Start Date\">"+result.rows.item(i).start_date+"</td><td data-th=\"Finish Date\">"+result.rows.item(i).finish_date+"</td><td data-th=\"Info\">"+result.rows.item(i).generated_text+"</td></tr>";
             }
         },
         function(error) {
