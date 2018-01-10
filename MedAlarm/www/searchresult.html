@@ -46,13 +46,32 @@
     </div>
 </nav>
 <div class="historybody">
-<h1 class="addillnessheader"><button id="questionbutton" class="glyphicon glyphicon-question-sign" onclick="window.location.href='home.html'"></button><button id="backbutton" class="glyphicon glyphicon-chevron-left" onclick="window.location.href='search.html'"></button>Search Results</h1>
+<h1 class="addillnessheader"><button id="questionbutton" class="glyphicon glyphicon-question-sign" data-title="Tutorial" data-toggle="modal" data-target="#tutorial"></button><button id="backbutton" class="glyphicon glyphicon-chevron-left" onclick="window.location.href='search.html'"></button>Search Results</h1>
 
   <div id="search_table_result"></div>
  
 <br><br><br><br><br>
 </div>
 </div>
+<div class="modal fade" id="tutorial" tabindex="-1" role="dialog" aria-labelledby="tutorial" aria-hidden="true">
+      <div class="modal-dialog">
+    <div id="popupbox" class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close"data-dismiss="modal" aria-hidden="true">SKIP<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+        
+      </div>
+        <div id="changeimage">
+         <img src="tutorial/7.png" style="width:75%;"></img>
+          
+          <div class="modal-footer ">
+        <button id="okaybutton" type="button" class="btn btn-warning btn-lg" style="width: 100%;" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-ok-sign"></span> Done</button>
+      </div>
+    </div>
+        </div>
+    <!-- /.modal-content --> 
+  </div>
+      <!-- /.modal-dialog --> 
+    </div>
      <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8" src="js/SQLitePlugin.js"></script>
         <script type="text/javascript" src="js/database_access.js"></script>
