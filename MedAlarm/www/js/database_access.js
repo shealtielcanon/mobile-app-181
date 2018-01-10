@@ -766,7 +766,8 @@ function updateLogText(ev_id, added_text) {
 function search() {//fix this one!
     var search_result = document.getElementById('search_id').value;
     if (search_result.trim() == '') {
-        alert("ERROR. Search input is empty.");
+        $("#error1").modal('show');
+        //alert("ERROR. Search input is empty.");
     } else  {
         window.location = "searchresult.html?s=" + search_result;
     }

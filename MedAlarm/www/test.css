@@ -1,3 +1,7 @@
+input[readonly] {
+    color: #999;
+}
+
 .spinner {
   width: 100px;
 }
