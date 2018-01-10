@@ -35,27 +35,27 @@
    <div class="Timeinput">
     <div id="alarm_list_id">
  <div  class="input-group spinner">
-    <input id="inputss" type="text" class="form-control" id="val_id" value="" placeholder="Hours" >
+    <input type="text" class="form-control" id="hrs" value="" placeholder="Hours" >
     <div id="inputsss" class="input-group-btn-vertical">
-      <button id="buttonup" class="btn btn-default glyphicon glyphicon-arrow-up" type="button" onclick="incVal()"><i class="fa fa-caret-up"></i></button>
-      <button id="buttondown" class="btn btn-default glyphicon glyphicon-arrow-down" type="button" onclick="decVal()"><i class="fa fa-caret-down"></i></button>
+      <button id="buttonup" class="btn btn-default glyphicon glyphicon-arrow-up" type="button" onclick="incVal('hrs')"><i class="fa fa-caret-up"></i></button>
+      <button id="buttondown" class="btn btn-default glyphicon glyphicon-arrow-down" type="button" onclick="decVal('hrs')"><i class="fa fa-caret-down"></i></button>
     </div>
   </div>
 </div>
 
      <div  class="input-group spinner">
-    <input id="inputss"type="text" class="form-control" id="val_id" value="" placeholder="Mins">
+    <input type="text" class="form-control" id="mins" value="" placeholder="Mins">
     <div id="inputsss" class="input-group-btn-vertical">
-      <button id="buttonup" class="btn btn-default glyphicon glyphicon-arrow-up" type="button" onclick="incVal()"><i class="fa fa-caret-up"></i></button>
-      <button id="buttondown" class="btn btn-default glyphicon glyphicon-arrow-down" type="button" onclick="decVal()"><i class="fa fa-caret-down"></i></button>
+      <button id="buttonup" class="btn btn-default glyphicon glyphicon-arrow-up" type="button" onclick="incVal('mins')"><i class="fa fa-caret-up"></i></button>
+      <button id="buttondown" class="btn btn-default glyphicon glyphicon-arrow-down" type="button" onclick="decVal('mins')"><i class="fa fa-caret-down"></i></button>
     </div>
   </div>
 
 <div  class="input-group spinner">
-    <input id="inputss" type="text" class="form-control" id="val_id" value="" placeholder="Days">
+    <input type="text" class="form-control" id="days" value="" placeholder="Days">
     <div id="inputsss" class="input-group-btn-vertical">
-      <button id="buttonup" class="btn btn-default glyphicon glyphicon-arrow-up" type="button" onclick="incVal()"><i class="fa fa-caret-up"></i></button>
-      <button id="buttondown" class="btn btn-default glyphicon glyphicon-arrow-down" type="button" onclick="decVal()"><i class="fa fa-caret-down"></i></button>
+      <button id="buttonup" class="btn btn-default glyphicon glyphicon-arrow-up" type="button" onclick="incVal('days')"><i class="fa fa-caret-up"></i></button>
+      <button id="buttondown" class="btn btn-default glyphicon glyphicon-arrow-down" type="button" onclick="decVal('days')"><i class="fa fa-caret-down"></i></button>
     </div>
   </div>
   <div  id="updates" class="boxed">
@@ -203,6 +203,48 @@
                 var x = document.getElementById("days").value;
                 document.getElementById("txtDay").innerHTML = x;
             }
+
+            function incVal(inp_id) {
+                var val = document.getElementById(inp_id).value * 1;
+
+                
+                if(inp_id == "hrs") {
+                  if(val<24) {
+                    document.getElementById(inp_id).value = val + 1;
+                  }
+                  else if (val == 24) {
+                    document.getElementById(inp_id).value = 0;
+                  }
+                }
+                
+                else if(inp_id == "mins") {
+                  if(val<60) {
+                    document.getElementById(inp_id).value = val + 1;
+                  }
+                  else if (val == 60) {
+                    document.getElementById(inp_id).value = 0;
+                  }
+                }
+
+                else if(inp_id == "hrs") {
+                  if(val<30) {
+                    document.getElementById(inp_id).value = val + 1;
+                  }
+                  else if (val == 30) {
+                    document.getElementById(inp_id).value = 0;
+                  }
+                }
+                
+              }
+            function decVal() {
+                var val = document.getElementById(inp_id).value * 1;
+
+                if(val>0) {
+                  document.getElementById(inp_id).value = val - 1;
+                }
+
+                
+              }
 
         </script>
 

@@ -659,61 +659,7 @@ max-width: 100%;
 
 }
 
-#days{
 
-width: 30%;
-  display: inline-block;
-  
-  border-radius: 10px;
-  position: relative;
-  max-width: 100%;
-  border-width: 2px;
- background-color:rgba(27, 33, 50, .4);
-  outline: none;
-  font-weight: bold;
-  font-size: 15px;
-  color: #FFFFFF;
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-
-}
-
-#hrs{
-
- 
-  width: 30%;
-  display: inline-block;
- 
-  border-radius: 10px;
-  position: relative;
-  max-width: 100%;
-  border-width: 2px;
- background-color:rgba(27, 33, 50, .4);
-  outline: none;
-  font-weight: bold;
-  font-size: 15px;
-  color: #FFFFFF;
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
- 
-}
-
-#mins{
-
- 
- width: 30%;
-  display: inline-block;
-  
-  border-radius: 10px;
-  position: relative;
-  max-width: 100%;
-  border-width: 2px;
- background-color:rgba(27, 33, 50, .4);
-  outline: none;
-  font-weight: bold;
-  font-size: 15px;
-  color: #FFFFFF;
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
- 
-}
 
 .Timeinput{
 
@@ -1131,11 +1077,11 @@ border-radius: 30px;
 #inputs{
 
   text-align: center;
-  display: inline-block;
+  display: inline-block;inputss
 
 }
 
-#inputss{
+#hrs, #mins, #days{
   text-align: center;
   display: inline-block;
   border-radius: 3px;
