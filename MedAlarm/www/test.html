@@ -10,8 +10,16 @@
 
 <body>
 <div class="page-header"><h1>Bootstrap 3 input-spinner</h1></div>  
-  <div class="input-group spinner">
-    <input type="text" class="form-control" id="val_id" value="42">
+  <div id="inputss" class="input-group spinner">
+    <input type="text" class="form-control" id="val_id" value="0">
+    <div class="input-group-btn-vertical">
+      <button id="buttonup" class="btn btn-default glyphicon glyphicon-arrow-up" type="button" onclick="incVal()"><i class="fa fa-caret-up"></i></button>
+      <button id="buttondown" class="btn btn-default glyphicon glyphicon-arrow-down" type="button" onclick="decVal()"><i class="fa fa-caret-down"></i></button>
+    </div>
+  </div>
+</div>
+<div id="inputss" class="input-group spinner">
+    <input type="text" class="form-control" id="val_id" value="0">
     <div class="input-group-btn-vertical">
       <button id="buttonup" class="btn btn-default glyphicon glyphicon-arrow-up" type="button" onclick="incVal()"><i class="fa fa-caret-up"></i></button>
       <button id="buttondown" class="btn btn-default glyphicon glyphicon-arrow-down" type="button" onclick="decVal()"><i class="fa fa-caret-down"></i></button>
