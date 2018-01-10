@@ -500,10 +500,12 @@ function checkAlarm(cuttime) {
                                 if(buttonIndex==1) {
                                     //willUpdate=true;
                                     updateNextAlarm(row_id, 'u');
+                                    window.location.href="home.html";
                                 }
                                 else {
                                     //willSnooze=true;
                                     updateNextAlarm(row_id, 'sn');
+                                    window.location.href="home.html";
                                 }
                                 doNotify=true;
                              },            
@@ -522,10 +524,12 @@ function checkAlarm(cuttime) {
                             if(buttonIndex==1) {
                                 //willUpdate=true;
                                 updateNextAlarm(row_id, 'u');
+                                window.location.href="home.html";
                             }
                             else {
                                 //willSnooze=true;
                                 updateNextAlarm(row_id, 'sn');
+                                window.location.href="home.html";
                             }
                             doNotify=true;
                          },            
@@ -679,7 +683,7 @@ function updateNextAlarm(alarm_index, setMode) {
             setAlarm(new Date(), temp_array, 'sn');
             snooze(alarm_index, temp_array[0]);
         }
-          
+        
     });
 
 }
@@ -688,6 +692,7 @@ function setNextAlarmDate(alarm_index) {
     db.transaction(function(transaction) {
         var executeQuery = "UPDATE prescription SET next_alarm_date=date('now', '+day') WHERE presc_id=?";
         transaction.executeSql(executeQuery, [new_next_alarm, alarm_index],nullHandler,errorHandler);
+
     },
     function (error) {
         console.log('Error' + error);
