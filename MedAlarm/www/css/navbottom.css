@@ -1013,10 +1013,12 @@ border-radius: 30px;
 
 .spinner {
   width: 100px;
+  color: white;
 }
 .spinner input {
   text-align: right;
   border-radius: 10px;
+   color: white;
 }
 .input-group-btn-vertical {
   position: relative;
@@ -1088,4 +1090,5 @@ border-radius: 30px;
   margin-left: 10px;
   margin-bottom: 5px;
   background-color:rgba(27, 33, 90, .4);
+
 }
