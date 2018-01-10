@@ -983,7 +983,7 @@ function showHistList() {
 
 function modalDiv(idnum) {
     var modal_line = "<div class=\"modal fade\" id=\"delete"+idnum+"\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"edit\" aria-hidden=\"true\">";
-    modal_line = modal_line + "<div class=\"modal-dialog\"><div class=\"modal-content\"><div class=\"modal-header\">";
+    modal_line = modal_line + "<div class=\"modal-dialog\"><div id=\"popupbox\" class=\"modal-content\"><div class=\"modal-header\">";
     modal_line = modal_line + "<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\"><span class=\"glyphicon glyphicon-remove\" aria-hidden=\"true\"></span></button>";
     modal_line = modal_line + "<h4 class=\"modal-title custom_align\" id=\"Heading\">Delete Event</h4>";
     modal_line = modal_line + "</div><div class=\"modal-body\"><div class=\"console.log console.log-danger\"><span class=\"glyphicon glyphicon-warning-sign\"></span> Are you sure you want to delete this alarm?</div>";
@@ -994,7 +994,7 @@ function modalDiv(idnum) {
 
 function modalDivAlarm(idnum) {
     var modal_line = "<div class=\"modal fade\" id=\"delete"+idnum+"\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"edit\" aria-hidden=\"true\">";
-    modal_line = modal_line + "<div class=\"modal-dialog\"><div class=\"modal-content\"><div class=\"modal-header\">";
+    modal_line = modal_line + "<div class=\"modal-dialog\"><div id=\"popupbox\" class=\"modal-content\"><div class=\"modal-header\">";
     modal_line = modal_line + "<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\"><span class=\"glyphicon glyphicon-remove\" aria-hidden=\"true\"></span></button>";
     modal_line = modal_line + "<h4 class=\"modal-title custom_align\" id=\"Heading\">Delete Alarm</h4>";
     modal_line = modal_line + "</div><div class=\"modal-body\"><div class=\"console.log console.log-danger\"><span class=\"glyphicon glyphicon-warning-sign\"></span> Are you sure you want to delete this alarm?</div>";
