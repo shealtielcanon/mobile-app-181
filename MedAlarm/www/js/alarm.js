@@ -99,9 +99,9 @@ function addNew() {
 
         alert("Added: " + med);
         var newLine = "";
-        newLine = newLine + hmtlForAlarmSetting();
+        //newLine = newLine + hmtlForAlarmSetting();
         console.log(newLine);
-        document.getElementById('alarm_list_id').innerHTML = newLine;
+        //document.getElementById('alarm_list_id').innerHTML = newLine;
         var medLine = "";
         medLine = medLine + "<select id=\"med_id\" data-toggle=\"\" class=\" form-control select-primary mrs mbm\"></select>";
         document.getElementById('med_select').innerHTML = medLine;
