@@ -556,7 +556,7 @@ function checkAlarm(cuttime) {
     },
     function() {
         console.log('Success checkAlarm');
-        showPList();
+
         //if(willUpdate) {
         //    updateNextAlarm(row_id, 'u');
         //}
@@ -690,6 +690,7 @@ function updateNextAlarm(alarm_index, setMode) {
             setAlarm(new Date(), temp_array, 'sn');
             snooze(alarm_index, temp_array[0]);
         }
+        showPList();
         
     });
 
