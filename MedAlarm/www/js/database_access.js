@@ -2,13 +2,6 @@ document.addEventListener("deviceready", onDeviceReady, false);
 var db = null;
 var doNotify = true;
 
-if(window.location.pathname=="/android_asset/www/home.html") {
-    alert("wew");
-    $(".clickable-row").click(function() {
-        window.location.href = $(this).data("href");
-    });
-}
-
 function onDeviceReady() {
     db = window.sqlitePlugin.openDatabase({name: "med_alarm_db.db", location: 'default', createFromLocation: 1});
     db.transaction(function(tx) {
