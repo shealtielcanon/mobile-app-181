@@ -1,6 +1,13 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 var db = null;
 var doNotify = true;
+
+if(window.location.href=="/android_asset/www/list.html") {
+    $(".clickable-row").click(function() {
+        window.location = $(this).data("href");
+    });
+}
+
 function onDeviceReady() {
     db = window.sqlitePlugin.openDatabase({name: "med_alarm_db.db", location: 'default', createFromLocation: 1});
     db.transaction(function(tx) {
@@ -926,7 +933,7 @@ function showEventList() {
                 event_line = event_line + "<table class=\"table table-bordred \"><thead> <th>Illness</th><th></th><th></th></thead><tbody>";
                 for(i=0; i<len; i++) {
                     console.log(result.rows.item(i).event_name);
-                    event_line = event_line + "<tr><td> <a class=\"atags\" href=\"list.html?e="+result.rows.item(i).event_id+"\">" +result.rows.item(i).event_name+"</a></td>";
+                    event_line = event_line + "<tr class='clickable-row' data-href=\"list.html?e="+result.rows.item(i).event_id+"\"><td> <a class=\"atags\" href=\"list.html?e="+result.rows.item(i).event_id+"\">" +result.rows.item(i).event_name+"</a></td>";
                     event_line = event_line + "<td><p data-placement=\"top\"  title=\"Delete\"><button class=\"btn btn-primary btn-xs\" data-title=\"Delete\" data-toggle=\"modal\" data-target=\"#delete"+result.rows.item(i).event_id+"\" ><span class=\"glyphicon glyphicon-trash\"></span></button></p></td>";
                     event_line = event_line + "<td><p data-placement=\"top\"  title=\"Open\"><button class=\"btn btn-info btn-xs\" onclick=\"window.location.href='list.html?e="+result.rows.item(i).event_id+"'\" ><span class=\"glyphicon glyphicon-pencil\"></span></button></p></td>";
                     event_line = event_line + "</tr>";
@@ -1061,8 +1068,5 @@ function nullHandler() {
 function successCb() {
     console.log("This is success");
 }
-
-
     
-
 
