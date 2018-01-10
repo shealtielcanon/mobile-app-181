@@ -12,14 +12,7 @@ var temp_alarm_array = [];
 
 setInterval(function() {
     var urlPath = window.location.pathname;
-    if(urlPath=="/android_asset/www/alarm3.html") {
-        if (temp_alarm_array.length==0) {
-            document.getElementById('buttoncolor').innerHTML = "<button style=\"background-color:rgba(160,160,160,1);\" id=\"alarmbutton\"  class=\"glyphicon glyphicon-ok btn btn-default\"  onclick=\"clickSet()\" data-title=\"Confrim\" data-toggle=\"modal\" data-target=\"#confirm\" disabled></button>";
-        }
-        else {
-            document.getElementById('buttoncolor').innerHTML = "<button id=\"alarmbutton\"  class=\"glyphicon glyphicon-ok btn btn-default\"  onclick=\"clickSet()\" data-title=\"Confrim\" data-toggle=\"modal\" data-target=\"#confirm\"></button>";
-        }
-    }
+    
     
     var date = new Date();
     var cuttime = getCurDate(date);
@@ -32,6 +25,7 @@ setInterval(function() {
 }, 1000);
 
 function clickSet() {
+    alert("Hi!");
     setMultipleAlarm(new Date());
 }
 

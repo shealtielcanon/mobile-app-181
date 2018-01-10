@@ -90,8 +90,7 @@
             <div id="alarmbuttoncont">
                 
                 <button id="alarmbutton"  class="glyphicon glyphicon-plus btn btn-default"  onclick="addNew()"></button>
-                <div id="buttoncolor">
-                <button id="alarmbutton"  class="glyphicon glyphicon-ok btn btn-default"  onclick="clickSet()" data-title="Confrim" data-toggle="modal" data-target="#confirm"></button></div>
+                
               </div> 
             </div><!-- /input-group -->
           </div><!-- /.form-group -->
@@ -133,7 +132,9 @@
           Alarm for <span id="m_name"></span> added.
       </div>
           <div class="modal-footer ">
-        <button id="okaybutton" type="button" class="btn btn-warning btn-lg" style="width: 100%;" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-ok-sign"></span> Okay</button>
+        <button id="okaybutton" type="button" class="btn btn-warning btn-lg" style="width: 100%;" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-ok-sign"></span> Add More</button>
+        <br><br>
+        <button id="okaybutton" type="button" class="btn btn-warning btn-lg" style="width: 100%;" onclick="clickSet()"><span class="glyphicon glyphicon-ok-sign"></span> Set</button>
       </div>
         </div>
     <!-- /.modal-content --> 
