@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Medical Alarm App</title>
+
+
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta charset="utf-8">
+
+
+<link href="bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link href="css/flat-ui.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/navbottom.css">
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/flat-ui.min.js"></script>
+
+    <script src="js/application.js"></script>
+    <script type="test.js"></script>
+
+
+
+</head> 
+<body class="homebody">
+  <div id="swipeBox" ontouchstart="touchStart(event,'swipeBox')" ontouchend="touchEnd(event)" ontouchmove="touchMove(event)" ontouchcancel="touchCancel(event)" style="position:relative;width:100%;height:100%;">
+<h1 class="homeheader">Current alarms</h1>
+
+<div >
+<div class="container">
+    <div class="row">
+        
+        
+        <div  class="col-md-12">
+        
+        <div id="homebodytable" class="table-responsive">
+
+      
+    
+      <div id ="event_list"></div>
+   
+
+                
+            </div>
+            
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+      <div class="modal-dialog">
+    <div class="modal-content">
+          <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+        <h4 class="modal-title custom_align" id="Heading">Edit Alarm</h4>
+      </div>
+          <div class="modal-body">
+          <div class="form-group">
+        <input class="form-control " type="text" placeholder="Hours">
+        </div>
+        <div class="form-group">
+        
+        <input class="form-control " type="text" placeholder="Minutes">
+        </div>
+        <div class="form-group">
+        <textarea rows="2" class="form-control" placeholder="Days"></textarea>
+    
+        
+        </div>
+      </div>
+          <div class="modal-footer ">
+        <button type="button" class="btn btn-warning btn-lg" style="width: 100%;"><span class="glyphicon glyphicon-ok-sign"></span> Update</button>
+      </div>
+        </div>
+    <!-- /.modal-content --> 
+  </div>
+      <!-- /.modal-dialog --> 
+    </div>
+    
+    
+    <div id="modal_del_id"></div>
+    <div id="changeImage">
+      
+    </div>
+</div>
+<div class="modal fade" id="tutorial" tabindex="-1" role="dialog" aria-labelledby="tutorial" aria-hidden="true">
+      <div class="modal-dialog">
+    <div id="popupbox" class="modal-content">
+        <div id="changeimage">
+         <img src="tutorial/1.png" style="width:75%;"></img>
+          
+          <div class="modal-footer ">
+        <button id="okaybutton" type="button" class="btn btn-warning btn-lg" style="width: 100%;" onclick="nextTutorial(1)"><span class="glyphicon glyphicon-ok-sign"></span> Next</button>
+      </div>
+    </div>
+        </div>
+    <!-- /.modal-content --> 
+  </div>
+      <!-- /.modal-dialog --> 
+    </div>
+<div class="navbarclass">
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+       
+        <!-- Collection of nav links and other content for toggling -->
+        <div>
+             <ul class="nav navbar-nav">
+                              
+                 <li><a class="  glyphicon glyphicon-search" style="color:#858585" href="search.html"></a></li>
+                <li><a class="glyphicon glyphicon-dashboard" style="color:  #1C4970" href="home.html"></a>
+                <li><a class="glyphicon glyphicon-list-alt" style="color:#858585" href="medicalhistory.html"></a></li>
+                <li><a class="  glyphicon glyphicon-home" style="color:#858585" href="alarm2.html"></a></li>
+            </ul>          
+           
+        </div>
+    </div>
+</nav>
+</div>
+<script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/SQLitePlugin.js"></script>
+        <script type="text/javascript" src="js/database_access.js"></script>    
+        <script type="text/javascript" src="js/alarm.js"></script>
+        <script type="text/javascript" src="js/swipe.js"></script>
+        <script type="text/javascript">
+            function nextTutorial(n) {
+                var htmlNext = "<img src=\"tutorial/"+(n+1)+".png\" style=\"width:75%;\"></img>";
+                htmlNext = htmlNext + "<div class=\"modal-footer \">";
+                if(n==4){
+                  htmlNext = htmlNext + "<button id=\"okaybutton\" type=\"button\" class=\"btn btn-warning btn-lg\" style=\"width: 100%;\" onclick=\"window.location.href='alarm2.html'\")><span class=\"glyphicon glyphicon-ok-sign\"></span> Done</button></div>";
+                }
+                else{
+                  htmlNext = htmlNext + "<button id=\"okaybutton\" type=\"button\" class=\"btn btn-warning btn-lg\" style=\"width: 100%;\" onclick=\"nextTutorial("+(n+1)+")\"><span class=\"glyphicon glyphicon-ok-sign\"></span> Next</button></div>";
+
+                }
+                
+                document.getElementById("changeimage").innerHTML = htmlNext;
+
+            }
+        </script>
+
+</body>
+</html>                            

@@ -61,6 +61,10 @@ function onDeviceReady() {
 
     }
 
+    if(urlPath=="/android_asset/www/tutorials.html") {
+        $("#tutorial").modal('show');
+    }
+
     if(urlPath=="/android_asset/www/searchresult.html") {
         var urlWithParams = window.location.href;
         var sv = getParameterByName('s', urlWithParams);
@@ -190,7 +194,7 @@ function confirmUser() {
     },
     function() {
         console.log('Success transaction');
-        window.location = "home.html";
+        window.location = "tutorials.html";
     });
 
 }
@@ -207,7 +211,7 @@ function checkForNewUser() {
             }
             else {
                 console.log("A user is found. Loading user with name " + result.rows.item(0).lname);
-                window.location="home.html";
+                window.location="alarm2.html";
             }
         },
         function(error) {
