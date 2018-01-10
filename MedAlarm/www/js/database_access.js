@@ -1016,13 +1016,8 @@ function showHistList() {
                 var x = document.getElementById("historyinstructions");
                 x.style.display = "none";
             }
-            var tempdate = "";
             for(i=0; i<len; i++) {
-                tempdate = result.rows.item(i).finish_date;
-                if(tempdate == "null") {
-                    tempdate = "";
-                }
-                hist_line = hist_line + "<tr><td data-th=\"Start Date\">"+result.rows.item(i).start_date+"</td><td data-th=\"Finish Date\">"+tempdate+"</td><td data-th=\"Info\">"+result.rows.item(i).generated_text+"</td></tr>";
+                hist_line = hist_line + "<tr><td data-th=\"Start Date\">"+result.rows.item(i).start_date+"</td><td data-th=\"Finish Date\">"+result.rows.item(i).finish_date+"</td><td data-th=\"Info\">"+result.rows.item(i).generated_text+"</td></tr>";
             }
         },
         function(error) {
