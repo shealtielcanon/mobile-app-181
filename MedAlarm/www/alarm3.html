@@ -225,7 +225,7 @@
                   }
                 }
 
-                else if(inp_id == "hrs") {
+                else if(inp_id == "days") {
                   if(val<30) {
                     document.getElementById(inp_id).value = val + 1;
                   }
@@ -235,7 +235,7 @@
                 }
                 
               }
-            function decVal() {
+            function decVal(inp_id) {
                 var val = document.getElementById(inp_id).value * 1;
 
                 if(val>0) {
