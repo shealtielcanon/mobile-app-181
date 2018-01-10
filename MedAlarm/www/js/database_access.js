@@ -1,6 +1,11 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 var db = null;
 var doNotify = true;
+//if(window.location.pathname=="/C:/Users/HARRIE/Desktop/repo-2018/mobile-app-181/MedAlarm/www/tutorials.html") {
+
+//    $("#tutorial").modal('show');
+//}
+
 
 function onDeviceReady() {
     db = window.sqlitePlugin.openDatabase({name: "med_alarm_db.db", location: 'default', createFromLocation: 1});
@@ -61,7 +66,7 @@ function onDeviceReady() {
         //showAlarmList();
 
     }
-
+    //if(urlPath=="/C:/Users/HARRIE/Desktop/repo-2018/mobile-app-181/MedAlarm/www/tutorials.html") {
     if(urlPath=="/android_asset/www/tutorials.html") {
         $("#tutorial").modal('show');
     }
