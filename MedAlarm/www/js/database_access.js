@@ -1017,11 +1017,7 @@ function showHistList() {
                 x.style.display = "none";
             }
             for(i=0; i<len; i++) {
-                var tdate = results.rows.item(i).finish_date;
-                if(tdate == "null") {
-                    tdate = "";
-                }
-                hist_line = hist_line + "<tr><td data-th=\"Start Date\">"+result.rows.item(i).start_date+"</td><td data-th=\"Finish Date\">"+tdate+"</td><td data-th=\"Info\">"+result.rows.item(i).generated_text+"</td></tr>";
+                hist_line = hist_line + "<tr><td data-th=\"Start Date\">"+result.rows.item(i).start_date+"</td><td data-th=\"Finish Date\">"+result.rows.item(i).finish_date+"</td><td data-th=\"Info\">"+result.rows.item(i).generated_text+"</td></tr>";
             }
         },
         function(error) {
