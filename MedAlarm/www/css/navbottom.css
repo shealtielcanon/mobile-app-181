@@ -991,6 +991,16 @@ outline: none;
 
 
 }
+#questionbutton{
+
+float: right;
+background-color:rgba(150, 50, 30, .0);
+border: 1px ; 
+outline: none;
+
+
+}
+
 
 #okaybutton{
     background-color:rgba(106, 139, 232, .5);
@@ -1092,3 +1102,4 @@ border-radius: 30px;
   background-color:rgba(27, 33, 90, .4);
 
 }
+
