@@ -23,13 +23,31 @@
 }
 .input-group-btn-vertical > .btn:first-child {
   border-top-right-radius: 4px;
+  margin-bottom:  0px;
+  margin-top: -4px;
 }
 .input-group-btn-vertical > .btn:last-child {
-  margin-top: -2px;
+  margin-top: 0px;
+  margin-bottom:  -3px;
   border-bottom-right-radius: 4px;
+
 }
 .input-group-btn-vertical i{
   position: absolute;
   top: 0;
   left: 4px;
+}
+
+#buttonup{
+  height: 21px;
+  font-size: 10px;
+  padding-top:4px;
+
+}
+
+#buttondown{
+  height: 21px;
+  font-size: 10px;
+  padding-top:  4px;
+
 }
