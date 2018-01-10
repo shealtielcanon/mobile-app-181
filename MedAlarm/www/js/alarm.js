@@ -97,7 +97,10 @@ function addNew() {
         temp_alarm_array.push([getCurDate(date), med, dur_h_t, dur_m_t, dur_times_t]);
         //addAlarmToDB(getCurDate(date), med, dur_h_t, dur_m_t, dur_times_t);
 
-        alert("Added: " + med);
+        //alert("Added: " + med);//modal popup here
+        document.getElementById('m_name').innerHTML = med;
+        $("#add").modal('show');
+
         var newLine = "";
         //newLine = newLine + hmtlForAlarmSetting();
         console.log(newLine);
