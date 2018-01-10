@@ -126,7 +126,7 @@
         <h4 class="modal-title custom_align" id="Heading">SUCCESS!</h4>
       </div>
           <div class="modal-body">
-          Alarm for <span id="m_name"></span> added.
+          Preparing the alarm for <span id="m_name"></span>.
       </div>
           <div class="modal-footer ">
         <button id="okaybutton" type="button" class="btn btn-warning btn-lg" style="width: 100%;" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-plus"></span> Add More</button>
@@ -206,7 +206,7 @@
                 .addEventListener("keyup", function(event) {
                 event.preventDefault();
                 if (event.keyCode === 13) {
-                    document.getElementById("addmedicinebutton").click();
+                    document.getElementById("alarmbutton").click();
                 }
             });
 
@@ -305,7 +305,7 @@
                 updateTextMin();
                 updateTextDay();
             }
-            
+
         </script>
 
 </body>

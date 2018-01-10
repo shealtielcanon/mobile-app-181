@@ -159,6 +159,51 @@ function processingRoutine() {
 			window.plugins.nativepagetransitions.slide(options);
 			//window.location = "home.html";
 		}
+		else if(urlPath=="/android_asset/www/searchresult.html") {
+			var options = {
+			  "direction"        : "right", 
+			  "duration"         :  200, 
+			  
+			  "iosdelay"         :  100, 
+			  "androiddelay"     :  150, 
+			  "winphonedelay"    :  250, 
+			  "fixedPixelsTop"   :    0, 
+			  "fixedPixelsBottom":   55,
+			  "href" : "search.html"
+			 };  
+			window.plugins.nativepagetransitions.slide(options);
+			//window.location = "home.html";
+		}
+		else if(urlPath=="/android_asset/www/list.html") {
+			var options = {
+			  "direction"        : "right", 
+			  "duration"         :  200, 
+			  
+			  "iosdelay"         :  100, 
+			  "androiddelay"     :  150, 
+			  "winphonedelay"    :  250, 
+			  "fixedPixelsTop"   :    0, 
+			  "fixedPixelsBottom":   55,
+			  "href" : "home.html"
+			 };  
+			window.plugins.nativepagetransitions.slide(options);
+			//window.location = "home.html";
+		}
+		else if(urlPath=="/android_asset/www/alarm3.html") {
+			var options = {
+			  "direction"        : "right", 
+			  "duration"         :  200, 
+			  
+			  "iosdelay"         :  100, 
+			  "androiddelay"     :  150, 
+			  "winphonedelay"    :  250, 
+			  "fixedPixelsTop"   :    0, 
+			  "fixedPixelsBottom":   55,
+			  "href" : "alarm2.html"
+			 };  
+			window.plugins.nativepagetransitions.slide(options);
+			//window.location = "home.html";
+		}
 
 	} else if ( swipeDirection == 'left' ) {
 		if(urlPath=="/android_asset/www/alarm2.html") {
