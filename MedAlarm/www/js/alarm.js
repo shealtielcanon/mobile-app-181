@@ -68,10 +68,12 @@ function addNew() {
     var dur_h_t = document.getElementById('hrs').value * 1;
     var dur_m_t = document.getElementById('mins').value * 1;
     if(dur_h_t==0 && dur_m_t==0) {
-        alert("Don't put zeroes(0) on both hours and minutes.");
+        //alert("Don't put zeroes(0) on both hours and minutes.");
+        $("#error1").modal('show');
     }
     else if(days == 0) {
-        alert("You have entered zero(o) on days. Please re-enter proper value for days.");
+        //alert("You have entered zero(o) on days. Please re-enter proper value for days.");
+        $("#error2").modal('show');
     }
     else {
         var addedhr = parseInt(dur_m_t / 60);
