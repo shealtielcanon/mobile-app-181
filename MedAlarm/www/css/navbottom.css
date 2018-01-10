@@ -672,10 +672,8 @@ max-width: 100%;
 
 }
 #iinformativeimage{
-  width: 100%;
-  position: relative;
-
-  top: 0px;
+  width: 80%;
+  margin-top: 0px;
 }
 #cont{
   margin-bottom: 0px;
