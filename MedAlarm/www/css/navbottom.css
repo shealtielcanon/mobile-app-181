@@ -710,8 +710,8 @@ max-width: 100%;
   width: 50%;
   position: relative;
   height: 45px;
-  top: 150px;
- float: left;
+  margin-top: 70%;
+ float: none;
 
   border-radius: 30px;
   cursor:pointer;
