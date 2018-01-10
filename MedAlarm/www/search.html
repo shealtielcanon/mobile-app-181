@@ -36,9 +36,20 @@
              <img class="informative" src="images/informative2.png">
 
               <div class="searchcontainer">
-              <input placeholder="Search for generic medicines " id="search_id" type="text" class="form-control">
+              <input placeholder=" Enter name of Medicine here " id="search_id" type="text" class="  form-control" list="mlist"  oninput="miniSearch()"/>
+              
+              <br><br>
+              <datalist id="mlist">
+              <div id="med_select">
+              <select id="med_id" class=" form-control select-primary mrs mbm" style="display: none;">
+                
+            </select>
+            
+                </div>
+                </datalist>
                  </div>
                 <button id="searchbutton"  class="btn glyphicon glyphicon-search btn-default"  onclick="search()"></button>
+
                 
            
               
