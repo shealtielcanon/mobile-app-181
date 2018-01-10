@@ -2,7 +2,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
 var db = null;
 var doNotify = true;
 
-if(window.location.pathname=="/android_asset/www/list.html") {
+if(window.location.pathname=="/android_asset/www/home.html") {
     alert("wew");
     $(".clickable-row").click(function() {
         window.location.href = $(this).data("href");
