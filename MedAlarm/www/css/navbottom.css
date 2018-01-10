@@ -1027,7 +1027,7 @@ outline: none;
 
 #okaybutton{
     background-color:rgba(106, 139, 232, .5);
-box-shadow: 0 2px 2px 2px #404040;
+
 border-radius: 15px;
 
 
@@ -1037,7 +1037,7 @@ border-radius: 15px;
 #popupbox{
 
 background-color:rgba(23, 81, 112, 1);
-box-shadow: 0 2px 3px 3px #404040;
+
 color: white;
 border-radius: 30px;
 
