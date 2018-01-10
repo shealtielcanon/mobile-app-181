@@ -13,7 +13,9 @@ var temp_alarm_array = [];
 setInterval(function() {
     var urlPath = window.location.pathname;
     
-    
+    //if(window.location.pathname=="/android_asset/www/list.html") {
+    //    showPList();
+    //}
     var date = new Date();
     var cuttime = getCurDate(date);
     

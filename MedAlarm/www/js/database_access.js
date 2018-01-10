@@ -506,12 +506,12 @@ function checkAlarm(cuttime) {
                                 if(buttonIndex==1) {
                                     //willUpdate=true;
                                     updateNextAlarm(row_id, 'u');
-                                    window.location.href="home.html";
+                                    //window.location.href="home.html";
                                 }
                                 else {
                                     //willSnooze=true;
                                     updateNextAlarm(row_id, 'sn');
-                                    window.location.href="home.html";
+                                    //window.location.href="home.html";
                                 }
                                 doNotify=true;
                              },            
@@ -530,12 +530,12 @@ function checkAlarm(cuttime) {
                             if(buttonIndex==1) {
                                 //willUpdate=true;
                                 updateNextAlarm(row_id, 'u');
-                                window.location.href="home.html";
+                                //window.location.href="home.html";
                             }
                             else {
                                 //willSnooze=true;
                                 updateNextAlarm(row_id, 'sn');
-                                window.location.href="home.html";
+                                //window.location.href="home.html";
                             }
                             doNotify=true;
                          },            
@@ -556,6 +556,7 @@ function checkAlarm(cuttime) {
     },
     function() {
         console.log('Success checkAlarm');
+        showPList();
         //if(willUpdate) {
         //    updateNextAlarm(row_id, 'u');
         //}
