@@ -985,6 +985,19 @@ float: right;
 
   
 }
+.boxed1{
+
+  border: 0px solid #BBC1C6 ;
+  width: 90%;
+  text-align: center;
+  border-radius: 10px;
+  margin-left: 5%;
+  background-color:rgba(27, 90, 50, .3);
+ 
+
+
+  
+}
 
 #happyimg {
 
