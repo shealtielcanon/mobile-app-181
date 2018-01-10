@@ -647,12 +647,12 @@ max-width: 100%;
 
 }
 
-#addillnessbutton:focus{
+#addillnessbutton:active{
   border-width: 5px;
-  font-size: 15px;
-  background-color: #FFFFFF;
+  font-size: 20px;
+ 
   border-color: #820099;
-  color: #820099;
+  
   outline: none;
 
 
@@ -781,12 +781,11 @@ max-width: 100%;
 }
 
 
-#alarmbutton:focus{
+#alarmbutton:active{
   
   font-size: 20px;
-  background-color: #FFFFFF;
   border-color: #820099;
-  color: #820099;
+;
 
 
 }
@@ -976,8 +975,7 @@ font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   border-radius: 10px;
   margin-left: 5%;
   background-color:rgba(27, 90, 50, .3);
-  box-shadow: 0 0 4px 1px #404040;
-
+  
 }
 
 #happyimg {
