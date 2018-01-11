@@ -1,57 +1,254 @@
-input[readonly] {
-    color: #999;
-}
+@import "nib"
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css")
+@import url("https://cdn.rawgit.com/wiseguy12851/OpenAssets/master/fonts/icomoon/style.css")
 
-.spinner {
-  width: 100px;
-}
-.spinner input {
-  text-align: right;
-}
-.input-group-btn-vertical {
-  position: relative;
-  white-space: nowrap;
-  width: 1%;
-  vertical-align: middle;
-  display: table-cell;
-}
-.input-group-btn-vertical > .btn {
-  display: block;
-  float: none;
-  width: 100%;
-  max-width: 100%;
-  padding: 8px;
-  margin-left: -1px;
-  position: relative;
-  border-radius: 0;
-}
-.input-group-btn-vertical > .btn:first-child {
-  border-top-right-radius: 4px;
-  margin-bottom:  0px;
-  margin-top: -4px;
-}
-.input-group-btn-vertical > .btn:last-child {
-  margin-top: 0px;
-  margin-bottom:  -3px;
-  border-bottom-right-radius: 4px;
+// IcoMoon icons at https://cdn.rawgit.com/wiseguy12851/OpenAssets/master/fonts/icomoon/demo.html
+    
+debug-box(color = red)
+    border 1px solid color
 
-}
-.input-group-btn-vertical i{
-  position: absolute;
-  top: 0;
-  left: 4px;
-}
+$flex-center
+    display flex
+    align-items center
+    justify-content center
 
-#buttonup{
-  height: 21px;
-  font-size: 10px;
-  padding-top:4px;
+*
+    box-sizing border-box
+    transition all .1s linear
 
-}
+// Begin fix for Android "background-size: contain" bug
+html
+body
+    height 100%
 
-#buttondown{
-  height: 21px;
-  font-size: 10px;
-  padding-top:  4px;
+html
+    overflow-y hidden
 
-}
+body
+    overflow-y auto
+
+// End fix
+
+body
+    background-image url("https://cdn.rawgit.com/wiseguy12851/OpenAssets/master/dragon.png"),
+    linear-gradient(top, darken(white, 75%), darken(white, 85%))
+    background-color darken(white, 80%)
+    background-repeat no-repeat
+    background-attachment fixed
+    background-position center
+    background-size contain
+    font-family 'Courier New', 'Droid Sans Mono'
+    font-size 20px
+
+.viewport
+    @extend $flex-center
+    flex-direction column
+    height 100%
+    
+    .clock
+        @extend $flex-center
+        flex-direction row
+        width 100%
+        max-width 800px
+        height 200px
+        
+        .buttons
+            @extend $flex-center
+            flex-direction column
+            align-items stretch
+            justify-content space-around
+            width 100%
+            height 100%
+            flex-shrink 2
+            
+            .row
+                @extend $flex-center
+                align-items stretch
+                justify-content space-around
+                height 100%
+                width 100%
+                
+                button
+                    width 100%
+                    margin 10px
+                    background-color darken(white, 20%)
+                    opacity .5
+                    border-radius 15px
+                    outline 0
+                    border 0
+                    padding 0
+                    font-size 35px
+                    text-align center
+                    
+                    span
+                        padding 0
+                        margin 0
+                        text-align center
+                    
+                button:hover
+                    opacity .7
+                    
+                button:active
+                button.toggled
+                    opacity .8
+                    background-color darken(white, 10%)
+                    
+                button:disabled
+                    opacity .4
+                    background-color darken(white, 40%)
+    .digits
+        @extend $flex-center
+        flex-direction row
+        align-items stretch
+        justify-content space-around
+        width 100%
+        height 100%
+        flex-grow 2
+        
+        .hours
+        .minutes
+        .am-pm
+            @extend $flex-center
+            flex-direction row
+            align-items stretch
+            justify-content center
+            width 100%
+            margin 0 10px
+            position relative
+            
+            .slot
+                @extend $flex-center
+                flex-direction column
+                align-items center
+                justify-content space-around
+                position relative
+                background-image linear-gradient(top, rgba(white, 0), darken(alpha(white, 95%), 30%), rgba(white, 0))
+                background-color transparent
+                width 100%
+                margin 0 5px
+                font-size 50px
+                overflow hidden
+                
+                .strip
+                    position absolute
+                    width 100%
+                    text-align center
+                    margin-top 75px
+                    //top -100px
+                    left: 0
+                    transition all 1s linear
+                    
+                    > div
+                        height 100px
+
+            .arrow.up
+                position absolute
+                top 0
+                width 100%
+                text-align center
+                font-size 45px
+                color white
+                z-index 5
+                opacity .6
+                background-color transparent
+                outline 0
+                border 0
+                transition all .5s linear
+
+            .arrow.up:hover
+                opacity .7
+                
+            .arrow.up:active
+                opacity .8
+
+            .arrow.down
+                position absolute
+                bottom -7px
+                width 100%
+                text-align center
+                font-size 45px
+                color white
+                z-index 5
+                opacity .6
+                background-color transparent
+                outline 0
+                border 0
+                transition all .5s linear
+
+            .arrow.down:hover
+                opacity .7
+
+            .arrow.down:active
+                opacity .8
+                    
+.hidden
+    //visibility hidden !important
+    opacity 0 !important
+
+for strip-pos in (0..9)
+    .strip.pos-{strip-pos}
+        top -(100px * (strip-pos))
+
+#alarmTone
+#player
+    position absolute
+    top -1000px
+    left -1000px
+    visibility hidden
+
+#instructions
+    width 100%
+    text-align center
+    padding 1px
+    margin 1px
+    color darken(white, 30%)
+    opacity .7
+    font-size 15px
+
+.intro
+    background-color rgba(150, 150, 150, .4)
+    color darken(white, 30%)
+    width 100%
+    max-width 800px
+    border-radius 15px
+    padding 15px
+    margin-bottom 60px
+    text-align center
+    font-size 18px
+    
+    .title
+        font-weight bold
+        font-size 24px
+    
+    .support
+    .supported
+        display none
+        
+    .support.not-supported
+        display static
+        opacity 1
+
+#copyright
+  margin-top 25px
+  background-color transparent
+  font-size 16px
+  color darken(white, 30%)
+  text-align center
+  
+  div
+    margin-bottom 10px
+  
+  a
+  a:link
+    color gray
+    text-decoration none
+    border-bottom 1px solid gray
+    padding-bottom 2px
+
+  a:active
+    color darken(white, 30%)
+  
+  a:hover
+    color darken(white, 30%)
+    border-bottom 1px solid darken(white, 30%)
+    padding-bottom 4px

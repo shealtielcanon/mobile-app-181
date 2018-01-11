@@ -1,53 +1,105 @@
-<!doctype html>
-<html>
-<head>
 <link rel="stylesheet" type="text/css" href="test.css">
-<link href="bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<link href="css/flat-ui.css" rel="stylesheet">
-</head>
-   
+<input type="file" id="alarmTone" />
+<audio id="player" loop></audio>
 
-<body>
-<div class="page-header"><h1>Bootstrap 3 input-spinner</h1></div>  
-  <div id="inputss" class="input-group spinner">
-    <input type="text" class="form-control" id="val_id" value="0">
-    <div class="input-group-btn-vertical">
-      <button id="buttonup" class="btn btn-default glyphicon glyphicon-arrow-up" type="button" onclick="incVal()"><i class="fa fa-caret-up"></i></button>
-      <button id="buttondown" class="btn btn-default glyphicon glyphicon-arrow-down" type="button" onclick="decVal()"><i class="fa fa-caret-down"></i></button>
+<div class="viewport">
+    
+    <div class="clock">
+        <div class="buttons">
+            <div class="row">
+                <button disabled title="Set the alarm" class="alarm-set"><span class="im im-settings"></span></button>
+                <button disabled title="Select a melody file" class="alarm-melody"><span class="im im-upload7"></span></button>
+                <button disabled title="Enable/Disable Alarm" class="alarm-enable"><span class="im im-alarm_on"></span></button>
+            </div>
+            <div class="row">
+                <button title="Enable/Disable 24/hr mode" class="alarm-24hr"><span class="im im-meter"></span></button>
+                <button disabled title="Manually start/stop alarm" class="alarm-melody-play"><span class="fa fa-play"></span></button>
+                <button disabled title="Snooze for 5 minutes" class="alarm-snooze"><span class="im im-snooze"></span></button>
+            </div>
+        </div>
+        
+        <div class="digits">
+            <div class="hours">
+                <button class="arrow up hidden"><span class="im im-arrow-up9"></span></button>
+                <button class="arrow down hidden"><span class="im im-arrow-down9"></span></button>
+                
+                <div class="slot slot-1">
+                    <div class="strip pos-1">
+                        <div>&nbsp;</div>
+                        <div>1</div>
+                        <div>2</div>
+                    </div>
+                </div>
+                
+                <div class="slot slot-2">
+                    <div class="strip pos-2">
+                        <div>0</div>
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                        <div>5</div>
+                        <div>6</div>
+                        <div>7</div>
+                        <div>8</div>
+                        <div>9</div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="minutes">
+                <button class="arrow up hidden"><span class="im im-arrow-up9"></span></button>
+                <button class="arrow down hidden"><span class="im im-arrow-down9"></span></button>
+                
+                <div class="slot slot-1">
+                    <div class="strip pos-4">
+                        <div>0</div>
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                        <div>5</div>
+                    </div>
+                </div>
+                
+                <div class="slot slot-2">
+                    <div class="strip pos-9">
+                        <div>0</div>
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                        <div>5</div>
+                        <div>6</div>
+                        <div>7</div>
+                        <div>8</div>
+                        <div>9</div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="am-pm">
+                <button class="arrow up hidden"><span class="im im-arrow-up9"></span></button>
+                <button class="arrow down hidden"><span class="im im-arrow-down9"></span></button>
+                
+                <div class="slot slot-1">
+                    <div class="strip pos-0">
+                        <div>AM</div>
+                        <div>PM</div>
+                        <div>&nbsp;</div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-<div id="inputss" class="input-group spinner">
-    <input type="text" class="form-control" id="val_id" value="0">
-    <div class="input-group-btn-vertical">
-      <button id="buttonup" class="btn btn-default glyphicon glyphicon-arrow-up" type="button" onclick="incVal()"><i class="fa fa-caret-up"></i></button>
-      <button id="buttondown" class="btn btn-default glyphicon glyphicon-arrow-down" type="button" onclick="decVal()"><i class="fa fa-caret-down"></i></button>
-    </div>
-  </div>
+    
+    <section id="copyright">
+        <div>(c) 2015 John Mothershed - <a href="https://opensource.org/licenses/MIT">License MIT</a> </div>
+  </section>
 </div>
 
-<script type="text/javascript">
-	function incVal() {
-		var val = document.getElementById('val_id').value * 1;
-
-		if(val<24) {
-			document.getElementById('val_id').value = val + 1;
-		}
-		else if (val == 24) {
-			document.getElementById('val_id').value = 0;
-		}
-		
-	}
-	function decVal() {
-		var val = document.getElementById('val_id').value * 1;
-
-		if(val>0) {
-			document.getElementById('val_id').value = val - 1;
-		}
-
-		
-	}
-</script>
-</body>
-</html>
+<script type="text/javascript" href="test.js"></script>

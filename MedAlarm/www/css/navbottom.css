@@ -1033,6 +1033,7 @@ border-radius: 30px;
   text-align: right;
   border-radius: 10px;
    color: white;
+   font-size: 20px;
 }
 .input-group-btn-vertical {
   position: relative;
@@ -1043,12 +1044,13 @@ border-radius: 30px;
 }
 .input-group-btn-vertical > .btn {
   display: block;
-  float: none;
+  
   width: 100%;
   max-width: 100%;
   padding: 8px;
-  margin-left: -1px;
+  
   position: relative;
+
   border-radius: 0;
   border-width: 0px;
   border-color: solid white;
@@ -1077,14 +1079,15 @@ border-radius: 30px;
 }
 
 #buttonup{
-  height: 21px;
+  height: 25px;
   font-size: 10px;
   padding-top:4px;
+  float: left;
 
 }
 
 #buttondown{
-  height: 21px;
+  height: 25px;
   font-size: 10px;
   padding-top:  4px;
 
@@ -1093,17 +1096,17 @@ border-radius: 30px;
 #inputs{
 
   text-align: center;
-  display: inline-block;inputss
-
+  display: inline-block;
 }
 
 #hrs, #mins, #days{
   text-align: center;
   display: inline-block;
-  border-radius: 3px;
+  border-radius: 10px;
   margin-left: 10px;
   margin-bottom: 5px;
   background-color:rgba(27, 33, 90, .4);
+  height: 50px;
 
 }
 
